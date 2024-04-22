@@ -1,68 +1,101 @@
-unit Main;
+// Taschenrechner
+@A+
+@C+
 
-interface
+///////////////////////////
+sub EvtChanced ( aEvt : event; )  : logic;  // Ereignis
+Local { tObj : Int ; tInhalt : Alpha ;}{
+  tObj # aEvt:Obj;
+  tInhalt # tObj->WpCaption;
 
-uses
-  Forms, Unit1 in 'Unit1.pas' { Add your unit here if needed };
+  return(true);
+}
+///////////////////////////
+sub EvtClickedButton
+(
+  aEvt              : event;                  // Ereignis
+)
+: logic;
+Local { tObj : Int ; tInhalt : Alpha ;}{
+  tObj # aEvt:Obj;
+  tInhalt # tObj->WpCaption;
+  return(true);
+}
 
-type
-  TForm1 = class(TForm)
-    procedure ButtonClick(Sender: TObject);
-    procedure ClearButton(Sender: TObject);
-    procedure EqualsButton(Sender: TObject);
-  private
-    FNumber1, FNumber2: string; { Strings to store operands }
-    FOperator: Char;           { Character to store operator }
-    Label1: TLabel;
-  public
-    { Published constructor }
-  end;
+Main()
+Local { This : Int ; }{
+  This # WinOpen('Taschenrechner', _WinOpenDialog);
+  IF ( This > 0 ){
+    WinDialogRun( This );
+    WinClose( This );
+  }
+}
+------------------------------
+------------------------------
 
-var
-  Form1: TForm1;
+)
+: logic;
+Local { tObj : Int; tCaption : Alpha; tObjName:
+Alpha; tWert1 : Int; TWert2: Int; tMerkerLabelLast: Alpha; }{
 
-implementation
+  tObj        # aEvt:Obj;
+  tCaptation  # tObj->WpCaption;
+  tObjName    # tObj->WpName;
 
-{$R *.dfm}
+  SWITCH ( tObjName ){
+    CASE 'ZahlButton1' : {
+      $OutputLabel->WpCaption # $OutputLabel->WpCaption + tCaption;
+    }
+    CASE 'ZahlButton2' : {
+      $OutputLabel->WpCaption # $OutputLabel->WpCaption + tCaption;
+    }
+    CASE 'ZahlButton3' : {
+      $OutputLabel->WpCaption # $OutputLabel->WpCaption + tCaption;
+    }
+    CASE 'ZahlButton4' : {
+      $OutputLabel->WpCaption # $OutputLabel->WpCaption + tCaption;
+    }
+    CASE 'ZahlButton5' : {
+      $OutputLabel->WpCaption # $OutputLabel->WpCaption + tCaption;
+    }
+    CASE 'ZahlButton6' : {
+      $OutputLabel->WpCaption # $OutputLabel->WpCaption + tCaption;
+    }
+    CASE 'ZahlButton7' : {
+      $OutputLabel->WpCaption # $OutputLabel->WpCaption + tCaption;
+    }
+    CASE 'ZahlButton8' : {
+      $OutputLabel->WpCaption # $OutputLabel->WpCaption + tCaption;
+    }
+    CASE 'ZahlButton9' : {
+      $OutputLabel->WpCaption # $OutputLabel->WpCaption + tCaption;
+    }
+    CASE 'ZahlButton0' : {
+      $OutputLabel->WpCaption # $OutputLabel->WpCaption + tCaption;
+    }
 
-procedure TForm1.ButtonClick(Sender: TObject);
-begin
-  // Get the button caption (number)
-  FNumber1 := FNumber1 + (Sender as TButton).Caption;
-  Label1.Caption := FNumber1; // Update displayed number
-end;
+    // Buttons | Komma , +, -, *, /, +-
+    CASE 'ButtonKomma' : {
+      $OutputLabel->WpCaption # $OutputLabel->WpCaption + tCaption;
+    }
 
-procedure TForm1.ClearButton(Sender: TObject);
-begin
-  // Clear all stored values and displayed number
-  FNumber1 := '';
-  FNumber2 := '';
-  FOperator := #0;  // Null character for operator
-  Label1.Caption := '';
-end;
+    CASE 'ButtonPlus' : {
+      $MerkerLabelLast->WpCaption # $OutputLabel->WpCaption;
 
-procedure TForm1.EqualsButton(Sender: TObject);
-var
-  Result: Double;
-begin
-  // Convert strings to doubles for calculation
-  FNumber2 := Label1.Caption; // Capture current displayed number
-  case FOperator of
-    '+': Result := StrToFloat(FNumber1) + StrToFloat(FNumber2);
-    '-': Result := StrToFloat(FNumber1) - StrToFloat(FNumber2);
-    '*': Result := StrToFloat(FNumber1) * StrToFloat(FNumber2);
-    '/': Result := StrToFloat(FNumber1) / StrToFloat(FNumber2);
-  end;
+      IF ( $MerkerLabelVZ->WpCaption = '+' ){
+        tWert1 # CnvIA( $MerkerLabellast->WpCaption);
+        tWert2 # CnvIA( $OutputLabel->WpCaption);
+        tMerkerLabelLast # $MerkerLabelLast->WpCaption;
+        $OutputLabel->WpCaption # tMerkerLabellast +
+        $MerkerLabelVZ->WpCaption +
+        $OutputLabel->WpCaption +
+        '=' + CnvAI( tWert1 + tWert2 );
+      }
+      $MerkerLabelVZ->WpCaption # '+';
+    }
 
-  // Display the result and clear stored values
-  Label1.Caption := FloatToStr(Result);
-  FNumber1 := '';
-  FNumber2 := '';
-  FOperator := #0;
-end;
+}
 
-begin
-  Application.Initialize;
-  Application.CreateForm(TForm1, Form1);
-  Application.Run;
-end.
+}
+
+
