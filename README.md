@@ -93,9 +93,23 @@ Alpha; tWert1 : Int; TWert2: Int; tMerkerLabelLast: Alpha; }{
       }
       $MerkerLabelVZ->WpCaption # '+';
     }
-
 }
-
 }
+##
+CASE 'ButtonPlus' : {
+  // Store the current displayed value in a variable
+  tWert1 := CnvIA($OutputLabel->WpCaption);
 
+  // If the previous operation was also addition, perform the addition
+  IF ($MerkerLabelVZ->WpCaption = '+') THEN
+    tWert2 := CnvIA($MerkerLabelLast->WpCaption);  // Use previous value
+    $OutputLabel->WpCaption := CnvAI(tWert1 + tWert2);  // Update output with sum
+  ELSE
+    // Store the current displayed value for future addition
+    $MerkerLabelLast->WpCaption := $OutputLabel->WpCaption;
+  END;
+
+  // Update the operator marker
+  $MerkerLabelVZ->WpCaption := '+';
+}
 
