@@ -1,3 +1,4 @@
+``` C
 // Taschenrechner
 @A+
 @C+
@@ -30,9 +31,10 @@ Local { This : Int ; }{
     WinClose( This );
   }
 }
-------------------------------
-------------------------------
+```
 
+------------------------------
+``` C
 )
 : logic;
 Local { tObj : Int; tCaption : Alpha; tObjName:
@@ -95,7 +97,10 @@ Alpha; tWert1 : Int; TWert2: Int; tMerkerLabelLast: Alpha; }{
     }
 }
 }
+```
+------------------------------
 ##
+``` C
 CASE 'ButtonPlus' : {
   // Store the current displayed value in a variable
   tWert1 := CnvIA($OutputLabel->WpCaption);
@@ -112,4 +117,4 @@ CASE 'ButtonPlus' : {
   // Update the operator marker
   $MerkerLabelVZ->WpCaption := '+';
 }
-
+```
