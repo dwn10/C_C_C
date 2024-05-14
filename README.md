@@ -118,3 +118,78 @@ CASE 'ButtonPlus' : {
   $MerkerLabelVZ->WpCaption := '+';
 }
 ```
+##
+``` C
+// Konvertierung
+@A+
+@C+
+sub EvtClickedButton
+(
+aEvt    :event; // Ereignis
+)
+: logic;
+Local {
+  tObj  : Int ; obj tCaption  :  Alpha  ; tObjName  :   Alpha  ;
+  tTestAlpha : Alpha  ;  tTestInt  :  Int  ;  tTestBigInt  :  BigInt ;
+}(
+  tObj        #  aEvt:Obj;
+  tCaption    #  tObj->WpCaption;
+  tObjName    #  tObj->WpName;
+SWITCH (tObjlName) {
+  CASE 'ConvertAlpha2AlphaButton': (
+  //tTest # $FieldAlpha2Alpha->WpCaption;
+  IF ( $FieldAlpha2Alpha->WpCaption <> '' ) {
+    $ConvertAlpha2AlphaZielField->WpCaption # $FieldAlpha2Alpha->WpCaption;
+    $OutputLabell->lWpCaption               # $FieldAlpha2Alpha->WpCaption;
+    $FieldAlpha2Alpha->WpCaption            # '';
+} ELSE {
+    $FieldAlpha2Alpha->WpCaption            # $ConvertAlpha2AlphaZielField->WpCaption;
+    $OutputLabell->WpCaption                # $ConvertAlpha2AlphaZielField->WpCaption;
+    $FieldAlpha2Alpha->pCaption:
+    $ConvertAlpha2AlphaZielField->WpCaption  # '';
+}
+}
+
+
+
+
+// Conv2Aipha
+CASE ConvertInt2AlphaButton FieldInt2Alpha->WpCaptionInt: TestInt
+: // (1) ConvertInt2Alpha + Label + Field + Button Convertint2AlphaZielField
+IF (FieldInt2Alpha->MpCaptionInt <> 0) [
+$OutputLabell->WpCaption FieldInt2Alpha->WpCaptionInt
+$ConvertInt2AlphaZielField->pCaption CnvAI (SFieldInt2Alpha->apCaptionInt):
+# CnvAI (FieldInt2Alpha->pCaptionInt):
+#0:
+#CnvIA( ConvertInt2AlphaZielField->@pCaption);
+# $ConvertInt2AlphaZielField->FpCaption:
+
+}
+} ELSE {
+}
+FieldInt2Alpha->SpCaptionInt OutputLabell->WpCaption
+Convert.Int2AlphaZielField->pCaption:
+}// ConvertInt2AlphaButton
+CASE ConvertBig2AlphaButton': { // (1) ConvertBig2Alpha Label Field Button ConvertBig2AlphaZiel Field
+TestBigInt FieldBigInt2Alpha->WpCaptionBigInt:
+IF (FieldBigInt2Alpha->RpCaptionBigInt <> b) {
+$ConvertBig2AlphaZielField->RpCaption CnvAB(FieldBigInt2Alpha->RpCaptionBigInt); CnvAB(FieldBigInt2Alpha->apCaptionBigInt):
+$OutputLabell->WpCaption
+FieldBigInt2Alpha->WpCaptionBigInt } ELSE ( 0\b:
+FieldBigInt2Alpha->WpCaptionBigInt
+OutputLabell->WpCaption ConvertBig2AlphaZielField->pCaption:
+ChvBA( ConvertBig2AlphaZielField->pCaption):
+ConvertBig2AlphaZielField->pCaption:
+}
+// SWITCH //
+return(true);
+Main()
+Local (This: Int ){
+This
+WinOpen('Konvertierung", WinOpenDialog);
+IF (This > 0) {
+WinDialogRun (This);
+WinClose (This);
+}
+} 
+```
