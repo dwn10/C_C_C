@@ -189,3 +189,56 @@ Local { This : Int ; }{
   }
 }
 ```
+
+##
+```C
+@A+
+@C+
+
+sub EvtClickedButton
+(
+  aEvt         : event;    // Ereignis
+)
+: logic;
+Local {
+  tObj : Int ; tCaption : Alpha ; tObjName : Alpha ;
+  tTestAlpha : Alpha ; tTestInt : Int ; tTestBigInt : BigInt ; tTestFloat : Float ;
+  tWertFloat : Dec;  // New variable to store converted decimal value
+}{
+  tObj   # aEvt:Obj;
+  tCaption # tObj->WpCaption;
+  tObjName # tObj->WpName;
+  SWITCH ( tObjName ) {
+    CASE 'ConvertAlpha2AlphaButton' : {
+      // ... existing code for ConvertAlpha2AlphaButton ...
+    }
+    CASE 'ConvertInt2AlphaButton' : { // ... existing code for ConvertInt2AlphaButton ... }
+    CASE 'ConvertBig2AlphaButton' : { // ... existing code for ConvertBig2AlphaButton ... }
+    // New case for float to decimal conversion
+    CASE 'ConvertFloat2AlphaButton' : {
+      tTestFloat # $FieldFloat2Alpha->WpCaptionFloat;  // Get float value from field
+      IF ( $FieldFloat2Alpha->WpCaptionFloat <> 0.0 ) {
+        tWertFloat # CnvFDec( $FieldFloat2Alpha->WpCaptionFloat );  // Convert float to decimal
+        $ConvertFloat2AlphaZielField->WpCaption # CnvAD( tWertFloat );  // Convert decimal to string and display
+        $OutputLabel1->WpCaption           # CnvAD( tWertFloat );
+        $FieldFloat2Alpha->WpCaptionFloat     # 0.0;  // Clear source field
+      } ELSE {
+        // Handle case where source field is empty (optional)
+        // ...
+      }
+    }
+  } // SWITCH
+  return(true);
+}
+
+Main()
+{
+  Local { This : Int ; }{
+    This # WinOpen( 'Konvertierung', _WinOpenDialog );
+    IF ( This > 0 ) {
+      WinDialogRun( This );
+      WinClose( This );
+    }
+  }
+}
+```
