@@ -6,24 +6,24 @@ Der Code erstellt einen einfachen Taschenrechner als grafische Anwendung (GUI) i
 
 ## Hauptkomponenten:
 
-- 'JFrame (Taschenrechner):' Das Hauptfenster der Anwendung.
-- 'JPanel (contentPane):' Ein Panel zur Organisation der Elemente im Fenster.
-- 'JTextField (txtPantalla):' Ein Textfeld zur Anzeige von Zahlen und Ergebnissen.
-- 'JButtons:' Zahlentasten '(0-9)', Operationstasten '(+, -, x, /)', eine Kommataste '(.)', eine Löschtaste '(C)' und eine Gleichheitstaste '(=)'.
+- `JFrame (Taschenrechner):` Das Hauptfenster der Anwendung.
+- `JPanel (contentPane):` Ein Panel zur Organisation der Elemente im Fenster.
+- `JTextField (txtPantalla):` Ein Textfeld zur Anzeige von Zahlen und Ergebnissen.
+- `JButtons:` Zahlentasten `(0-9)`, Operationstasten `(+, -, x, /)`, eine Kommataste `(.)`, eine Löschtaste `(C)` und eine Gleichheitstaste `(=)`.
 
 ## Funktionsweise:
 
-- 'Oberfläche:' Die Oberfläche des Taschenrechners wird mit dem Textfeld und den verschiedenen Tasten aufgebaut.
-- 'Eingabe:' Wenn Zahlentasten gedrückt werden, werden die entsprechenden Zahlen im Textfeld angezeigt.
-- 'Operationen:' Operationstasten '(+, -, \*, /)' speichern die aktuelle Zahl und die gewählte Operation.
-- 'Berechnung:' Die Gleichheitstaste '(=)' löst die Berechnung aus. Das Programm verwendet die gespeicherten Zahlen und die Operation, um das Ergebnis zu ermitteln. Das Ergebnis wird im Textfeld angezeigt.
-- 'Löschen:' Die Löschtaste '(C)' setzt das Textfeld zurück.
+- `Oberfläche:` Die Oberfläche des Taschenrechners wird mit dem Textfeld und den verschiedenen Tasten aufgebaut.
+- `Eingabe:` Wenn Zahlentasten gedrückt werden, werden die entsprechenden Zahlen im Textfeld angezeigt.
+- `Operationen:` Operationstasten `(+, -, \*, /)` speichern die aktuelle Zahl und die gewählte Operation.
+- `Berechnung:` Die Gleichheitstaste `(=)` löst die Berechnung aus. Das Programm verwendet die gespeicherten Zahlen und die Operation, um das Ergebnis zu ermitteln. Das Ergebnis wird im Textfeld angezeigt.
+- `Löschen:` Die Löschtaste `(C)` setzt das Textfeld zurück.
 
 ## Variablen:
 
-'numero1', 'numero2': Speichern die eingegebenen Zahlen.
-'resultado:' Speichert das Ergebnis einer Berechnung.
-'operacion:' Speichert die gewählte Rechenoperation '(+, -, \*, /)'.
+`numero1`, `numero2`: Speichern die eingegebenen Zahlen.
+`resultado:` Speichert das Ergebnis einer Berechnung.
+`operacion:` Speichert die gewählte Rechenoperation `(+, -, \*, /)`.
 
 ## Ereignisbehandlung (ActionListener):
 
@@ -31,4 +31,4 @@ Jede Taste hat einen ActionListener, der auf Klicks reagiert. Die ActionListener
 
 ## Hauptmethode (main):
 
-Die 'main-Methode' startet die Anwendung, indem sie eine Instanz des Taschenrechners erstellt und sichtbar macht.
+Die `main-Methode` startet die Anwendung, indem sie eine Instanz des Taschenrechners erstellt und sichtbar macht.
