@@ -2,7 +2,7 @@
 
 Der Code erstellt einen einfachen Taschenrechner als grafische Anwendung (GUI) in Java mithilfe der Swing-Bibliothek. Hier die Hauptfunktionen und Komponenten:
 
-<a href=".\calculator.gif"><img src=".calculator.gif" style="height: 80%; width:80%;"/></a>
+<a href="https://github.com/dwn10/C_C_C/blob/main/JAVA/Calculator/Calculator/calculator.gif"><img src="https://github.com/dwn10/C_C_C/blob/main/JAVA/Calculator/Calculator/calculator.gif" style="height: 80%; width:80%;"/></a>
 
 ## Hauptkomponenten:
 
