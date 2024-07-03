@@ -18,7 +18,7 @@ z.B:
 - `Time` zu `Alpha`
 - `Date` zu `Alpha`
 
-- Dieser `Concept-16-Code` demonstriert die Konvertierung zwischen verschiedenen Datentypen.
+- Dieser `Conzept-16-Code` demonstriert die Konvertierung zwischen verschiedenen Datentypen.
 
 ## Funktionsweise:
 
@@ -42,7 +42,7 @@ z.B:
 
 ## CnvAI, CnvAB, CnvIA, CnvBA:
 
-Dies sind integrierte Funktionen in `Concept 16` zur Konvertierung zwischen verschiedenen Datentypen umgewandelt.
+Dies sind integrierte Funktionen in `Conzept 16` zur Konvertierung zwischen verschiedenen Datentypen umgewandelt.
 
 ## Main-Funktion:
 
