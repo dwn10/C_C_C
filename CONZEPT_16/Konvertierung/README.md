@@ -84,5 +84,5 @@ Dies sind integrierte Funktionen in `Conzept 16` zur Konvertierung zwischen vers
 
 ## Main-Funktion:
 
-- Die Hauptfunktion, die ein Fenster mit dem Namen "Konvertierung" öffnet und die Interaktion mit dem Benutzer ermöglicht.
+- Die Hauptfunktion, die ein Fenster mit dem Namen `"Konvertierung"` öffnet und die Interaktion mit dem Benutzer ermöglicht.
 - Führt den Dialog aus und schließt ihn anschließend wieder.
