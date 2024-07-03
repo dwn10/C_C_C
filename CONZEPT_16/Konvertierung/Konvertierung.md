@@ -129,7 +129,9 @@ AreaBottom: 54 / AreaWidth: 84 / AreaHeight: 24
 @A+
 @C+
 
- /* Main ----------------------------------------------------------------*/
+ /* Das Programm öffnet ein Dialogfenster namens "KonvertierungNeu"
+ und führt es aus. Wenn das Fenster erfolgreich geöffnet wurde (Rückgabewert > 0),
+ wird es nach der Ausführung geschlossen.*/
 Main()
 Local { This : Int ; }{
   This # WinOpen( 'KonvertierungNeu', _WinOpenDialog );
@@ -157,6 +159,16 @@ Local { This : Int ; }{
 //----------------------------------------------------------------------------
 //  ALPHA
 //----------------------------------------------------------------------------
+
+/* Dieses Code behandelt ein Click-Ereignis (EvtClickedButton) in einer Anwendung.
+Es identifiziert das angeklickte Objekt (tObj) und reagiert spezifisch auf einen Button namens
+'ConvertAlpha2AlphaButton'.
+
+Wenn das Eingabefeld ($FieldAlpha2Alpha) nicht leer ist, wird sein Inhalt in ein Zielfeld
+($ConvertAlpha2AlphaZielField) und ein Ausgabe-Label ($OutputLabel1) kopiert und anschließend gelöscht.
+
+Ist das Eingabefeld leer, wird der Inhalt des Zielfelds in das Eingabefeld und das Ausgabe-Label kopiert
+und aus dem Zielfeld gelöscht. */
 
 sub EvtClickedButton
 (
@@ -777,6 +789,12 @@ Local {
 // EvtClickedCheckbox (ALPHA)   1 o 0
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
+
+/* Dieser Code definiert ein Ereignis (EvtClickedCheckbox12), das ausgelöst wird,
+wenn ein Kontrollkästchen (Checkbox12) angeklickt wird.
+Je nach Zustand des Kontrollkästchens (aktiviert oder deaktiviert) wird
+der Wert eines anderen Feldes (ConvertCheckBoxEins2NullZielField) auf "1" oder "0" gesetzt. */
+
 sub EvtClickedCheckbox12
 (aEvt :event;)// ConvertDate 1 o 0/
    : logic;
@@ -894,6 +912,11 @@ sub EvtClickedCheckbox12
  // EvtClicked (ALPHA)  True to False
  //------------------------------------------------------------------------------------
  //------------------------------------------------------------------------------------
+
+/*  Das Code-Snippet definiert ein Ereignis (EvtClickedButton12), das ausgelöst wird,
+wenn ein Radiobutton angeklickt wird. Je nach Zustand des Radiobuttons (angehakt oder nicht)
+wird der Text eines Zielfeldes (ConvertCheckBoxTrue2FalseZielField) auf "True" oder "False" gesetzt. */
+
  sub EvtClickedButton12 //ConvertDate True to False /
     (
       aEvt        :event;   // Ereignis
