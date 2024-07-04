@@ -1,42 +1,75 @@
-package Grafico;
+package Grafico;import java.awt.Color;  				// Farbeinstellungen für Komponenten
+// Layout-Manager für die Anordnung von Komponenten
+import java.awt.EventQueue Hilfsklasse für die Ereignisverarbeitung
+// Textfeld zur Anzeige von Ergebnissen
+import java.awt.Font; 				// Einstellungen für Schriftart und -größe
+import java.awt.event.Acti istener; 	// Interface für die Ereignisbehandlun
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+// Ausrichtung von Text im Textfeld 
+import javax.swing.JButton; / Schaltflächen für die Eingabe
+import javax.swing.JF  		// Hauptfenster der Anwendung
+import javax.swing.JPanel; 
+import javax.swing.JTextFie 
+import javax.swing.JBu 
+import java.awt.Color; 
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JTextField;
-import java.awt.Font;
-import javax.swing.SwingConstants;
-import javax.swing.JButton;
-import java.awt.Color;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class Calculadora extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtPantalla;
-	
+
 	// VARIABLES
 	double numero1;
-	double numero2;
-	double resultado;
+	double resultado; // Stores the accumulated result
 	String operacion;
-	
+
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Calculadora frame = new Calculadora();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+		EventQueue.invokeLater(() -> {
+			try {
+				Calculadora frame = new Calculadora();
+				frame.setVisible(true);
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 		});
 	}
+
+	public Calculadora() {
+		setTitle("Calculator");
+		// ... (rest of the GUI setup is the same as before)
+
+		JButton btnIgual = new JButton("=");
+		btnIgual.addActionListener(new ActionListener() {
+		
+
+				double numero2 = Double.parseDouble(txtPantalla.getText());
+
+				switch (operacion) {
+					case "+":
+						resultado += numero2; // Accumulate the result
+						break;
+					case "-":
+						resultado -= numero2;
+						break;
+					case "*":
+						resultado *= numero2;
+						break;
+					case "/":
+						if (numero2 == 0) {
+							txtPantalla.setText("Error: Division by zero");
+							return; // Exit the function if division by zero
+						}
+						resultado /= numero2;
+						break;
+					default:
+						resultado = numero2; // First operation, set result directly
+				}
+
+				txtPantalla.setText(String.valueOf(resultado));
+				operacion = null; // Reset the operation after calculation
+			}
+		});
 
 	/**
 	 * Create the frame.
@@ -184,8 +217,9 @@ public class Calculadora extends JFrame {
 		contentPane.add(btn7);
 		
 		JButton btnCero = new JButton("0");
-		btnCero.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnCero.addActionListener(new ActionListener()
+
+	public void actionPerformed(ActionEvent e) {
 				//CERO
 				String IngreseNumero = txtPantalla.getText() + btnCero.getText();
 				txtPantalla.setText(IngreseNumero);
