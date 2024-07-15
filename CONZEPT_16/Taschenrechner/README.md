@@ -1,11 +1,11 @@
 # Taschenrechner
 
-– Einfacher Taschenrechner mit grafischer Oberfläche
+- Einfacher Taschenrechner mit grafischer Oberfläche
 
 ## Funktionen:
 
-`EvtChanged(aEvt):` Diese Funktion reagiert auf Ereignisse (z.B. Tastendrücke), ermittelt das auslösende Objekt und seinen Inhalt.
-`EvtClickedButton(aEvt):` Die Kernfunktion, die auf Klicks auf Buttons reagiert. Abhängig vom Button werden Zahlen eingegeben, mathematische Operationen durchgeführt oder das Ergebnis berechnet und angezeigt.
+- `EvtChanged(aEvt):` Diese Funktion reagiert auf Ereignisse (z.B. Tastendrücke), ermittelt das auslösende Objekt und seinen Inhalt.
+- `EvtClickedButton(aEvt):` Die Kernfunktion, die auf Klicks auf Buttons reagiert. Abhängig vom Button werden Zahlen eingegeben, mathematische Operationen durchgeführt oder das Ergebnis berechnet und angezeigt.
 
 ## Funktionsweise:
 
