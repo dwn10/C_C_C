@@ -4,10 +4,10 @@
 @C+
 
 //////////////////
-sub EvtChanged( aEvt : event; )  : logic; // Ereignis
+sub EvtChanged( aEvt : event; )  : logic; // Funktion: Bearbeitet das Ereignis der Änderung eines Objekts in der Benutzeroberfläche.
 Local { tObj : Int ; tInhalt : Alpha ; }{
 
-  tObj # aEvt:Obj;
+  tObj # aEvt:Obj; // tObj: ID des geänderten Objekts.
     tInhalt # tObj->WpCaption;
 
   return(true);

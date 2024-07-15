@@ -1,6 +1,8 @@
-# Taschenrechner
+# Taschenrechner mit Conzept 16
 
-- Einfacher Taschenrechner mit grafischer Oberfläche
+- Taschenrechner mit grafischer Benutzeroberfläche `(GUI)`.
+- Er reagiert auf Klick-Ereignisse von Schaltflächen `(Zahlen, Operatoren, etc.)` und führt entsprechende Aktionen aus.
+- Zusätzlich wird eine `Historie` der Berechnung in einer Liste `(LastLineDataList)` gespeichert.
 
 ## Funktionen:
 
@@ -20,7 +22,34 @@
   - Der Operator wird in einer weiteren Hilfsvariable `(MerkerLabelVZ)` vermerkt.
 
 - `Ergebnisberechnung:`
+
   - Beim Klick auf `"="` wird der aktuelle Wert im Eingabefeld als zweite Zahl geholt.
   - Basierend auf dem gespeicherten Operator `(MerkerLabelVZ)` wird die entsprechende Berechnung durchgeführt `(Addition, Subtraktion, Multiplikation oder Division)`.
   - Das Ergebnis wird als String formatiert und im Eingabefeld angezeigt.
-  - Zusätzlich wird eine `Historie` der Berechnung in einer Liste `(LastLineDataList)` gespeichert.
+
+  ***
+
+  ## EXTRA
+
+  ***
+
+## Variablen:
+
+- `tObj:` ID der gedrückten Taste.
+- `tCaption:` Bezeichnung der gedrückten Taste.
+- `tObjName:` Name der gedrückten Taste.
+- `tWert1`, `tWert2:` Numerische Werte für Berechnungen `(Typ Float)`.
+- `tMerkerLabelLast:` Speichert die letzte numerische Eingabe.
+- `tLabelVZ:` Speichert den gewählten mathematischen Operator `(+, -, \*, /)`.
+- `tLastInput:` Speichert die letzte numerische Eingabe vor dem Operator.
+- `tLineCount:` Zähler für Zeilen in einer Liste für den Berechnungsverlauf.
+- `tErg:` Ergebnis der Operation (nicht im gezeigten Code verwendet).
+- `tSuccess:` Gibt den Erfolg einer Operation im Zusammenhang mit der Verlaufsliste.
+
+## Logik:
+
+- `Bildschirm löschen:` Wenn der letzte Operator `'='` war, löschen Sie den Bildschirm und den Akkumulator.
+- `Numerische Tasten verarbeiten:` Verkettet die gedrückte Ziffer mit dem Inhalt des Displays.
+- `Operatortasten verarbeiten:` Speichert den Operator, löscht das Display und speichert den vorherigen Wert in einem Akkumulator.
+- `Gleichheitszeichen (=) verarbeiten:` Führt die Berechnung gemäß dem gespeicherten Operator durch, zeigt das Ergebnis und einer Verlaufsliste an.
+- `Alles löschen-Taste verarbeiten:` Löscht die Verlaufsliste.
