@@ -4,6 +4,8 @@
 - Er reagiert auf Klick-Ereignisse von Schaltflächen `(Zahlen, Operatoren, etc.)` und führt entsprechende Aktionen aus.
 - Zusätzlich wird eine `Historie` der Berechnung in einer Liste `(LastLineDataList)` gespeichert.
 
+<a href="https://github.com/dwn10/C_C_C/blob/main/CONZEPT_16/Taschenrechner/taschenrechner-c16.gif"><img src="https://github.com/dwn10/C_C_C/blob/main/CONZEPT_16/Taschenrechner/taschenrechner-c16.gif" style="height: 80%; width:80%;"/></a>
+
 ## Funktionen:
 
 - `EvtChanged(aEvt):` Diese Funktion reagiert auf Ereignisse (z.B. Tastendrücke), ermittelt das auslösende Objekt und seinen Inhalt.
