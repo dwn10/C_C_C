@@ -1,6 +1,6 @@
 # StringCnv mit Conzept16:
 
-<a href="#"><img src="#" style="height: 80%; width:80%;"/></a>
+<a href="https://github.com/dwn10/C_C_C/blob/main/CONZEPT_16/StringKonverter/StringCnv.gif"><img src="https://github.com/dwn10/C_C_C/blob/main/CONZEPT_16/StringKonverter/StringCnv.gif" style="height: 80%; width:80%;"/></a>
 
 ## Allgemeines
 
