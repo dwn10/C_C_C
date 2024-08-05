@@ -1,9 +1,9 @@
-## Neu Frame
+## Neu Frame erstellen
 
 `Name:` KonvertierungNeu `Caption:` KonvertierungsbefehleFrame
 
-AreaLeft: 6 / AreaTop: 6 / AreaRight: 516 /
-AreaBottom: 516 / AreaWidth: 510 / AreaHeight: 510
+- AreaLeft: 6 / AreaTop: 6 / AreaRight: 516 /
+- AreaBottom: 516 / AreaWidth: 510 / AreaHeight: 510
 
 ---
 
@@ -11,17 +11,17 @@ AreaBottom: 516 / AreaWidth: 510 / AreaHeight: 510
 
 `Notebook1`
 
-AreaLeft: 6 / AreaTop: 6 / AreaRight: 516 /
-AreaBottom: 516 / AreaWidth: 510 / AreaHeight: 510
+- AreaLeft: 6 / AreaTop: 6 / AreaRight: 516 /
+- AreaBottom: 516 / AreaWidth: 510 / AreaHeight: 510
 
 ---
 
 ## Ausgabe > Label
 
-Konvertierungsbefehle Datentypen
+`Konvertierungsbefehle Datentypen`
 
-AreaLeft: 120 / AreaTop: 12 / AreaRight: 348 /
-AreaBottom: 60 / AreaWidth: 228 / AreaHeight: 48
+- AreaLeft: 120 / AreaTop: 12 / AreaRight: 348 /
+- AreaBottom: 60 / AreaWidth: 228 / AreaHeight: 48
 
 ---
 
@@ -29,13 +29,13 @@ AreaBottom: 60 / AreaWidth: 228 / AreaHeight: 48
 
 `Name:` > `Caption:`
 
-AlphaLabel `Alpha`
-IntLabel `Int`
-BigIntLabel `BigInt`
-FloatLabel `Float`
-DecimalLabel `Decimal`
-TimeLabel `Time`
-DateLabel `Date`
+- AlphaLabel `Alpha`
+- IntLabel `Int`
+- BigIntLabel `BigInt`
+- FloatLabel `Float`
+- DecimalLabel `Decimal`
+- TimeLabel `Time`
+- DateLabel `Date`
 
 ---
 
@@ -45,16 +45,16 @@ DateLabel `Date`
 
 `Name:` > `Caption:`
 
-FieldAlpha2Alpha > 0,10
-FieldInt2Alpha > 100
-FieldBigInt2Alpha > 10
-FieldFloat > 0,2
-FieldDecimal > 0,50
-FieldTime > 08:30:00,00
-FieldDate > 15.05.2024
+- FieldAlpha2Alpha > 0,10
+- FieldInt2Alpha > 100
+- FieldBigInt2Alpha > 10
+- FieldFloat > 0,2
+- FieldDecimal > 0,50
+- FieldTime > 08:30:00,00
+- FieldDate > 15.05.2024
 
-AreaLeft: 132 / AreaTop: 78 / AreaRight: 222 /
-AreaBottom: 96 / AreaWidth: 90 / AreaHeight: 18
+- AreaLeft: 132 / AreaTop: 78 / AreaRight: 222 /
+- AreaBottom: 96 / AreaWidth: 90 / AreaHeight: 18
 
 ---
 
@@ -62,16 +62,16 @@ AreaBottom: 96 / AreaWidth: 90 / AreaHeight: 18
 
 `Name:` Caption: Ereignisse: Special / `EvtClicked`
 
-ConvertAlpha2AlphaButton `<<>>` \_Konvertierung:`EvtClickedButton`
-ConvertInt2AlphaButton
-ConvertBig2AlphaButton
-ConvertFloat2AlphaButton
-ConvertDecimal2AlphaButton
-ConvertTime2AlphaButton
-ConvertDatel2AlphaButton
+- ConvertAlpha2AlphaButton `<<>>` \_Konvertierung:`EvtClickedButton`
+- ConvertInt2AlphaButton
+- ConvertBig2AlphaButton
+- ConvertFloat2AlphaButton
+- ConvertDecimal2AlphaButton
+- ConvertTime2AlphaButton
+- ConvertDatel2AlphaButton
 
-AreaLeft: 234 / AreaTop: 78 / AreaRight: 324 /
-AreaBottom: 96 / AreaWidth: 90 / AreaHeight: 18
+- AreaLeft: 234 / AreaTop: 78 / AreaRight: 324 /
+- AreaBottom: 96 / AreaWidth: 90 / AreaHeight: 18
 
 ---
 
@@ -79,16 +79,16 @@ AreaBottom: 96 / AreaWidth: 90 / AreaHeight: 18
 
 `Name:` `Caption:`
 
-ConvertAlpha2AlphaZielField x
-ConvertInt2AlphaZielField
-ConvertBig2AlphaZielField
-ConvertFloat2AlphaField
-ConvertDecimal2AlphaZielField
-ConvertTime2AlphaZielField
-ConvertDate2AlphaZielField
+- ConvertAlpha2AlphaZielField `x`
+- ConvertInt2AlphaZielField
+- ConvertBig2AlphaZielField
+- ConvertFloat2AlphaField
+- ConvertDecimal2AlphaZielField
+- ConvertTime2AlphaZielField
+- ConvertDate2AlphaZielField
 
-AreaLeft: 336 / AreaTop: 78 / AreaRight: 426 /
-AreaBottom: 96 / AreaWidth: 90 / AreaHeight: 18
+- AreaLeft: 336 / AreaTop: 78 / AreaRight: 426 /
+- AreaBottom: 96 / AreaWidth: 90 / AreaHeight: 18
 
 ---
 
@@ -96,13 +96,13 @@ AreaBottom: 96 / AreaWidth: 90 / AreaHeight: 18
 
 ## Schaltflächen > Checkbox
 
-Checkbox1 Checkbox
+`Checkbox1 Checkbox`
 
 ---
 
 ## Eingabe > Edit
 
-ConvertCheckBoxEins2NullZielField x
+`ConvertCheckBoxEins2NullZielField` `x`
 
 ---
 
@@ -114,11 +114,11 @@ Groupbox1 > Checkbox > \_Konvertierung:EvtClickedCheckbox1
 
 ## Schaltflächen > Radiobutton
 
-Name: RadiobuttonOff / Caption: `Off`
-Name: RadiobuttonOn / Caption: `On`
+- Name: RadiobuttonOff / Caption: `Off`
+- Name: RadiobuttonOn / Caption: `On`
 
-AreaLeft: 30 / AreaTop: 30 / AreaRight: 114 /
-AreaBottom: 54 / AreaWidth: 84 / AreaHeight: 24
+- AreaLeft: 30 / AreaTop: 30 / AreaRight: 114 /
+- AreaBottom: 54 / AreaWidth: 84 / AreaHeight: 24
 
 ---
 
