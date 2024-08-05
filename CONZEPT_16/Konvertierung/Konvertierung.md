@@ -2,8 +2,8 @@
 
 `Name:` KonvertierungNeu `Caption:` KonvertierungsbefehleFrame
 
-- AreaLeft: 6 / AreaTop: 6 / AreaRight: 516 /
-- AreaBottom: 516 / AreaWidth: 510 / AreaHeight: 510
+- - AreaLeft: 6 / AreaTop: 6 / AreaRight: 516 /
+- - AreaBottom: 516 / AreaWidth: 510 / AreaHeight: 510
 
 ---
 
