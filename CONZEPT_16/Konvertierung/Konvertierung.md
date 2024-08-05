@@ -102,8 +102,6 @@
 
 ---
 
----
-
 ## Schaltflächen > Checkbox
 
 `Checkbox1 Checkbox`
