@@ -19,7 +19,7 @@
 
 - `Rechenoperationen:`
 
-  - Beim Klick auf einen Operator `(+, -, \*, /)` wird die bisherige Eingabe in einer Hilfsvariable `(MerkerLabelLast)` gespeichert.
+  - Beim Klick auf einen Operator `(+, -, *, /)` wird die bisherige Eingabe in einer Hilfsvariable `(MerkerLabelLast)` gespeichert.
   - Das Eingabefeld wird geleert.
   - Der Operator wird in einer weiteren Hilfsvariable `(MerkerLabelVZ)` vermerkt.
 
@@ -42,7 +42,7 @@
 - `tObjName:` Name der gedrückten Taste.
 - `tWert1`, `tWert2:` Numerische Werte für Berechnungen `(Typ Float)`.
 - `tMerkerLabelLast:` Speichert die letzte numerische Eingabe.
-- `tLabelVZ:` Speichert den gewählten mathematischen Operator `(+, -, \*, /)`.
+- `tLabelVZ:` Speichert den gewählten mathematischen Operator `(+, -, *, /)`.
 - `tLastInput:` Speichert die letzte numerische Eingabe vor dem Operator.
 - `tLineCount:` Zähler für Zeilen in einer Liste für den Berechnungsverlauf.
 - `tErg:` Ergebnis der Operation (nicht im gezeigten Code verwendet).
