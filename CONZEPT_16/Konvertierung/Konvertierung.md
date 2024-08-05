@@ -39,8 +39,6 @@
 
 ---
 
----
-
 ## Eingabe > Edit
 
 `Name:` > `Caption:`
@@ -53,8 +51,10 @@
 - FieldTime > 08:30:00,00
 - FieldDate > 15.05.2024
 
+```C
   - AreaLeft: 132 / AreaTop: 78 / AreaRight: 222 /
   - AreaBottom: 96 / AreaWidth: 90 / AreaHeight: 18
+```
 
 ---
 
