@@ -1,3 +1,83 @@
+## Neu Frame erstellen
+
+`Name:` TaschenrechnerNeu `Caption:` Frame `[Frame1]`
+
+```C
+    - AreaLeft: 6 / AreaTop: 6 / AreaRight: 516 /
+    - AreaBottom: 516 / AreaWidth: 510 / AreaHeight: 510
+```
+
+---
+
+## Ausgabe > Label
+
+`InputField` `Edit`
+
+```C
+    - AreaLeft: 120 / AreaTop: 12 / AreaRight: 348 /
+    - AreaBottom: 60 / AreaWidth: 228 / AreaHeight: 48
+```
+
+---
+
+## Schaltflächen > Button
+
+`Name:` Caption: Ereignisse: Special / `EvtClickedButton`
+
+- `ZahlButton0` `Button[0]` \_Konvertierung:`EvtClickedButton`
+- `ZahlButton1` `Button[1]`
+- `ZahlButton2` `Button[2]`
+- `ZahlButton3` `Button[3]`
+- `ZahlButton4` `Button[4]`
+- `ZahlButton5` `Button[5]`
+- `ZahlButton6` `Button[6]`
+- `ZahlButton7` `Button[7]`
+- `ZahlButton8` `Button[8]`
+- `ZahlButton9` `Button[9]`
+- `ButtonKomma` `Button[,]`
+
+- `ButtonClearAll` `Button[CE]`
+- `ButtonPlus` `Button[+]`
+- `ButtonSubtraktion` `Button[-]`
+- `ButtonMultiplikation` `Button[*]`
+- `ButtonDivision` `Button[/]`
+- `ButtonEreignis` `Button[=]`
+
+```C
+  - AreaLeft: 234 / AreaTop: 78 / AreaRight: 324 /
+  - AreaBottom: 96 / AreaWidth: 90 / AreaHeight: 18
+```
+
+## Ausgabe > Label
+
+`OutputLabel` `Label`
+
+```C
+    - AreaLeft: 120 / AreaTop: 12 / AreaRight: 348 /
+    - AreaBottom: 60 / AreaWidth: 228 / AreaHeight: 48
+```
+
+## Ausgabe > Label
+
+- `MerkerLabelLast` `Label[b]`
+- `MerkerLabelVZ` `Label[a]`
+
+```C
+    - AreaLeft: 120 / AreaTop: 12 / AreaRight: 348 /
+    - AreaBottom: 60 / AreaWidth: 228 / AreaHeight: 48
+```
+
+## Ansicht > DataList
+
+- `LastLineDataList` `DataList`
+
+```C
+    - AreaLeft: 120 / AreaTop: 12 / AreaRight: 348 /
+    - AreaBottom: 60 / AreaWidth: 228 / AreaHeight: 48
+```
+
+---
+
 ```C
 // _Taschenrechner
 @A+
