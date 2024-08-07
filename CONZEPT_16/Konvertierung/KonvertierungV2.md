@@ -14,33 +14,35 @@
 
 ## Das Konzept 16 befasst sich mit der Konvertierung von Werten zwischen verschiedenen Datentypen,
 
-- wie Alpha (Text), Integer, BigInt, Float, Decimal, Time, Date, und Checkbox- und Radiobutton-Zuständen.
+-- wie `Alpha` (Text), `Integer`, `BigInt`,
+-- `Float`, `Decimal`, `Time`, `Date`,
+-- `Checkbox`- und `Radiobutton`-Zuständen
 
 ## Hauptfunktionen:
 
-- `EvtClickedButton:`
+`EvtClickedButton:`
 
 - Diese Funktion verarbeitet Klickereignisse auf Schaltflächen.
 - Je nach Name der angeklickten Schaltfläche werden Werte zwischen zwei Feldern konvertiert.
 - Unterstützt Konvertierungen zwischen verschiedenen Datentypen (z. B. Alpha zu Integer, BigInt zu Alpha usw.).
 
-- `EvtClickedCheckbox1:`
+`EvtClickedCheckbox1:`
 
 - Reagiert auf Klicks auf ein Kontrollkästchen.
 - Setzt den Wert eines anderen Feldes auf `"1"` (wenn das Kontrollkästchen aktiviert ist) oder `"0" `(wenn deaktiviert).
 
-- `EvtClickedButton1:`
+`EvtClickedButton1:`
 
 - Verarbeitet Klicks auf einen `Radiobutton`.
 - Setzt den Text eines Zielfeldes auf `"True"` (wenn der Radiobutton aktiviert ist) oder `"False"` (wenn deaktiviert).
 
-- `Hauptprogramm (Main):`
+`Hauptprogramm (Main):`
 
-- Öffnet ein Dialogfenster mit dem Namen "KonvertierungV2".
+- Öffnet ein Dialogfenster mit dem Namen `"KonvertierungV2"`.
 - Führt den Dialog aus (wartet auf Benutzerinteraktionen).
 - Schließt das Dialogfenster nach Beendigung.
 
-- `Wichtige Hinweise:`
+`Wichtige Hinweise:`
 
 - Der Code verwendet spezielle Funktionen wie `CnvAI` `(Alpha to Integer)`, `CnvAB` `(Alpha to BigInt)`, etc. für die Konvertierungen.
 - Die Verwendung von `SWITCH` ermöglicht die effiziente Verarbeitung verschiedener Schaltflächenklicks.
