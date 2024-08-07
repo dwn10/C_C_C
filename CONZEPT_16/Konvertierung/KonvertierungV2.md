@@ -15,8 +15,8 @@
 ## Das Konzept 16 befasst sich mit der Konvertierung von Werten zwischen verschiedenen Datentypen,
 
 - wie `Alpha` (Text), `Integer`, `BigInt`,
-  - `Float`, `Decimal`, `Time`, `Date`,
-  - `Checkbox`- und `Radiobutton`-Zuständen
+- `Float`, `Decimal`, `Time`, `Date`,
+- `Checkbox`- und `Radiobutton`-Zuständen
 
 ## Hauptfunktionen:
 
