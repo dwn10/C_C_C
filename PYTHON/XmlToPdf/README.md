@@ -42,8 +42,8 @@ Zeigt Warnmeldungen an, wenn versucht wird herunterzuladen, ohne Zeilen auszuwä
 Wichtige Bibliotheken
 ```
 
-`streamlit:` Zur Erstellung der interaktiven Webanwendung.
-`pandas:` Zur Datenverarbeitung und Tabellenanzeige.
-`xml.etree.ElementTree:` Zum Lesen und Schreiben von XML-Daten.
-`fpdf:` Zum Erstellen von PDF-Dokumenten.
-`io:` Zur Arbeit mit Bytes-Objekten (für den Download).
+- `streamlit:` Zur Erstellung der interaktiven Webanwendung.
+- `pandas:` Zur Datenverarbeitung und Tabellenanzeige.
+- `xml.etree.ElementTree:` Zum Lesen und Schreiben von XML-Daten.
+- `fpdf:` Zum Erstellen von PDF-Dokumenten.
+- `io:` Zur Arbeit mit Bytes-Objekten (für den Download).
