@@ -1,0 +1,188 @@
+
+
+@startuml
+
+!theme crt-green
+!include <C4/C4_Context>
+title Ablaufdiagramm - Inventarsystem D.Paz
+
+start
+
+:Benutzername und Passwort eingeben;
+:Benutzer validieren;
+
+if (Ist der Benutzer gültig?) then (ja)
+  :Hauptmenü anzeigen;
+  :Option auswählen;
+  switch (Option)
+    case (Produkt hinzufügen)
+      :Produktdaten eingeben;
+      :Produkt in der Datenbank speichern;
+    case (Produkt löschen)
+      :Zu löschendes Produkt auswählen;
+      :Produkt aus der Datenbank löschen;
+    case (Produkt aktualisieren)
+      :Zu aktualisierendes Produkt auswählen;
+      :Neue Produktdaten eingeben;
+      :Produkt in der Datenbank aktualisieren;
+    case (Inventar anzeigen)
+      :Produktliste anzeigen;
+    case (Beenden)
+      :Sitzung beenden;
+  endswitch
+  :Zurück zum Hauptmenü;
+else (nein)
+  :Fehlermeldung anzeigen;
+  :Zurück zur Anmeldung;
+endif
+
+stop
+
+@enduml
+
+
+@startuml
+
+!theme crt-green
+!include <C4/C4_Context>
+title Usecase Diagramm
+
+left to right direction
+
+Actor "Administrator" as admin
+Actor "Benutzer" as user
+
+Rectangle Inventar_System {
+  admin -- (Anmelden)
+  (Anmelden) <. (Login validieren) : include
+  (Anmelden) <.. (Passwort wiederherstellen) : extends
+  (Login validieren) <. (DB abfragen) : include
+  (Passwort wiederherstellen) <. (DB abfragen) : include
+
+  admin -- (Benutzer verwalten)
+  admin -- (Produkte verwalten)
+  admin -- (Berichte generieren)
+
+  user -- (Inventar abfragen)
+  (Inventar abfragen) <. (DB abfragen) : include
+  user -- (Produktanfrage stellen)
+  (Produktanfrage stellen) <. (DB abfragen) : include
+}
+
+@enduml
+
+
+
+@startuml
+
+!theme crt-green
+!include <C4/C4_Context>
+title PackageStyle - Inventarsystem D.Paz
+
+:Main Admin: as Admin
+(Use the application) as (Use)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Use)
+
+note right of Admin : This is an example.
+
+note right of (Use)
+  A note can also
+  be on several lines
+end note
+
+note "This note is connected\nto several objects." as N2
+(Start) .. N2
+N2 .. (Use)
+
+@enduml
+
+
+
+@startgantt
+
+!theme crt-green
+!include <C4/C4_Context>
+title Gantt Diagramm - Aufgaben
+
+[Task1] requires 20 days
+then [Task2] requires 4 days
+-- Phase Two --
+then [Task3] requires 3 days
+then [Task4] requires 3 days
+-- Phase Tree --
+[Task3] requires 3 days
+then [Task4] requires 4 days
+
+@endgantt
+
+
+
+@startgantt
+
+!theme crt-green
+!include <C4/C4_Context>
+title << Aufgaben >>
+
+Project starts 2024-10-14
+
+[taskA] starts 2024-10-14 and requires 3 days
+[taskB] starts 2024-10-25 and requires 3 days
+[taskB] displays on same row as [taskA]
+
+[task01] starts 2024-10-14 and requires 4 days
+
+then [task02] requires 8 days
+note bottom
+  note for task02
+  more notes
+end note
+
+then [task03] requires 7 days
+note bottom
+  note for task03
+  more notes
+end note
+
+-- separator --
+
+[taskC] starts 2020-09-02 and requires 5 days
+[taskD] starts 2020-09-09 and requires 5 days
+[taskD] displays on same row as [taskC]
+
+[task 10] starts 2020-09-05 and requires 5 days
+then [task 11] requires 5 days
+note bottom
+  note for task11
+  more notes
+end note
+
+@endgantt
+
+
+
+@startgantt
+
+!theme crt-green
+!include <C4/C4_Context>
+title << Process >>
+
+[Kick off] requires 1 days and is colored in LightGreen
+then [Prototype design] requires 5 days
+[Test prototype] requires 4 days
+[Test prototype] starts at [Prototype design]'s end
+[Prototype design] is colored in Orange
+[Test prototype] is colored in Yellow
+
+legend
+Legend:
+|= Color |= Task Type |
+|<#Yellow> | Planned |
+|<#Orange>| In progress |
+|<#LightGreen> | Done |
+end legend
+
+@endgantt
