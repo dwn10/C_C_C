@@ -27,10 +27,10 @@ const Project = {
 
 #### 2 Analyse und Design
 - [2.1 Durchführung der Ist-Analyse.](#21-durchführung-der-ist-analyse)
-- [2.2 Durchführung der Wirtschaftlichkeitsanalyse inkl. Amortisationsrechnung.](#22-Durchführung-der-Wirtschaftlichkeitsanalyse-inkl.-Amortisationsrechnung)
-- [2.3 Ermittlung von Anwendungsfällen inkl. Erstellung eines Anwendungsfall-Diagramms.](#)
-- [2.4 Erstellung einer erweiterten Ereignisgesteuerten Prozesskette.]()
-- [2.5 Unterstützung des Fachbereichs beim Erstellen des Lastenhefts.]()
+- [2.2 Durchführung der Wirtschaftlichkeitsanalyse inkl. Amortisationsrechnung.](#22-durchf%C3%BChrung-der-wirtschaftlichkeitsanalyse-inkl-amortisationsrechnung)
+- [2.3 Ermittlung von Anwendungsfällen inkl. Erstellung eines Anwendungsfall-Diagramms.](#23-ermittlung-von-anwendungsf%C3%A4llen-inkl-erstellung-eines-anwendungsfall-diagramms)
+- [2.4 Erstellung einer erweiterten Ereignisgesteuerten Prozesskette.](#24-erstellung-einer-erweiterten-ereignisgesteuerten-prozesskette)
+- [2.5 Unterstützung des Fachbereichs beim Erstellen des Lastenhefts.](#25-unterst%C3%BCtzung-des-fachbereichs-beim-erstellen-des-lastenhefts)
 
 #### 3 Entwurf
 - [3.1 Entwurf der Datenbank und der Anwendungsstruktur.]()
