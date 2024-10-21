@@ -157,6 +157,7 @@ berechnen
       60 
 
 #### 2.3 Ermittlung von Anwendungsfällen inkl. Erstellung eines [Anwendungsfall-Diagramms.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/DiagrammeIMG.md#usecase-diagramm)
+Ein weiterer Schritt der Analysephase war die Darstellung der wichtigsten fachlichen Anwendungsfälle. Dafür wurde mithilfe der Unified Modeling Language (UML).
 
 - **Aktionen des Administrators:**
 Der Administrator kann sich anmelden, wobei die Aktionen "Login validieren" und optional "Passwort wiederherstellen" inkludiert sind. Beide Aktionen beinhalten Datenbankabfragen.
@@ -173,8 +174,38 @@ Prozessablauf eines Inventarsystems. Nach Eingabe von Benutzername und Passwort 
 - **Produkt aktualisieren:** Zu aktualisierendes Produkt auswählen, neue Daten eingeben und in der Datenbank aktualisieren.
 - **Inventar anzeigen:** Produktliste anzeigen.
 - **Beenden:** Sitzung beenden.
+
 Nach jeder Aktion kehrt der Benutzer zum Hauptmenü zurück. Ist der Benutzer ungültig, wird eine Fehlermeldung angezeigt und der Benutzer muss sich erneut anmelden.
 
 #### 2.5 Unterstützung des Fachbereichs beim Erstellen des Lastenhefts.
+Die Analysephase gipfelte in der Erstellung einer Anforderungsspezifikation in Zusammenarbeit mit der Personalabteilung. Diese Spezifikation, die die Grundlage für die technische Umsetzung bildet, umfasst alle technischen Anforderungen des Projekts.
+
+Anhand des Anwendungsfalldiagramms und der Gespräche mit der Personalabteilung wurden die technischen Anforderungen für die Webanwendung mithilfe der MoSCoW-Methode erfasst, dokumentiert und priorisiert. Diese Methode klassifiziert die Anforderungen nach ihrer Wichtigkeit in vier Kategorien: Muss haben, Sollte haben, Könnte haben und Wird nicht haben.
+
+#### 3 Entwurf
+In der Entwurfsphase, die auf die Analyse folgte, entstanden konkrete Pläne für die Architektur, das Datenmodell und die Benutzeroberflächen der Anwendung.  Parallel dazu wurden  Qualitätssicherungsmaßnahmen definiert und ein Pflichtenheft erarbeitet, welches die technischen Spezifikationen zur Umsetzung der im Lastenheft beschriebenen fachlichen Anforderungen enthielt.
+
+#### 3.1 Entwurf der [Datenbank](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/DiagrammeIMG.md#tabellenmodell) und der Anwendungsstruktur.
+Das System verfolgt Produkte mit vollständigen Details, einschließlich Kategorien, Marken und Preisen. Darüber hinaus zeichnet das "Kardex" alle Inventarbewegungen auf, bietet einen Transaktionsverlauf und ermöglicht eine Analyse des Produktflusses.
+
+- **firma:** Speichert Informationen über das Unternehmen, einschließlich Name, Währungssymbol und ID des Administratorbenutzers.
+- **firmazuordnen:** Ordnet Benutzer Firmen zu.
+- **kategorien:** Definiert Produktkategorien mit Beschreibung und Farbe.
+- **kardex:** Registriert Inventarbewegungen (Einträge, Ausgänge) mit Datum, Typ, Benutzer, Produkt, Menge, Details und Status.
+- **marke:** Speichert Informationen über die Marken der Produkte.
+- **modul:** Scheint mit Berechtigungen oder Modulen des Systems zusammenzuhängen, mit einem Namen und einem Status ("check").
+- **berechtigungen:** Weist Benutzern Berechtigungen in Bezug auf die Module zu.
+- **produkte:** Enthält detaillierte Informationen zu den Produkten, einschließlich Beschreibung, Marke, Lagerbestand, Mindestbestand, Codes, Preisen und Kategorie.
+- **users:** Speichert Informationen der Systembenutzer.
+
+#### 3.2 Entwurf der Benutzeroberfläche inkl. Erstellung von Mock-Ups.
+
+#### 3.3 Erstellung eines ER-Modells.
+
+#### 3.4 Entwurf der PDF auf Basis der Oberfläche.
+
+#### 3.5 Planung der Architektur inkl. Erstellung eines Komponentendiagramms.
+
+#### 3.6 Erstellung des Pflichtenhefts.
 
 
