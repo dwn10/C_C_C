@@ -34,11 +34,11 @@ const Project = {
 
 #### 3 Entwurf
 - [3.1 Entwurf der Datenbank und der Anwendungsstruktur.](#31-entwurf-der-datenbank-und-der-anwendungsstruktur)
-- [3.2 Entwurf der Benutzeroberfläche inkl. Erstellung von Mock-Ups.]()
-- [3.3 Erstellung eines ER-Modells.]()
-- [3.4 Entwurf der PDF auf Basis der Oberfläche.]()
-- [3.5 Planung der Architektur inkl. Erstellung eines Komponentendiagramms.]()
-- [3.6 Erstellung des Pflichtenhefts.]()
+- [3.2 Entwurf der Benutzeroberfläche inkl. Erstellung von Mock-Ups.](#32-entwurf-der-benutzeroberfl%C3%A4che-inkl-erstellung-von-mock-ups)
+- [3.3 Erstellung eines ER-Modells.](#33-erstellung-eines-er-modells)
+- [3.4 Entwurf der PDF auf Basis der Oberfläche.](#34-entwurf-der-pdf-auf-basis-der-oberfl%C3%A4che)
+- [3.5 Planung der Architektur inkl. Erstellung eines Komponentendiagramms.](#35-planung-der-architektur-inkl-erstellung-eines-komponentendiagramms)
+- [3.6 Erstellung des Pflichtenhefts.](#36-erstellung-des-pflichtenhefts)
 
 #### 4 Implementierung inkl. Tests
 - [4.1 Hauptfunktionen des Systems entwickeln.]()
@@ -57,8 +57,8 @@ const Project = {
 - [5.4 Deployment der Anwendung.]()
 
 #### 6 Dokumentation
-- [6.1 Erstellung des Benutzerhandbuchs.]()
-- [6.2 Erstellung der Entwicklerdokumentation.]()
+- [6.1 Erstellung des Benutzerhandbuchs.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/User.md#benutzerhandbuch)
+- [6.2 Erstellung der Entwicklerdokumentation.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Dev.md#ein-inventar-projekt-mit-react-und-supabase-in-visual-studio-code-erstellen)
 
 #### 1 Projektplanung
 Dieses Kapitel beschreibt die umfassende Planung des Projekts, die die Auswahl einer geeigneten Entwicklungsmethode und die Identifizierung der für die Durchführung erforderlichen Ressourcen umfasst.
