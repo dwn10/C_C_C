@@ -185,7 +185,7 @@ Anhand des Anwendungsfalldiagramms und der Gespräche mit der Personalabteilung 
 #### 3 Entwurf
 In der Entwurfsphase, die auf die Analyse folgte, entstanden konkrete Pläne für die Architektur, das Datenmodell und die Benutzeroberflächen der Anwendung.  Parallel dazu wurden  Qualitätssicherungsmaßnahmen definiert und ein Pflichtenheft erarbeitet, welches die technischen Spezifikationen zur Umsetzung der im Lastenheft beschriebenen fachlichen Anforderungen enthielt.
 
-#### 3.1 Entwurf der [Datenbank](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/DiagrammeIMG.md#tabellenmodell) und der Anwendungsstruktur.
+#### 3.1 Entwurf der [Datenbank](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/DiagrammeIMG.md#table-structure) und der Anwendungsstruktur.
 Das System verfolgt Produkte mit vollständigen Details, einschließlich Kategorien, Marken und Preisen. Darüber hinaus zeichnet das "Kardex" alle Inventarbewegungen auf, bietet einen Transaktionsverlauf und ermöglicht eine Analyse des Produktflusses.
 
 - **firma:** Speichert Informationen über das Unternehmen, einschließlich Name, Währungssymbol und ID des Administratorbenutzers.
