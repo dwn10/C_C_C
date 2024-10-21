@@ -27,7 +27,7 @@ const Project = {
 
 #### 2 Analyse und Design
 - [2.1 Durchführung der Ist-Analyse.](#21-durchführung-der-ist-analyse)
-- [2.2 Durchführung der Wirtschaftlichkeitsanalyse inkl. Amortisationsrechnung.]()
+- [2.2 Durchführung der Wirtschaftlichkeitsanalyse inkl. Amortisationsrechnung.](#22-Durchführung-der-Wirtschaftlichkeitsanalyse-inkl.-Amortisationsrechnung)
 - [2.3 Ermittlung von Anwendungsfällen inkl. Erstellung eines Anwendungsfall-Diagramms.]()
 - [2.4 Erstellung einer erweiterten Ereignisgesteuerten Prozesskette.]()
 - [2.5 Unterstützung des Fachbereichs beim Erstellen des Lastenhefts.]()
