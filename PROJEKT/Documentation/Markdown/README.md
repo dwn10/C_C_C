@@ -33,7 +33,7 @@ const Project = {
 - [2.5 Unterstützung des Fachbereichs beim Erstellen des Lastenhefts.](#25-unterst%C3%BCtzung-des-fachbereichs-beim-erstellen-des-lastenhefts)
 
 #### 3 Entwurf
-- [3.1 Entwurf der Datenbank und der Anwendungsstruktur.]()
+- [3.1 Entwurf der Datenbank und der Anwendungsstruktur.](#31-entwurf-der-datenbank-und-der-anwendungsstruktur)
 - [3.2 Entwurf der Benutzeroberfläche inkl. Erstellung von Mock-Ups.]()
 - [3.3 Erstellung eines ER-Modells.]()
 - [3.4 Entwurf der PDF auf Basis der Oberfläche.]()
@@ -199,8 +199,27 @@ Das System verfolgt Produkte mit vollständigen Details, einschließlich Kategor
 - **users:** Speichert Informationen der Systembenutzer.
 
 #### 3.2 Entwurf der Benutzeroberfläche inkl. Erstellung von Mock-Ups.
+Für die Gestaltung benutzerfreundlicher Oberflächen wurden in Zusammenarbeit mit der Personalabteilung Mockups erstellt. Ein Mockup ist die visuelle Darstellung eines Designentwurfs.
 
-#### 3.3 Erstellung eines ER-Modells.
+Zur Erstellung dieser Mockups wurde die Software Figma verwendet. Anhand von Anwendungsfällen wurden die notwendigen Oberflächen für Login, Produktverwaltung etc. ermittelt.
+
+Das Design umfasst beispielsweise die Farbgestaltung und Positionierung bestimmter Elemente.  Zusätzlich wurden wiederkehrende Elemente wie Logo und Navigationsleiste in Kopf- und Fußzeile integriert. Das erste Mockup zeigt die Benutzeroberfläche für die Zugangsverwaltung zur Plattform.
+
+#### 3.3 Erstellung eines [ER-Modells.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/DiagrammeIMG.md#tabellenmodell)
+
+**Haupt Entitäten:**
+
+- **firma (1):** Unternehmen mit Name und Währung. Jedes Unternehmen hat einen Administrator (Benutzer).
+- **benutzer (n):** Benutzer mit Name, Kontaktinformationen, Registrierungsdatum, Typ und ID.
+- **produkte (n):** Produkt mit Beschreibung, Marke, Lagerbestand, Barcodes, Preis, Kategorie und Unternehmen.
+- **kategorien (n):** Produktkategorie mit Beschreibung, Farbe und zugehörigem Unternehmen.
+- **marke (n):** Produktmarke mit Beschreibung und zugehörigem Unternehmen.
+
+**Beziehungen:**
+
+- **firmazuordnen (n:n):** Ordnet Benutzer Unternehmen zu. Ein Benutzer kann zu mehreren Unternehmen gehören und ein Unternehmen kann mehrere Benutzer haben.
+- **kardex (n):** Inventaraufzeichnung mit Datum, Transaktionstyp, Benutzer, Produkt, Menge, Unternehmen, Details und Status.
+- **berechtigungen (n:n):** Verwaltet Benutzerberechtigungen. Ordnet Benutzer Systemmodulen zu. Ein Benutzer kann auf mehrere Module zugreifen und ein Modul kann für mehrere Benutzer zugänglich sein.
 
 #### 3.4 Entwurf der PDF auf Basis der Oberfläche.
 

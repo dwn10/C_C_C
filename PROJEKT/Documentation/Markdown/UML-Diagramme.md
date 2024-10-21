@@ -243,4 +243,140 @@ title Projekt
 
 ```
 
+### Komponentendiagramm
+```plantuml
+
+@startuml
+!theme superhero
+!include <C4/C4_Component>
+
+System_Boundary(c1, "Inventar") {
+  Component(ui, "Benutzeroberfläche", "React", "Intuitive und responsive Web-Oberfläche")
+  Component(api, "API", "Supabase", "API für den Zugriff auf die Datenbank und Authentifizierung")
+  Component(db, "Datenbank", "PostgreSQL", "Speicherung der Inventardaten")
+  Component(auth, "Authentifizierung", "Supabase Auth", "Verwaltung der Authentifizierung und Autorisierung von Benutzern")
+  Component(storage, "Dateispeicher", "Supabase Storage", "Speicherung von Produktbildern")
+  Component(reporting, "Berichtsgenerierung", "React-pdf", "Generierung von PDF-Berichten")
+  
+  Rel(ui, api, "Liest/Schreibt Daten", "API REST")
+  Rel(api, db, "Liest/Schreibt Daten")
+  Rel(api, auth, "Authentifiziert Benutzer")
+  Rel(api, storage, "Speichert/Ruft Bilder ab")
+  Rel(ui, reporting, "Generiert Berichte")
+}
+
+System_Ext(erp, "ERP-System", "Externes System")
+
+Rel(api, erp, "Optionale Integration", "API")
+@enduml
+
+```
+
+### ER-Modell
+```plantuml
+
+@startuml
+!theme toy
+
+title ER-Modell
+
+entity firma {
+  * id (PK)
+  --
+  name
+  währungssymbol
+  iduseradmin
+}
+
+entity firmazuordnen {
+  * id (PK)
+  --
+  id_firma
+  id_user
+}
+
+entity kategorien {
+  * id (PK)
+  --
+  beschreibung
+  color
+  id_firma
+}
+
+entity kardex {
+  * id (PK)
+  --
+  datum
+  typ
+  id_user
+  id_producto
+  anzahl
+  id_firma
+  details
+  status
+}
+
+entity marke {
+  * id (PK)
+  --
+  beschreibung
+  id_firma
+}
+
+entity modul {
+  * id (PK)
+  --
+  name
+  check
+}
+
+entity berechtigungen {
+  * id (PK)
+  --
+  id_user
+  id_modul
+}
+
+entity produkte {
+  * id (PK)
+  --
+  beschreibung
+  id_marke
+  aktueller_lagerbestand
+  mindestbestand
+  barcode
+  interner_code
+  verkaufspreis
+  kaufpreis
+  id_kategorie
+  id_firma
+}
+
+entity users {
+  * id (PK)
+  --
+  namen
+  nr_doc
+  telefon
+  adresse
+  datum_reg
+  status
+  typuser
+  idauth
+  typdoc
+  email
+}
+
+firma ||--|{ firmazuordnen : "1" Firma "kann mehrere" Benutzer "haben"
+firmazuordnen }|--|| users : "1" Benutzer "kann mehreren" Firmen "zugeordnet sein"
+kategorien }|--|| produkte : "1" Kategorie "kann mehrere" Produkte "haben"
+marke ||--|{ produkte : "1" Marke "kann mehrere" Produkte "haben"
+modul ||--|{ berechtigungen : "1" Modul "kann mehreren" Benutzern "zugeordnet sein"
+berechtigungen }|--|| users : "1" Benutzer "kann Zugriff auf mehrere" Module "haben"
+produkte ||--|{ kardex : "1" Produkt "kann in mehreren" Inventarbewegungen "vorkommen"
+users ||--|{ kardex : "1" Benutzer "kann mehrere" Inventarbewegungen "durchführen"
+
+@enduml
+
+```
 
