@@ -47,12 +47,12 @@ Die folgenden Grafiken sind zum besseren Verständnis mit einem Teil des Codes v
 
 ### Komponentendiagramm
 
-<a href="#" target="_blank">
-  <img src="#" style="height: 80%; width:80%;"/>
+<a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/UML-Diagramme.md#Komponentendiagramm" target="_blank">
+  <img src="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/img/diagram5.png" style="height: 80%; width:80%;"/>
 </a>
 
 ### ER-Modell
 
-<a href="#" target="_blank">
-  <img src="#" style="height: 80%; width:80%;"/>
+<a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/UML-Diagramme.md#ER-Modell" target="_blank">
+  <img src="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/img/diagram6.png" style="height: 80%; width:80%;"/>
 </a>
