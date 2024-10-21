@@ -1,6 +1,6 @@
 # Lastenheft für das Inventarsystem mit React und Supabase
 #### 1. Einleitung
-Dieses Dokument beschreibt die Anforderungen an ein neues Inventarsystem für die SOFTWEAVER GmbH, das mit React und Supabase entwickelt werden soll. Das aktuelle System ist nicht webbasiert und kann nur von einem PC aus verwaltet werden, was zu Einschränkungen bei der Flexibilität und dem Zugriff führt. Das neue System soll diese Einschränkungen beseitigen und eine effiziente Verwaltung von Produkten, Lagerbeständen und Ressourcen ermöglichen.
+Dieses Dokument beschreibt die Anforderungen an ein neues Web Inventarsystem für die SOFTWEAVER GmbH. Das aktuelle System ist nicht webbasiert und kann nur von einem PC aus verwaltet werden, was zu Einschränkungen bei der Flexibilität und dem Zugriff führt. Das neue System soll diese Einschränkungen beseitigen und eine effiziente Verwaltung von Produkten, Lagerbeständen und Ressourcen ermöglichen.
 
 #### 2. Anforderungen
 

@@ -177,7 +177,7 @@ Prozessablauf eines Inventarsystems. Nach Eingabe von Benutzername und Passwort 
 
 Nach jeder Aktion kehrt der Benutzer zum Hauptmenü zurück. Ist der Benutzer ungültig, wird eine Fehlermeldung angezeigt und der Benutzer muss sich erneut anmelden.
 
-#### 2.5 Unterstützung des Fachbereichs beim Erstellen des Lastenhefts.
+#### 2.5 Unterstützung des Fachbereichs beim Erstellen des [Lastenhefts.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Lastenheft.md#lastenheft-f%C3%BCr-das-inventarsystem-mit-react-und-supabase)
 Die Analysephase gipfelte in der Erstellung einer Anforderungsspezifikation in Zusammenarbeit mit der Personalabteilung. Diese Spezifikation, die die Grundlage für die technische Umsetzung bildet, umfasst alle technischen Anforderungen des Projekts.
 
 Anhand des Anwendungsfalldiagramms und der Gespräche mit der Personalabteilung wurden die technischen Anforderungen für die Webanwendung mithilfe der MoSCoW-Methode erfasst, dokumentiert und priorisiert. Diese Methode klassifiziert die Anforderungen nach ihrer Wichtigkeit in vier Kategorien: Muss haben, Sollte haben, Könnte haben und Wird nicht haben.
