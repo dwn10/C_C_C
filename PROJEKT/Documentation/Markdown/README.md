@@ -223,7 +223,8 @@ Das Design umfasst beispielsweise die Farbgestaltung und Positionierung bestimmt
 
 #### 3.4 Entwurf der PDF auf Basis der Oberfläche.
 
-#### 3.5 Planung der Architektur inkl. Erstellung eines Komponentendiagramms.
+#### 3.5 Planung der Architektur inkl. Erstellung eines [Komponentendiagramms.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/DiagrammeIMG.md#komponentendiagramm)
+
 
 #### 3.6 Erstellung des Pflichtenhefts.
 
