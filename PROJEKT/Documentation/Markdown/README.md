@@ -1,7 +1,8 @@
 <p align="center">
   <a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Dev.md#ein-inventar-projekt-mit-react-und-supabase-in-visual-studio-code-erstellen" target="_blank">Entwicklerdokumentation</a> •
   <a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/User.md#benutzerhandbuch" target="_blank">Benutzerdokumentation</a> •
-  <a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/DiagrammeIMG.md#diagramme" target="_blank">Diagramme</a>
+  <a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/DiagrammeIMG.md#diagramme" target="_blank">Diagramme</a> •
+  <a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Links.md#projektlinks-und-ressourcen" target="_blank">Projektlinks</a>
 </p>
 
 # Inventarsystem
@@ -155,9 +156,24 @@ berechnen
 ........................... ×50 €/h ≈ 13.779 €/Jahr
       60 
 
-#### 2.3 Ermittlung von Anwendungsfällen inkl. Erstellung eines Anwendungsfall-Diagramms.
+#### 2.3 Ermittlung von Anwendungsfällen inkl. Erstellung eines [Anwendungsfall-Diagramms.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/DiagrammeIMG.md#usecase-diagramm)
 
-#### 2.4 Erstellung einer erweiterten Ereignisgesteuerten Prozesskette.
+- **Aktionen des Administrators:**
+Der Administrator kann sich anmelden, wobei die Aktionen "Login validieren" und optional "Passwort wiederherstellen" inkludiert sind. Beide Aktionen beinhalten Datenbankabfragen.
+Der Administrator kann Benutzer verwalten, Produkte verwalten und Berichte generieren.
+
+- **Aktionen des Benutzers:**
+Der Benutzer kann das Inventar abfragen und eine Produktanfrage stellen. Beide Aktionen beinhalten Datenbankabfragen.
+
+#### 2.4 Erstellung einer erweiterten Ereignisgesteuerten [Prozesskette.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/DiagrammeIMG.md#ablaufdiagramm)
+Prozessablauf eines Inventarsystems. Nach Eingabe von Benutzername und Passwort erfolgt eine Validierung. Ist der Benutzer gültig, wird das Hauptmenü angezeigt, in dem der Benutzer zwischen verschiedenen Optionen wählen kann:
+
+- **Produkt hinzufügen:** Produktdaten eingeben und in der Datenbank speichern.
+- **Produkt löschen:** Zu löschendes Produkt auswählen und aus der Datenbank löschen.
+- **Produkt aktualisieren:** Zu aktualisierendes Produkt auswählen, neue Daten eingeben und in der Datenbank aktualisieren.
+- **Inventar anzeigen:** Produktliste anzeigen.
+- **Beenden:** Sitzung beenden.
+Nach jeder Aktion kehrt der Benutzer zum Hauptmenü zurück. Ist der Benutzer ungültig, wird eine Fehlermeldung angezeigt und der Benutzer muss sich erneut anmelden.
 
 #### 2.5 Unterstützung des Fachbereichs beim Erstellen des Lastenhefts.
 
