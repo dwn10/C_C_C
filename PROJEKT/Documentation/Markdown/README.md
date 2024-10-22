@@ -41,14 +41,14 @@ const Project = {
 - [3.6 Erstellung des Pflichtenhefts.](#36-erstellung-des-pflichtenhefts)
 
 #### 4 Implementierung inkl. Tests
-- [4.1 Hauptfunktionen des Systems entwickeln.]()
-- [4.2 Verwendung von Supabase Realtime-Funktionen.]()
-- [4.3 Implementierung des Logins.]()
-- [4.4 Verwendung von React-pdf zur Erstellung von PDF-Berichten.]()
-- [4.5 Speicherung von Kaufpreisinformationen in der Supabase-Datenbank.]()
-- [4.6 Verwendung von APIs, um eine Verbindung zu den externen Diensten herzustellen.]()
-- [4.7 Implementierung der Oberfläche der Webanwendung.]()
-- [4.8 Verwendung von Funktionen zur Berechnung von Leistungskennzahlen.]()
+- [4.1 Hauptfunktionen des Systems entwickeln.](#41-hauptfunktionen-des-systems-entwickeln)
+- [4.2 Verwendung von Supabase Realtime-Funktionen.](#42-verwendung-von-supabase-realtime-funktionen)
+- [4.3 Implementierung des Logins.](#43-implementierung-des-logins)
+- [4.4 Verwendung von React-pdf zur Erstellung von PDF-Berichten.](#44-verwendung-von-react-pdf-zur-erstellung-von-pdf-berichten)
+- [4.5 Speicherung von Kaufpreisinformationen in der Supabase-Datenbank.](#45-speicherung-von-kaufpreisinformationen-in-der-supabase-datenbank)
+- [4.6 Verwendung von APIs, um eine Verbindung zu den externen Diensten herzustellen.](#46-verwendung-von-apis-um-eine-verbindung-zu-den-externen-diensten-herzustellen)
+- [4.7 Implementierung der Oberfläche der Webanwendung.](#47-implementierung-der-oberfl%C3%A4che-der-webanwendung)
+- [4.8 Verwendung von Funktionen zur Berechnung von Leistungskennzahlen.](#48-verwendung-von-funktionen-zur-berechnung-von-leistungskennzahlen)
 
 #### 5 Abnahme und Einführung
 - [5.1 Code-Review.]()
@@ -274,16 +274,16 @@ Diese Komponente stellt eine Benutzeroberfläche zur Erstellung von PDF-Berichte
 #### 3.6 Erstellung des [Pflichtenhefts.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Lastenheft.md#pflichtenheft)
 Dieses Dokument beschreibt die Anforderungen an das zu entwickelnde Webinventarsystem für die SOFTWEAVER GmbH. Es basiert auf dem Projektantrag und den Ergebnissen der Analysephase. Das Dokument dient als Grundlage für die Implementierung und definiert die Funktionen, Qualitätsmerkmale und Rahmenbedingungen des Systems.
 
-#### [4 Implementierung inkl. Tests](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Dev.md#crud-produkte)
+#### 4 Implementierung inkl. Tests
 Dieser Abschnitt beschreibt die Implementierung der Produktverwaltung. Der Fokus liegt auf den CRUD-Operationen (Erstellen, Lesen, Aktualisieren, Löschen). Für die Umsetzung werden React (Frontend) und Supabase (Backend) verwendet.
 
-#### 4.1 Hauptfunktionen des Systems entwickeln.
+#### 4.1 [Hauptfunktionen des Systems entwickeln.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Dev.md#schritt-8-funktionen-hinzuf%C3%BCgen)
 
 
 #### 4.2 Verwendung von Supabase Realtime-Funktionen.
 
 
-#### 4.3 Implementierung des Logins.
+#### 4.3 [Implementierung des Logins.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Dev.md#login)
 
 
 #### 4.4 Verwendung von React-pdf zur Erstellung von PDF-Berichten.
