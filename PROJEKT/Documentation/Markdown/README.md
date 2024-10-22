@@ -222,9 +222,54 @@ Das Design umfasst beispielsweise die Farbgestaltung und Positionierung bestimmt
 - **berechtigungen (n:n):** Verwaltet Benutzerberechtigungen. Ordnet Benutzer Systemmodulen zu. Ein Benutzer kann auf mehrere Module zugreifen und ein Modul kann für mehrere Benutzer zugänglich sein.
 
 #### 3.4 Entwurf der PDF auf Basis der Oberfläche.
+Diese Komponente stellt eine Benutzeroberfläche zur Erstellung von PDF-Berichten bereit, die Informationen wie den Benutzer, die Produktbeschreibung, die Art der Bewegung (Eingabe oder Ausgabe), die Menge, das Datum und den aktuellen Lagerbestand enthalten.
 
 #### 3.5 Planung der Architektur inkl. Erstellung eines [Komponentendiagramms.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/DiagrammeIMG.md#komponentendiagramm)
 
+**Hauptkomponenten:**
+**Benutzeroberfläche (Frontend):**
+
+- Entwickelt mit React.
+- Bietet eine intuitive und responsive Oberfläche für die Benutzerinteraktion.
+- **Hauptkomponenten:**
+    - Produktverwaltung (Registrierung, Suche, Aktualisierung).
+    - Bestandsverwaltung (Visualisierung, Warnungen, Bewegungen).
+    - Lieferantenverwaltung (Registrierung, Historie, Bewertung).
+    - Berichtsgenerierung (Anpassung, Export).
+    - Authentifizierung und Zugriffskontrolle.
+- Anpassbares Design für verschiedene Geräte (Desktop, Tablets, Mobilgeräte).
+
+**API (Backend):**
+- Implementiert mit Supabase.
+- Bietet eine REST-API für die Kommunikation zwischen Frontend und Datenbank.
+- **Funktionalitäten:**
+    - Authentifizierung und Autorisierung von Benutzern.
+    - Datenzugriff (Lesen und Schreiben).
+    - Speicherung von Produktbildern.
+    - Integration mit externen Diensten (optional).
+
+**Datenbank:**
+- PostgreSQL (bereitgestellt von Supabase).
+- **Speichert Informationen über:**
+    - Produkte (Name, Code, Beschreibung, Kategorie, Preis, Lagerbestand, Bilder).
+    - Produktkategorien.
+    - Produktmarken.
+    - Benutzer (Rollen, Berechtigungen).
+    - Lagerbewegungen (Einträge, Ausgänge, Lagerbestand).
+    - Lieferanten.
+
+**Authentifizierung:**
+- Supabase Auth.
+- Verwaltet die Authentifizierung und Autorisierung von Benutzern.
+- Weist Rollen und Berechtigungen zu.
+
+**Dateispeicher:**
+- Supabase Storage.
+- Speichert Produktbilder.
+
+**Berichtsgenerierung:**- React-pdf.
+- Generiert Berichte im PDF-Format.
+- Ermöglicht die Anpassung und den Export von Berichten.
 
 #### 3.6 Erstellung des Pflichtenhefts.
 
