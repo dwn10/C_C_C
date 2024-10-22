@@ -271,6 +271,8 @@ Diese Komponente stellt eine Benutzeroberfläche zur Erstellung von PDF-Berichte
 - Generiert Berichte im PDF-Format.
 - Ermöglicht die Anpassung und den Export von Berichten.
 
-#### 3.6 Erstellung des Pflichtenhefts.
+#### 3.6 Erstellung des [Pflichtenhefts.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Lastenheft.md#pflichtenheft)
+Dieses Dokument beschreibt die Anforderungen an das zu entwickelnde Webinventarsystem für die SOFTWEAVER GmbH. Es basiert auf dem Projektantrag und den Ergebnissen der Analysephase. Das Dokument dient als Grundlage für die Implementierung und definiert die Funktionen, Qualitätsmerkmale und Rahmenbedingungen des Systems.
+
 
 
