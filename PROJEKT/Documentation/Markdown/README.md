@@ -152,9 +152,9 @@ Die Amortisationszeit wird berechnet, indem die Projektkosten (2.350 €) mit de
 Durch die Zeiteinsparung von 4.593 Minuten pro Jahr ließen sich die jährlich gesparten Kosten
 berechnen
 
-` 4.593 min/Jahr
-........................... ×50 €/h ≈ 13.779 €/Jahr
-      60 
+$$
+\displaystyle \frac{4.593 \ {\text{min/Jahr}}}{60 \ } \times 50 \ {€/h} \approx 13.779 \ {€ / Jahr}
+$$
 
 #### 2.3 Ermittlung von Anwendungsfällen inkl. Erstellung eines [Anwendungsfall-Diagramms.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/DiagrammeIMG.md#usecase-diagramm)
 Ein weiterer Schritt der Analysephase war die Darstellung der wichtigsten fachlichen Anwendungsfälle. Dafür wurde mithilfe der Unified Modeling Language (UML).
