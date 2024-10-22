@@ -274,5 +274,29 @@ Diese Komponente stellt eine Benutzeroberfläche zur Erstellung von PDF-Berichte
 #### 3.6 Erstellung des [Pflichtenhefts.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Lastenheft.md#pflichtenheft)
 Dieses Dokument beschreibt die Anforderungen an das zu entwickelnde Webinventarsystem für die SOFTWEAVER GmbH. Es basiert auf dem Projektantrag und den Ergebnissen der Analysephase. Das Dokument dient als Grundlage für die Implementierung und definiert die Funktionen, Qualitätsmerkmale und Rahmenbedingungen des Systems.
 
+#### [4 Implementierung inkl. Tests](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Dev.md#crud-produkte)
+Dieser Abschnitt beschreibt die Implementierung der Produktverwaltung. Der Fokus liegt auf den CRUD-Operationen (Erstellen, Lesen, Aktualisieren, Löschen). Für die Umsetzung werden React (Frontend) und Supabase (Backend) verwendet.
 
+#### 4.1 Hauptfunktionen des Systems entwickeln.
+
+
+#### 4.2 Verwendung von Supabase Realtime-Funktionen.
+
+
+#### 4.3 Implementierung des Logins.
+
+
+#### 4.4 Verwendung von React-pdf zur Erstellung von PDF-Berichten.
+
+
+#### 4.5 Speicherung von Kaufpreisinformationen in der Supabase-Datenbank.
+
+
+#### 4.6 Verwendung von APIs, um eine Verbindung zu den externen Diensten herzustellen.
+
+
+#### 4.7 Implementierung der Oberfläche der Webanwendung.
+
+
+#### 4.8 Verwendung von Funktionen zur Berechnung von Leistungskennzahlen.
 
