@@ -51,10 +51,10 @@ const Project = {
 - [4.8 Verwendung von Funktionen zur Berechnung von Leistungskennzahlen.](#48-verwendung-von-funktionen-zur-berechnung-von-leistungskennzahlen)
 
 #### 5 Abnahme und Einführung
-- [5.1 Code-Review.]()
-- [5.2 Abnahme durch den Fachbereich.]()
-- [5.3 Erfolgskontrolle in der Fachabteilung.]()
-- [5.4 Deployment der Anwendung.]()
+- [5.1 Code-Review.](#51-code-review)
+- [5.2 Abnahme durch den Fachbereich.](#52-abnahme-durch-den-fachbereich)
+- [5.3 Erfolgskontrolle in der Fachabteilung.](#53-erfolgskontrolle-in-der-fachabteilung)
+- [5.4 Deployment der Anwendung.](#54-deployment-der-anwendung)
 
 #### 6 Dokumentation
 - [6.1 Erstellung des Benutzerhandbuchs.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/User.md#benutzerhandbuch)
@@ -350,7 +350,11 @@ Diese Funktionen können so programmiert werden, dass sie regelmäßig oder in E
 Die Ergebnisse dieser Funktionen können in Dashboards oder Berichten angezeigt werden, was die Analyse und Entscheidungsfindung erleichtert.
 
 #### 5 Abnahme und Einführung
+Die Abnahme und Präsentation des Webinventarsystems erfolgte durch eine interaktive Demonstration mit der Personalabteilung. Die Webanwendung wurde vorgestellt, ihre Funktionalität erläutert und die Fragen des Teams beantwortet. Es wurden verschiedene Anwendungsszenarien simuliert, wie z. B. die Registrierung neuer Produkte, die Aktualisierung des Lagerbestands, die Generierung von Berichten und die Benutzerverwaltung.
 
+Der Schwerpunkt lag auf der Benutzerfreundlichkeit, Effizienz und Sicherheit des Systems. Das Team hatte die Möglichkeit, die Anwendung zu testen, Fragen zu stellen und Feedback zu geben.
+
+Die Vorschläge wurden gesammelt und Anpassungen vorgenommen, um sicherzustellen, dass das System die Erwartungen und Anforderungen der Abteilung erfüllt. Schließlich wurde die Genehmigung zur Implementierung des Webinventarsystems erteilt.
 
 #### 5.1 Code-Review.
 
