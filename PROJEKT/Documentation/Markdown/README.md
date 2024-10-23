@@ -350,19 +350,32 @@ Diese Funktionen können so programmiert werden, dass sie regelmäßig oder in E
 Die Ergebnisse dieser Funktionen können in Dashboards oder Berichten angezeigt werden, was die Analyse und Entscheidungsfindung erleichtert.
 
 #### 5 Abnahme und Einführung
+
+#### 5.1 Code-Review.
+Um die Qualität und Wartbarkeit des Inventarsystems zu gewährleisten, wird die Codeüberprüfung ein wesentlicher Prozess in der Entwicklung sein. Es wird ein Peer-Review-Ansatz implementiert, bei dem die Entwickler ihren Code gegenseitig überprüfen, um Fehler zu erkennen, die Lesbarkeit zu verbessern und die Konformität mit den Codierungsstandards sicherzustellen.  
+
+Statische Codeanalyse-Tools werden verwendet, um die Identifizierung häufiger Probleme zu automatisieren, und die Diskussion und der Wissensaustausch zwischen den Entwicklern werden gefördert. Die Codeüberprüfung wird auch als Gelegenheit dienen, mögliche Verbesserungen im Design und in der Architektur des Systems zu identifizieren.
+
+#### 5.2 Abnahme durch den Fachbereich.
 Die Abnahme und Präsentation des Webinventarsystems erfolgte durch eine interaktive Demonstration mit der Personalabteilung. Die Webanwendung wurde vorgestellt, ihre Funktionalität erläutert und die Fragen des Teams beantwortet. Es wurden verschiedene Anwendungsszenarien simuliert, wie z. B. die Registrierung neuer Produkte, die Aktualisierung des Lagerbestands, die Generierung von Berichten und die Benutzerverwaltung.
 
 Der Schwerpunkt lag auf der Benutzerfreundlichkeit, Effizienz und Sicherheit des Systems. Das Team hatte die Möglichkeit, die Anwendung zu testen, Fragen zu stellen und Feedback zu geben.
 
 Die Vorschläge wurden gesammelt und Anpassungen vorgenommen, um sicherzustellen, dass das System die Erwartungen und Anforderungen der Abteilung erfüllt. Schließlich wurde die Genehmigung zur Implementierung des Webinventarsystems erteilt.
 
-#### 5.1 Code-Review.
-
-
-#### 5.2 Abnahme durch den Fachbereich.
-
-
 #### 5.3 Erfolgskontrolle in der Fachabteilung.
-
+Der Projekterfolg wird kontinuierlich bewertet, indem der Fortschritt in Bezug auf die definierten Ziele und Zeitvorgaben verfolgt wird. Es werden Projektmanagement-Tools eingesetzt, um den Fortschritt zu überwachen, potenzielle Hindernisse zu identifizieren und die termingerechte Lieferung des Systems sicherzustellen.
 
 #### 5.4 Deployment der Anwendung.
+Die Bereitstellung der Anwendung erfolgt in einer Produktionsumgebung, die über das Internet zugänglich ist. Zum Hosten der React-Anwendung wird ein Cloud-Hosting-Dienst wie Ionos oder Vercel verwendet.
+
+Die PostgreSQL-Datenbank und die Authentifizierungs- und Speicherfunktionen werden von Supabase bereitgestellt. Für die Anwendung wird eine benutzerdefinierte Domain konfiguriert und zur Gewährleistung der Kommunikationssicherheit ein SSL-Zertifikat verwendet. 
+
+Es werden Caching-Strategien und Leistungsoptimierungen implementiert, um ein reibungsloses Benutzererlebnis zu gewährleisten. Vor der endgültigen Inbetriebnahme werden umfassende Tests in der Produktionsumgebung durchgeführt. Der Bereitstellungsprozess wird dokumentiert, um zukünftige Updates und die Wartung der Anwendung zu erleichtern.
+
+#### 6 [Dokumentation]()
+
+#### 6.1 Erstellung des Benutzerhandbuchs.
+
+
+#### 6.2 Erstellung der Entwicklerdokumentation.
