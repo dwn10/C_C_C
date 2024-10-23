@@ -277,26 +277,88 @@ Dieses Dokument beschreibt die Anforderungen an das zu entwickelnde Webinventars
 #### 4 Implementierung inkl. Tests
 Dieser Abschnitt beschreibt die Implementierung der Produktverwaltung. Der Fokus liegt auf den CRUD-Operationen (Erstellen, Lesen, Aktualisieren, Löschen). Für die Umsetzung werden React (Frontend) und Supabase (Backend) verwendet.
 
-#### 4.1 [Hauptfunktionen des Systems entwickeln.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Dev.md#schritt-8-funktionen-hinzuf%C3%BCgen)
+#### 4.1 [Hauptfunktionen des Systems entwickeln.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Dev.md#ein-inventar-projekt-mit-react-und-supabase-in-visual-studio-code-erstellen)
+Die Entwicklung des Inventarsystems konzentriert sich auf die Erstellung einer robusten, skalierbaren und benutzerfreundlichen Webanwendung unter Verwendung von React für das Frontend und Supabase für das Backend.
 
+**Hauptfunktionen:**
+
+- **Produktverwaltung**
+- **Bestandsverwaltung**
+- **Berichtsgenerierung**
+- **API-Integration (optional)**
+- **Sicherheit und Zugriffskontrolle**
+
+**Entwicklung**
+
+Der Entwicklungsprozess wird die folgenden Phasen durchlaufen:
+
+- **Analyse und Design:** Detaillierte Definition der Anforderungen, Design der Datenbank und Struktur der Anwendung.
+- **Frontend-Entwicklung:** Erstellung der Benutzeroberfläche mit React.
+- **Backend-Entwicklung:** Konfiguration von Supabase, Erstellung von Tabellen, Funktionen und Sicherheitsrichtlinien.
+- **Integration:** Verbindung des Frontends mit dem Backend über die Supabase-API.
+- **Implementierung von Funktionen:** Entwicklung der Hauptfunktionen des Systems.
+- **Tests und Optimierung:** Umfassende Tests, um die Qualität und Leistung des Systems sicherzustellen.
+- **Implementierung:** Bereitstellung des Systems in einer Produktionsumgebung.
 
 #### 4.2 Verwendung von Supabase Realtime-Funktionen.
 
+**Vorteile der Verwendung von Supabase Realtime:**
+- **Erhöhte Effizienz:**
+Echtzeit-Updates ermöglichen es den Benutzern, fundierte Entscheidungen auf der Grundlage genauer und aktueller Daten zu treffen.
+
+- **Verbesserte Produktivität:**
+Die Automatisierung von Aufgaben und Echtzeit-Benachrichtigungen entlasten das Personal, sodass es sich auf andere wichtige Aufgaben konzentrieren kann.
+
+- **Reduzierung von Fehlern:**
+Die Echtzeit-Synchronisierung von Daten minimiert das Risiko von Fehlern, die durch veraltete Informationen verursacht werden.
+
+- **Verbesserte Benutzererfahrung:**
+Die dynamische und interaktive Benutzeroberfläche bietet den Benutzern eine ansprechendere und effizientere Erfahrung.
 
 #### 4.3 [Implementierung des Logins.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Dev.md#login)
+Die Implementierung der Anmeldung wird Supabase Auth zur Authentifizierung der Benutzer verwenden. Es wird ein Anmeldeformular erstellt, in dem die Benutzer ihre Anmeldeinformationen (E-Mail und Passwort) eingeben. Beim Absenden des Formulars überprüft Supabase Auth, ob die Anmeldeinformationen gültig sind.
 
+Zusätzlich werden weitere Sicherheitsmaßnahmen implementiert, wie z. B. der Schutz vor Brute-Force-Angriffen und die Validierung sicherer Passwörter.
 
 #### 4.4 Verwendung von React-pdf zur Erstellung von PDF-Berichten.
+React-pdf bietet die Möglichkeit, individuelle und visuell ansprechende Berichte mit Inventardaten zu erstellen, wie z. B. den aktuellen Lagerbestand, die Historie der Bewegungen, Verkäufe und Einkäufe, unter anderem. 
 
+Diese Berichte können in Echtzeit generiert werden, was den Benutzern aktuelle und genaue Informationen für die Entscheidungsfindung liefert. Darüber hinaus erleichtert React-pdf die Integration der Berichte in die Benutzeroberfläche des Systems, sodass Benutzer schnell und einfach darauf zugreifen können. Die Möglichkeit, die Berichte im PDF-Format zu exportieren, erleichtert auch deren Speicherung, Druck und Verteilung.
 
 #### 4.5 Speicherung von Kaufpreisinformationen in der Supabase-Datenbank.
+Die Kaufinformationen werden in der Datenbank unter Verwendung separater Tabellen für "Produkte", "Lieferanten" und "Einkäufe" gespeichert. Die Tabelle "Produkte" enthält detaillierte Informationen zu jedem Produkt, einschließlich des Einkaufspreises. 
 
+Die Tabelle "Lieferanten" speichert die Informationen der Lieferanten, wie Name, Kontakt und Adresse. Die Tabelle "Einkäufe" zeichnet jede Einkaufstransaktion auf, einschließlich Datum, Lieferant, gekaufte Produkte, Mengen und Gesamtkosten. Fremdschlüssel werden verwendet, um die Tabellen zu verknüpfen und die Datenintegrität zu gewährleisten.
 
 #### 4.6 Verwendung von APIs, um eine Verbindung zu den externen Diensten herzustellen.
+APIs werden verwendet, um das Inventarsystem mit externen Diensten wie ERP- oder E-Commerce-Plattformen zu verbinden. Dies ermöglicht die Synchronisierung von Daten wie Produktinformationen, Preisen und Lagerbeständen zwischen dem Inventarsystem und den externen Plattformen.
 
+Darüber hinaus bietet die Integration mit externen Diensten über APIs Flexibilität und Skalierbarkeit für das System, indem die Verbindung mit verschiedenen Datenquellen und die Automatisierung von Aufgaben ermöglicht wird.
 
 #### 4.7 Implementierung der Oberfläche der Webanwendung.
+Die Benutzeroberfläche der Webanwendung wird mit React entwickelt, wobei wiederverwendbare Komponenten und ein responsives Design verwendet werden, das sich an verschiedene Geräte anpasst (Desktop, Tablets und Mobilgeräte). 
 
+Es wird eine klare und intuitive Navigation zwischen den verschiedenen Bereichen des Systems implementiert, wie z. B. Produktverwaltung, Inventar, Lieferanten und Berichte. Es werden Bibliotheken wie TanStack Query verwendet, um Anfragen an den Server zu stellen, und TanStack Table, um die Daten in interaktiven Tabellen anzuzeigen. 
+
+Besonderes Augenmerk wird auf die Benutzererfahrung gelegt, mit einem optisch ansprechenden Design und einer benutzerfreundlichen Oberfläche.
 
 #### 4.8 Verwendung von Funktionen zur Berechnung von Leistungskennzahlen.
+Die Funktionen in Supabase können die Berechnung von wichtigen Leistungsindikatoren automatisieren. Beispielsweise können Funktionen erstellt werden, um den Gesamtwert des Inventars, den Lagerumschlag, die Kosten der verkauften Produkte und die Bruttogewinnmarge zu berechnen. 
 
+Diese Funktionen können so programmiert werden, dass sie regelmäßig oder in Echtzeit ausgeführt werden, wodurch aktuelle Informationen über die Leistung des Inventars bereitgestellt werden. 
+
+Die Ergebnisse dieser Funktionen können in Dashboards oder Berichten angezeigt werden, was die Analyse und Entscheidungsfindung erleichtert.
+
+#### 5 Abnahme und Einführung
+
+
+#### 5.1 Code-Review.
+
+
+#### 5.2 Abnahme durch den Fachbereich.
+
+
+#### 5.3 Erfolgskontrolle in der Fachabteilung.
+
+
+#### 5.4 Deployment der Anwendung.
