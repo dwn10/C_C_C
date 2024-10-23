@@ -378,6 +378,12 @@ Es werden Caching-Strategien und Leistungsoptimierungen implementiert, um ein re
 #### 6 Dokumentation
 
 #### 6.1 Erstellung des [Benutzerhandbuchs.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/User.md#benutzerhandbuch)
+Das Benutzerhandbuch wurde zum einfachen Verständnis entwickelt und enthält Screenshots und Beispiele, die jeden Schritt veranschaulichen. Die wichtigsten Funktionen des Systems, wie die Produktregistrierung, die Bestandsverwaltung und die Berichterstellung, werden detailliert beschrieben. 
 
+Darüber hinaus werden Informationen über den Zugriff auf das System, die Navigation in der Benutzeroberfläche und die Ausführung gängiger Aufgaben bereitgestellt.
 
 #### 6.2 Erstellung der [Entwicklerdokumentation.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Dev.md#ein-inventar-projekt-mit-react-und-supabase-in-visual-studio-code-erstellen)
+Die Entwicklerdokumentation dient als Leitfaden für das Inventarsystem.
+Sie beschreibt detailliert die Projektstruktur, die Hauptfunktionen, die verwendeten APIs sowie die durchgeführten Unit- und Integrationstests.
+Zur besseren Veranschaulichung der Beziehungen zwischen den Komponenten werden Klassen- und Sequenzdiagramme verwendet.
+Diese Dokumentation wird bei jeder Änderung am Quellcode aktualisiert, um ihre Genauigkeit und ihren Nutzen zu gewährleisten.
