@@ -15,7 +15,9 @@ mit React und Supabase
 const Project = {
   code: ["HTML", "CSS", "Javascript", "SQL"],
   technologies: {
-    devTool: ["VS-Code", "Supabase"],
+    frontend: ["React", "TanStack Query"],
+    backend: ["Supabase", "PostgreSQL"],
+    devTool: ["VS-Code"],
   },
 };
 ```
