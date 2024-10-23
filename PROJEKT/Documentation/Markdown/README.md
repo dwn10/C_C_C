@@ -59,8 +59,8 @@ const Project = {
 - [5.4 Deployment der Anwendung.](#54-deployment-der-anwendung)
 
 #### 6 Dokumentation
-- [6.1 Erstellung des Benutzerhandbuchs.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/User.md#benutzerhandbuch)
-- [6.2 Erstellung der Entwicklerdokumentation.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Dev.md#ein-inventar-projekt-mit-react-und-supabase-in-visual-studio-code-erstellen)
+- [6.1 Erstellung des Benutzerhandbuchs.](#61-erstellung-des-benutzerhandbuchs)
+- [6.2 Erstellung der Entwicklerdokumentation.](#62-erstellung-der-entwicklerdokumentation)
 
 #### 1 Projektplanung
 Dieses Kapitel beschreibt die umfassende Planung des Projekts, die die Auswahl einer geeigneten Entwicklungsmethode und die Identifizierung der für die Durchführung erforderlichen Ressourcen umfasst.
@@ -375,9 +375,9 @@ Die PostgreSQL-Datenbank und die Authentifizierungs- und Speicherfunktionen werd
 
 Es werden Caching-Strategien und Leistungsoptimierungen implementiert, um ein reibungsloses Benutzererlebnis zu gewährleisten. Vor der endgültigen Inbetriebnahme werden umfassende Tests in der Produktionsumgebung durchgeführt. Der Bereitstellungsprozess wird dokumentiert, um zukünftige Updates und die Wartung der Anwendung zu erleichtern.
 
-#### 6 [Dokumentation]()
+#### 6 Dokumentation
 
-#### 6.1 Erstellung des Benutzerhandbuchs.
+#### 6.1 Erstellung des [Benutzerhandbuchs.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/User.md#benutzerhandbuch)
 
 
-#### 6.2 Erstellung der Entwicklerdokumentation.
+#### 6.2 Erstellung der [Entwicklerdokumentation.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Dev.md#ein-inventar-projekt-mit-react-und-supabase-in-visual-studio-code-erstellen)
