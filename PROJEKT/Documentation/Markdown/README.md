@@ -323,7 +323,7 @@ Die Implementierung der Anmeldung wird Supabase Auth zur Authentifizierung der B
 Zusätzlich werden weitere Sicherheitsmaßnahmen implementiert, wie z. B. der Schutz vor Brute-Force-Angriffen und die Validierung sicherer Passwörter.
 
 #### 4.4 Verwendung von React-pdf zur Erstellung von PDF-Berichten.
-React-pdf bietet die Möglichkeit, individuelle und visuell ansprechende Berichte mit Inventardaten zu erstellen, wie z. B. den aktuellen Lagerbestand, die Historie der Bewegungen, Verkäufe und Einkäufe, unter anderem. 
+React-pdf bietet die Möglichkeit, individuelle und visuell ansprechende Berichte mit Inventardaten zu erstellen, wie z. B. den aktuellen Lagerbestand, die Historie der Bewegungen, Verkäufe und Einkäufe, unter anderem.
 
 Diese Berichte können in Echtzeit generiert werden, was den Benutzern aktuelle und genaue Informationen für die Entscheidungsfindung liefert. Darüber hinaus erleichtert React-pdf die Integration der Berichte in die Benutzeroberfläche des Systems, sodass Benutzer schnell und einfach darauf zugreifen können. Die Möglichkeit, die Berichte im PDF-Format zu exportieren, erleichtert auch deren Speicherung, Druck und Verteilung.
 
@@ -338,23 +338,23 @@ APIs werden verwendet, um das Inventarsystem mit externen Diensten wie ERP- oder
 Darüber hinaus bietet die Integration mit externen Diensten über APIs Flexibilität und Skalierbarkeit für das System, indem die Verbindung mit verschiedenen Datenquellen und die Automatisierung von Aufgaben ermöglicht wird.
 
 #### 4.7 Implementierung der Oberfläche der Webanwendung.
-Die Benutzeroberfläche der Webanwendung wird mit React entwickelt, wobei wiederverwendbare Komponenten und ein responsives Design verwendet werden, das sich an verschiedene Geräte anpasst (Desktop, Tablets und Mobilgeräte). 
+Die Benutzeroberfläche der Webanwendung wird mit React entwickelt, wobei wiederverwendbare Komponenten und ein responsives Design verwendet werden, das sich an verschiedene Geräte anpasst (Desktop, Tablets und Mobilgeräte).
 
-Es wird eine klare und intuitive Navigation zwischen den verschiedenen Bereichen des Systems implementiert, wie z. B. Produktverwaltung, Inventar, Lieferanten und Berichte. Es werden Bibliotheken wie TanStack Query verwendet, um Anfragen an den Server zu stellen, und TanStack Table, um die Daten in interaktiven Tabellen anzuzeigen. 
+Es wird eine klare und intuitive Navigation zwischen den verschiedenen Bereichen des Systems implementiert, wie z. B. Produktverwaltung, Inventar, Lieferanten und Berichte. Es werden Bibliotheken wie TanStack Query verwendet, um Anfragen an den Server zu stellen, und TanStack Table, um die Daten in interaktiven Tabellen anzuzeigen.
 
 Besonderes Augenmerk wird auf die Benutzererfahrung gelegt, mit einem optisch ansprechenden Design und einer benutzerfreundlichen Oberfläche.
 
 #### 4.8 Verwendung von Funktionen zur Berechnung von Leistungskennzahlen.
 Die Funktionen in Supabase können die Berechnung von wichtigen Leistungsindikatoren automatisieren. Beispielsweise können Funktionen erstellt werden, um den Gesamtwert des Inventars, den Lagerumschlag, die Kosten der verkauften Produkte und die Bruttogewinnmarge zu berechnen. 
 
-Diese Funktionen können so programmiert werden, dass sie regelmäßig oder in Echtzeit ausgeführt werden, wodurch aktuelle Informationen über die Leistung des Inventars bereitgestellt werden. 
+Diese Funktionen können so programmiert werden, dass sie regelmäßig oder in Echtzeit ausgeführt werden, wodurch aktuelle Informationen über die Leistung des Inventars bereitgestellt werden.
 
 Die Ergebnisse dieser Funktionen können in Dashboards oder Berichten angezeigt werden, was die Analyse und Entscheidungsfindung erleichtert.
 
 #### 5 Abnahme und Einführung
 
 #### 5.1 Code-Review.
-Um die Qualität und Wartbarkeit des Inventarsystems zu gewährleisten, wird die Codeüberprüfung ein wesentlicher Prozess in der Entwicklung sein. Es wird ein Peer-Review-Ansatz implementiert, bei dem die Entwickler ihren Code gegenseitig überprüfen, um Fehler zu erkennen, die Lesbarkeit zu verbessern und die Konformität mit den Codierungsstandards sicherzustellen.  
+Um die Qualität und Wartbarkeit des Inventarsystems zu gewährleisten, wird die Codeüberprüfung ein wesentlicher Prozess in der Entwicklung sein. Es wird ein Peer-Review-Ansatz implementiert, bei dem die Entwickler ihren Code gegenseitig überprüfen, um Fehler zu erkennen, die Lesbarkeit zu verbessern und die Konformität mit den Codierungsstandards sicherzustellen.
 
 Statische Codeanalyse-Tools werden verwendet, um die Identifizierung häufiger Probleme zu automatisieren, und die Diskussion und der Wissensaustausch zwischen den Entwicklern werden gefördert. Die Codeüberprüfung wird auch als Gelegenheit dienen, mögliche Verbesserungen im Design und in der Architektur des Systems zu identifizieren.
 
@@ -371,7 +371,7 @@ Der Projekterfolg wird kontinuierlich bewertet, indem der Fortschritt in Bezug a
 #### 5.4 Deployment der Anwendung.
 Die Bereitstellung der Anwendung erfolgt in einer Produktionsumgebung, die über das Internet zugänglich ist. Zum Hosten der React-Anwendung wird ein Cloud-Hosting-Dienst wie Ionos oder Vercel verwendet.
 
-Die PostgreSQL-Datenbank und die Authentifizierungs- und Speicherfunktionen werden von Supabase bereitgestellt. Für die Anwendung wird eine benutzerdefinierte Domain konfiguriert und zur Gewährleistung der Kommunikationssicherheit ein SSL-Zertifikat verwendet. 
+Die PostgreSQL-Datenbank und die Authentifizierungs- und Speicherfunktionen werden von Supabase bereitgestellt. Für die Anwendung wird eine benutzerdefinierte Domain konfiguriert und zur Gewährleistung der Kommunikationssicherheit ein SSL-Zertifikat verwendet.
 
 Es werden Caching-Strategien und Leistungsoptimierungen implementiert, um ein reibungsloses Benutzererlebnis zu gewährleisten. Vor der endgültigen Inbetriebnahme werden umfassende Tests in der Produktionsumgebung durchgeführt. Der Bereitstellungsprozess wird dokumentiert, um zukünftige Updates und die Wartung der Anwendung zu erleichtern.
 

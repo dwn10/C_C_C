@@ -56,3 +56,16 @@ Die folgenden Grafiken sind zum besseren Verständnis mit einem Teil des Codes v
 <a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/UML-Diagramme.md#ER-Modell" target="_blank">
   <img src="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/img/diagram6.png" style="height: 80%; width:80%;"/>
 </a>
+
+# Img
+### Mock-Ups
+
+<a href="#" target="_blank">
+  <img src="#" style="height: 80%; width:80%;"/>
+</a>
+
+### System Nav
+
+<a href="#" target="_blank">
+  <img src="#" style="height: 80%; width:80%;"/>
+</a>
