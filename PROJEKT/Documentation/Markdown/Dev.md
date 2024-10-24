@@ -110,7 +110,7 @@ function Produktliste() {
     const produkteAbrufen = async () => {
       const { data, error } = await supabase
         .from('produkte')
-        .select('*');  
+        .select('*');
 
 
       if (error) {
@@ -295,7 +295,7 @@ EXECUTE FUNCTION public.insert_standardwerte();
 
 Dieser Code definiert drei "Trigger" (Auslöser) in einer Datenbank. Trigger sind Aktionen, die automatisch ausgeführt werden, wenn bestimmte Ereignisse eintreten:
 
-- **trigger_aktualisiere_bestand:** Dieser Trigger wird nach jeder Einfügung (AFTER INSERT) in der Tabelle kardex aktiviert. Seine Funktion ist die Ausführung der Funktion aktualisiere_bestand(), welche den Produktbestand basierend auf dem neuen Eintrag im Kardex aktualisiert. 
+- **trigger_aktualisiere_bestand:** Dieser Trigger wird nach jeder Einfügung (AFTER INSERT) in der Tabelle kardex aktiviert. Seine Funktion ist die Ausführung der Funktion aktualisiere_bestand(), welche den Produktbestand basierend auf dem neuen Eintrag im Kardex aktualisiert.
 
 - **trigger_berechtigungen:** Dieser Trigger wird nach jeder Einfügung (AFTER INSERT) in der Tabelle users aktiviert. Seine Funktion ist die Ausführung der Funktion insert_berechtigungen(), die wahrscheinlich einem neuen Benutzer die Standardberechtigungen zuweist.
 
@@ -308,22 +308,22 @@ ___
 
 ```js
 
-// Definiert eine Reihe von Funktionen für die Interaktion mit einer Datenbank (Supabase) 
+// Definiert eine Reihe von Funktionen für die Interaktion mit einer Datenbank (Supabase)
 // und die Verwaltung von Produktinformationen.
 
 import { supabase } from "../index";
 import Swal from "sweetalert2";
-const tabelle = "produkte"; 
+const tabelle = "produkte";
 
-export async function ProdukteEinfuegen(p) { 
+export async function ProdukteEinfuegen(p) {
   try {
-    const { error } = await supabase.rpc("produkteEinfuegen", p); 
+    const { error } = await supabase.rpc("produkteEinfuegen", p);
     if (error) {
-      console.log("parameter", p); 
-      console.log("parameter", error.message); 
+      console.log("parameter", p);
+      console.log("parameter", error.message);
       Swal.fire({
         icon: "error",
-        title: "Ups...", 
+        title: "Ups...",
         text: error.message,
         footer: '<a href="">Neue Beschreibung hinzufügen</a>',
       });
@@ -333,64 +333,64 @@ export async function ProdukteEinfuegen(p) {
   }
 }
 
-export async function ProdukteAnzeigen(p) { 
+export async function ProdukteAnzeigen(p) {
   try {
     const { data } = await supabase.rpc("produkteAnzeigen", {
-      _id_firma: p._id_firma, 
+      _id_firma: p._id_firma,
     });
     return data;
   } catch (error) {}
 }
 
-export async function ProdukteLoeschen(p) { 
+export async function ProdukteLoeschen(p) {
   try {
     const { error } = await supabase.from("produkte").delete().eq("id", p.id);
     if (error) {
-      alert("Fehler beim Löschen", error); 
+      alert("Fehler beim Löschen", error);
     }
   } catch (error) {
-    alert(error.error_description || error.message + " Produkte löschen"); 
+    alert(error.error_description || error.message + " Produkte löschen");
   }
 }
 
-export async function ProdukteBearbeiten(p) { 
+export async function ProdukteBearbeiten(p) {
   try {
     const { error } = await supabase.from("produkte").update(p).eq("id", p.id);
     if (error) {
-      alert("Fehler beim Bearbeiten des Produkts", error); 
+      alert("Fehler beim Bearbeiten des Produkts", error);
     }
   } catch (error) {
-    alert(error.error_description || error.message + " Kategorien bearbeiten"); 
+    alert(error.error_description || error.message + " Kategorien bearbeiten");
   }
 }
 
-export async function ProdukteSuchen(p) { 
+export async function ProdukteSuchen(p) {
   try {
-    const { data } = await supabase.rpc("produkteSuchen", { 
-      _id_firma: p.id_firma, 
-      suchbegriff: p.beschreibung, 
+    const { data } = await supabase.rpc("produkteSuchen", {
+      _id_firma: p.id_firma,
+      suchbegriff: p.beschreibung,
     });
     return data;
   } catch (error) {}
 }
 
-// BERICHTE // 
-export async function ReportLagerbestandAlleProdukte(p) { 
+// BERICHTE //
+export async function ReportLagerbestandAlleProdukte(p) {
   const { data, error } = await supabase
     .from(tabelle)
     .select()
-    .eq("id_firma", p.id_firma); 
+    .eq("id_firma", p.id_firma);
   if (error) {
     return;
   }
   return data;
 }
 
-export async function ReportLagerbestandProProdukt(p) { 
+export async function ReportLagerbestandProProdukt(p) {
   const { data, error } = await supabase
     .from(tabelle)
     .select()
-    .eq("id_firma", p.id_firma) 
+    .eq("id_firma", p.id_firma)
     .eq("id", p.id);
   if (error) {
     return;
@@ -398,7 +398,7 @@ export async function ReportLagerbestandProProdukt(p) {
   return data;
 }
 
-export async function ReportLagerbestandUnterMinimum(p) { 
+export async function ReportLagerbestandUnterMinimum(p) {
   const { data, error } = await supabase.rpc("reportprodukteunterminimum", p); geändert
 
   if (error) {
@@ -407,7 +407,7 @@ export async function ReportLagerbestandUnterMinimum(p) {
   return data;
 }
 
-export async function ReportKardexEinAusgang(p) { 
+export async function ReportKardexEinAusgang(p) {
   const { data, error } = await supabase.rpc("kardexunternehmenanzeigen", p);
   if (error) {
     return;
@@ -415,7 +415,7 @@ export async function ReportKardexEinAusgang(p) {
   return data;
 }
 
-export async function ReportInventarBewertung(p) { 
+export async function ReportInventarBewertung(p) {
   const { data, error } = await supabase.rpc("inventarbewertung", p);
 
   if (error) {
@@ -1459,7 +1459,7 @@ export const AuthContextProvider = ({ children }) => {
 export const UserAuth = () => {
   return useContext(AuthContext);
 };
-// Dieser Code definiert einen Kontext-Provider in React, 
+// Dieser Code definiert einen Kontext-Provider in React,
 // um die Benutzerauthentifizierung mit Supabase zu verwalten.
 
 ```
@@ -1479,3 +1479,119 @@ export const UserAuth = () => {
 - Gib die Komponente `AuthContext.Provider` zurück, die den Wert des Kontexts `(user)` an alle untergeordneten Komponenten weitergibt.
 
 **Kontextzugriffsfunktion:** Definiere eine Funktion `UserAuth`, die den Hook `useContext` verwendet, um von jeder untergeordneten Komponente aus auf den Wert des Kontexts `(user)` zuzugreifen.
+
+___
+#### PDF-Bericht
+
+```js
+import { NavLink, Outlet } from "react-router-dom";
+import styled from "styled-components";
+export function ReportesTemplate() {
+  return (
+    <Container>
+      <PageContainer>
+        <Content>
+          <Outlet/>
+        </Content>
+        <Sidebar>
+          <SidebarSection>
+            <SidebarTitle>Aktueller Lagerbestand</SidebarTitle>
+            <SidebarItem to="aktueller-lagerbestand-nach-produkt">
+              Nach Produkt
+            </SidebarItem>
+            <SidebarItem to="aktueller-bestand-alles">Alle</SidebarItem>
+            <SidebarItem to="lagerbestand-niedrig-minimum">unter dem Minimum</SidebarItem>
+          </SidebarSection>
+          <SidebarSection>
+          <SidebarTitle>Ein- und Ausgänge</SidebarTitle>
+          <SidebarItem to="kardex-eingaenge-ausgaenge">Nach Produkt</SidebarItem>
+          </SidebarSection>
+          <SidebarSection>
+          <SidebarTitle to="ss">Geschätzt</SidebarTitle>
+          <SidebarItem to="bestandsbewertet">Alle</SidebarItem>
+          </SidebarSection>
+        </Sidebar>
+      </PageContainer>
+    </Container>
+  );
+}
+```
+```css
+const Content = styled.div`
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px;
+  flex: 1;
+`;
+const PageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  justify-content: center;
+  width: 100%;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
+const Container = styled.div`
+  min-height: 100vh;
+  padding: 15px;
+  width: 100%;
+  color: ${({ theme }) => theme.text};
+`;
+const Sidebar = styled.div`
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @media (min-width: 768px) {
+    width: 250px;
+    order: 2;
+  }
+`;
+const SidebarSection = styled.div`
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 2px solid ${({ theme }) => theme.color2};
+  padding: 12px;
+`;
+const SidebarTitle = styled.h3`
+  margin-bottom: 20px;
+  font-size: 1.2em;
+`;
+const SidebarItem = styled(NavLink)`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 5px 0;
+  padding: 0 5%;
+  text-decoration: none;
+  color: ${(props) => props.theme.text};
+  height: 60px;
+  &:hover {
+    color: ${(props) => props.theme.colorSubtitle};
+  }
+  &.active {
+    background: ${(props) => props.theme.bg6};
+    border: 2px solid ${(props) => props.theme.bg5};
+    color: ${(props) => props.theme.color1};
+    font-weight: 600;
+  }
+`;
+
+```
+
+**ReportTemplate:** Eine Vorlage für den Berichtsbereich einer Anwendung
+
+**Struktur:**
+- **Seitenleiste:** Enthält eine Liste von Links zu verschiedenen Berichtsarten, gruppiert in Abschnitten (aktueller Lagerbestand, Ein- und Ausgänge, etc.).
+- **Inhalt:** Ein Bereich, in dem der ausgewählte Bericht angezeigt wird.
+
+**Funktionalität:**
+- Verwendet react-router-dom für die Navigation zwischen den verschiedenen Berichten.
+- Outlet rendert die Komponente des spezifischen Berichts basierend auf der aktuellen Route.
+- Verwendet styled-components zur Gestaltung der Vorlage, einschließlich der Seitenleiste, des Inhalts und der Links.
+- Das Design ist responsiv und passt sich an verschiedene Bildschirmgrößen an.

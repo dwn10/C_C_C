@@ -200,7 +200,7 @@ Das System verfolgt Produkte mit vollständigen Details, einschließlich Kategor
 - **produkte:** Enthält detaillierte Informationen zu den Produkten, einschließlich Beschreibung, Marke, Lagerbestand, Mindestbestand, Codes, Preisen und Kategorie.
 - **users:** Speichert Informationen der Systembenutzer.
 
-#### 3.2 Entwurf der Benutzeroberfläche inkl. Erstellung von Mock-Ups.
+#### 3.2 Entwurf der Benutzeroberfläche inkl. Erstellung von [Mock-Ups.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/DiagrammeIMG.md#mock-ups)
 Für die Gestaltung benutzerfreundlicher Oberflächen wurden in Zusammenarbeit mit der Personalabteilung Mockups erstellt. Ein Mockup ist die visuelle Darstellung eines Designentwurfs.
 
 Zur Erstellung dieser Mockups wurde die Software Figma verwendet. Anhand von Anwendungsfällen wurden die notwendigen Oberflächen für Login, Produktverwaltung etc. ermittelt.
@@ -337,7 +337,7 @@ APIs werden verwendet, um das Inventarsystem mit externen Diensten wie ERP- oder
 
 Darüber hinaus bietet die Integration mit externen Diensten über APIs Flexibilität und Skalierbarkeit für das System, indem die Verbindung mit verschiedenen Datenquellen und die Automatisierung von Aufgaben ermöglicht wird.
 
-#### 4.7 Implementierung der Oberfläche der Webanwendung.
+#### 4.7 Implementierung der [Oberfläche der Webanwendung.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/DiagrammeIMG.md#system-nav)
 Die Benutzeroberfläche der Webanwendung wird mit React entwickelt, wobei wiederverwendbare Komponenten und ein responsives Design verwendet werden, das sich an verschiedene Geräte anpasst (Desktop, Tablets und Mobilgeräte).
 
 Es wird eine klare und intuitive Navigation zwischen den verschiedenen Bereichen des Systems implementiert, wie z. B. Produktverwaltung, Inventar, Lieferanten und Berichte. Es werden Bibliotheken wie TanStack Query verwendet, um Anfragen an den Server zu stellen, und TanStack Table, um die Daten in interaktiven Tabellen anzuzeigen.
@@ -345,7 +345,7 @@ Es wird eine klare und intuitive Navigation zwischen den verschiedenen Bereichen
 Besonderes Augenmerk wird auf die Benutzererfahrung gelegt, mit einem optisch ansprechenden Design und einer benutzerfreundlichen Oberfläche.
 
 #### 4.8 Verwendung von Funktionen zur Berechnung von Leistungskennzahlen.
-Die Funktionen in Supabase können die Berechnung von wichtigen Leistungsindikatoren automatisieren. Beispielsweise können Funktionen erstellt werden, um den Gesamtwert des Inventars, den Lagerumschlag, die Kosten der verkauften Produkte und die Bruttogewinnmarge zu berechnen. 
+Die Funktionen in Supabase können die Berechnung von wichtigen Leistungsindikatoren automatisieren. Beispielsweise können Funktionen erstellt werden, um den Gesamtwert des Inventars, den Lagerumschlag, die Kosten der verkauften Produkte und die Bruttogewinnmarge zu berechnen.
 
 Diese Funktionen können so programmiert werden, dass sie regelmäßig oder in Echtzeit ausgeführt werden, wodurch aktuelle Informationen über die Leistung des Inventars bereitgestellt werden.
 
