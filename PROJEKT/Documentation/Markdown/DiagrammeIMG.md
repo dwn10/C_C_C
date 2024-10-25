@@ -42,7 +42,7 @@ Die folgenden Grafiken sind zum besseren Verständnis mit einem Teil des Codes v
 ### Wasserfallmodell Phasen
 
 <a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/UML-Diagramme.md#wasserfallmodell-phasen" target="_blank">
-  <img src="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/img/diagram7.png" style="height: 50%; width:50%;"/>
+  <img src="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/img/diagram7.png" style="height: 40%; width:40%;"/>
 </a>
 
 ### Gantt Diagramm
