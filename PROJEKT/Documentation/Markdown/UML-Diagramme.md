@@ -419,3 +419,49 @@ users ||--|{ kardex : "1" Benutzer "kann mehrere" Inventarbewegungen "durchführ
 
 ```
 
+### Wasserfallmodell Phasen
+```plantuml
+
+@startuml
+!theme mars
+
+!include <C4/C4_Context>
+
+
+!define LIGHTBLUE 0xADD8E6
+!define LIGHTGREEN 0x90EE90
+!define LIGHTYELLOW 0xFFFFE0
+
+skinparam activity {
+  BackgroundColor LIGHTBLUE
+  BorderColor black
+  FontName Arial
+  FontSize 12
+}
+
+skinparam activityDiamond {
+  BackgroundColor LIGHTYELLOW
+  BorderColor black
+}
+
+skinparam activityStart {
+  Color LIGHTGREEN
+}
+
+skinparam activityEnd {
+  Color LIGHTGREEN
+}
+
+start
+
+:Analyse und Design;
+:Entwurf;
+:Implementierung inkl. Tests;
+:Abnahme und Einführung;
+:Dokumentation;
+
+stop
+@enduml
+
+```
+

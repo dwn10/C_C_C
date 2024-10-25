@@ -39,6 +39,12 @@ Die folgenden Grafiken sind zum besseren Verständnis mit einem Teil des Codes v
   <img src="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/img/diagram2.png" style="height: 80%; width:80%;"/>
 </a>
 
+### Wasserfallmodell Phasen
+
+<a href="#" target="_blank">
+  <img src="#" style="height: 80%; width:80%;"/>
+</a>
+
 ### Gantt Diagramm
 
 <a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/UML-Diagramme.md#gantt-diagramm" target="_blank">
