@@ -6,6 +6,6 @@
 </p>
 
 ## Benutzerhandbuch
-Das Benutzerhandbuch wurde zum einfachen Verständnis entwickelt und enthält Screenshots und Beispiele, die jeden Schritt veranschaulichen. Die wichtigsten Funktionen des Systems, wie die Produktregistrierung, die Bestandsverwaltung und die Berichterstellung, werden detailliert beschrieben. 
+Das Benutzerhandbuch wurde zum einfachen Verständnis entwickelt und enthält Screenshots und Beispiele, die jeden Schritt veranschaulichen. Die wichtigsten Funktionen des Systems, wie die Produktregistrierung, die Bestandsverwaltung und die Berichterstellung, werden detailliert beschrieben.
 
 Darüber hinaus werden Informationen über den Zugriff auf das System, die Navigation in der Benutzeroberfläche und die Ausführung gängiger Aufgaben bereitgestellt.

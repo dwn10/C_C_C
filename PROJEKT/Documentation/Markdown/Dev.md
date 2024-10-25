@@ -1486,7 +1486,7 @@ ___
 ```js
 import { NavLink, Outlet } from "react-router-dom";
 import styled from "styled-components";
-export function ReportesTemplate() {
+export function ReportTemplate() {
   return (
     <Container>
       <PageContainer>

@@ -111,6 +111,45 @@ ___
 | **typdoc** | TEXT | not null , default: - |  | |
 | **email** | TEXT | not null , default: - |  | |
 
+### Projektphasen
+
+
+| Phase             | Zeit | Beschreibung                                                                                   |
+|----------------------|------|------------------------------------------------------------------------------------------------|
+| **Analyse**        | **12 h** |                                                                                                |
+|                    | 3 h  | Durchführung der Ist-Analyse                                                                     |
+|                    | 3 h  | Durchführung der Wirtschaftlichkeitsanalyse inkl. Amortisationsrechnung                           |
+|                    | 2 h  | Ermittlung von Anwendungsfällen inkl. Erstellung eines Anwendungsfall-Diagramms                  |
+|                    | 2 h  | Erstellung einer erweiterten Ereignisgesteuerten Prozesskette                                     |
+|                    | 2 h  | Unterstützung des Fachbereichs beim Erstellen des Lastenhefts                                     |
+| **Entwurf**         | **12 h** |                                                                                                |
+|                    | 1 h  | Entwurf der Datenbank und der Anwendungsstruktur.                                               |
+|                    | 3 h  | Entwurf der Benutzeroberfläche inkl. Erstellung von Mock-Ups                                    |
+|                    | 2 h  | Erstellung eines ER-Modells                                                                      |
+|                    | 2 h  | Entwurf der PDF auf Basis der Oberfläche                                                        |
+|                    | 1 h  | Planung der Architektur inkl. Erstellung eines Komponentendiagramms                              |
+|                    | 3 h  | Erstellung des Pflichtenhefts                                                                   |
+| **Implementierung inkl. Tests** | **41 h** |                                                                                                |
+|                    | 2 h  | Hauptfunktionen des Systems entwickeln                                                           |
+|                    | 2 h  | Verwendung von Supabase Realtime-Funktionen                                                       |
+|                    | 2 h  | Implementierung des Logins                                                                      |
+|                    | 4 h  | Implementierung der Domäne                                                                      |
+|                    | 3 h  | Verwendung von React-pdf zur Erstellung von PDF-Berichten                                        |
+|                    | 5 h  | Speicherung von Kaufpreisinformationen in der Supabase-Datenbank                               |
+|                    | 3 h  | Aktualisierung in Echtzeit, um den aktuellen Lagerbestand anzuzeigen                              |
+|                    | 3 h  | Verwendung von APIs, um eine Verbindung zu den externen Diensten herzustellen                   |
+|                    | 7 h  | Implementierung der Oberfläche der Webanwendung                                                |
+|                    | 6 h  | Formatierung der Daten in Tabellen und Diagrammen                                                |
+|                    | 4 h  | Verwendung von Funktionen zur Berechnung von Leistungskennzahlen                                 |
+| **Abnahme und Einführung** | **5 h**  |                                                                                                |
+|                    | 2 h  | Code-Review                                                                                    |
+|                    | 1 h  | Abnahme durch den Fachbereich                                                                   |
+|                    | 1 h  | Erfolgskontrolle in der Fachabteilung                                                           |
+|                    | 1 h  | Deployment der Anwendung                                                                       |
+| **Dokumentation**    | **12 h** |                                                                                                |
+|                    | 6 h  | Erstellung des Benutzerhandbuchs                                                                 |
+|                    | 6 h  | Erstellung der Entwicklerdokumentation                                                           |
+
 # PlantUML Diagramme
 ### Ablaufdiagramm
 // !theme superhero-outline // !theme crt-green
@@ -224,19 +263,19 @@ title Projekt
 
 + << Technologie >>       | << Beschreibung >>
 
-+ Frontend                | <<>> 
++ Frontend                | <<>>
 ++ React
-+++ Zustand               | Zustandsverwaltung   
-+++ TanStack              |  Devtool   
++++ Zustand               | Zustandsverwaltung
++++ TanStack              |  Devtool
 +++ ReactChart            | Diagrammerstellung
-+++ Styled Components     | CSS-Style mit JavaScript-Syntax     
++++ Styled Components     | CSS-Style mit JavaScript-Syntax
   
-+ Backend                 | <<>>   
-++ Supabase     
-+++ Konsole SQL       
-+++ Triggers Functions    
-+++ UserAuth   
-+++ Tabellendiagramm  
++ Backend                 | <<>>
+++ Supabase
++++ Konsole SQL
++++ Triggers Functions
++++ UserAuth
++++ Tabellendiagramm
 }
 }
 @endsalt

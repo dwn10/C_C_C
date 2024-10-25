@@ -66,7 +66,7 @@ const Project = {
 Dieses Kapitel beschreibt die umfassende Planung des Projekts, die die Auswahl einer geeigneten Entwicklungsmethode und die Identifizierung der für die Durchführung erforderlichen Ressourcen umfasst.
 
 #### 1.1 Projektphasen
-Diese Abschlussarbeit wird nach dem Wasserfallmodell entwickelt. Die Gesamtzeit, die der IT-Spezialist für die Entwicklung der Anwendung aufwenden kann, ist auf 80 Stunden begrenzt. Tabelle 1 zeigt im Detail, wie diese 80 Stunden auf die verschiedenen Phasen des Wasserfallmodells verteilt sind.
+Diese Abschlussarbeit wird nach dem Wasserfallmodell entwickelt. Die Gesamtzeit, die der IT-Spezialist für die Entwicklung der Anwendung aufwenden kann, ist auf 80 Stunden begrenzt. Tabelle 1 zeigt im Detail, wie diese 80 Stunden auf die verschiedenen Phasen des Wasserfallmodells verteilt sind. [weitere Details](#)
 
 
 | Phase                     | Zeit |
@@ -322,7 +322,7 @@ Die Implementierung der Anmeldung wird Supabase Auth zur Authentifizierung der B
 
 Zusätzlich werden weitere Sicherheitsmaßnahmen implementiert, wie z. B. der Schutz vor Brute-Force-Angriffen und die Validierung sicherer Passwörter.
 
-#### 4.4 Verwendung von React-pdf zur Erstellung von PDF-Berichten.
+#### 4.4 Verwendung von React-pdf zur Erstellung von [PDF-Berichten.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Dev.md#pdf-bericht)
 React-pdf bietet die Möglichkeit, individuelle und visuell ansprechende Berichte mit Inventardaten zu erstellen, wie z. B. den aktuellen Lagerbestand, die Historie der Bewegungen, Verkäufe und Einkäufe, unter anderem.
 
 Diese Berichte können in Echtzeit generiert werden, was den Benutzern aktuelle und genaue Informationen für die Entscheidungsfindung liefert. Darüber hinaus erleichtert React-pdf die Integration der Berichte in die Benutzeroberfläche des Systems, sodass Benutzer schnell und einfach darauf zugreifen können. Die Möglichkeit, die Berichte im PDF-Format zu exportieren, erleichtert auch deren Speicherung, Druck und Verteilung.
