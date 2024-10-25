@@ -378,7 +378,7 @@ Es werden Caching-Strategien und Leistungsoptimierungen implementiert, um ein re
 #### 6 Dokumentation
 
 #### 6.1 Erstellung des [Benutzerhandbuchs.](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/User.md#benutzerhandbuch)
-Das Benutzerhandbuch wurde zum einfachen Verständnis entwickelt und enthält Screenshots und Beispiele, die jeden Schritt veranschaulichen. Die wichtigsten Funktionen des Systems, wie die Produktregistrierung, die Bestandsverwaltung und die Berichterstellung, werden detailliert beschrieben. 
+Das Benutzerhandbuch wurde zum einfachen Verständnis entwickelt und enthält Screenshots und Beispiele, die jeden Schritt veranschaulichen. Die wichtigsten Funktionen des Systems, wie die Produktregistrierung, die Bestandsverwaltung und die Berichterstellung, werden detailliert beschrieben.
 
 Darüber hinaus werden Informationen über den Zugriff auf das System, die Navigation in der Benutzeroberfläche und die Ausführung gängiger Aufgaben bereitgestellt.
 
@@ -387,3 +387,12 @@ Die Entwicklerdokumentation dient als Leitfaden für das Inventarsystem.
 Sie beschreibt detailliert die Projektstruktur, die Hauptfunktionen, die verwendeten APIs sowie die durchgeführten Unit- und Integrationstests.
 Zur besseren Veranschaulichung der Beziehungen zwischen den Komponenten werden Klassen- und Sequenzdiagramme verwendet.
 Diese Dokumentation wird bei jeder Änderung am Quellcode aktualisiert, um ihre Genauigkeit und ihren Nutzen zu gewährleisten.
+
+#### Schlussfolgerung
+Dieses Projekt schlägt die Entwicklung eines modernen und effizienten Inventarsystems unter Verwendung von React und Supabase vor. Ziel ist es, die Mängel des aktuellen Systems zu beheben, das nur von einem PC aus verwaltet werden kann, was die Flexibilität und den Zugriff auf Informationen einschränkt.
+
+Das neue System wird eine intuitive und reaktionsschnelle Benutzeroberfläche bieten, auf die von verschiedenen Geräten aus zugegriffen werden kann. Es ermöglicht eine detaillierte Produktverwaltung, Echtzeit-Bestandskontrolle, Lieferantenmanagement und Berichtsgenerierung.
+
+Zu den erwarteten Vorteilen der Implementierung des neuen Systems gehören die Optimierung der Bestandsverwaltung, die Verbesserung der Entscheidungsfindung, die Steigerung der Effizienz, Skalierbarkeit, Sicherheit und Zuverlässigkeit.
+
+Insgesamt zielt das Projekt darauf ab, die Art und Weise, wie Unternehmen ihre Lagerbestände verwalten, zu verbessern, indem es ein robustes, effizientes und benutzerfreundliches Werkzeug bereitstellt.
