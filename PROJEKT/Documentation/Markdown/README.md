@@ -66,7 +66,7 @@ const Project = {
 Dieses Kapitel beschreibt die umfassende Planung des Projekts, die die Auswahl einer geeigneten Entwicklungsmethode und die Identifizierung der für die Durchführung erforderlichen Ressourcen umfasst.
 
 #### 1.1 Projektphasen
-Diese Abschlussarbeit wird nach dem Wasserfallmodell entwickelt. Die Gesamtzeit, die der IT-Spezialist für die Entwicklung der Anwendung aufwenden kann, ist auf 80 Stunden begrenzt. Tabelle 1 zeigt im Detail, wie diese 80 Stunden auf die verschiedenen Phasen des Wasserfallmodells verteilt sind. [weitere Details](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/UML-Diagramme.md#projektphasen)
+Diese Abschlussarbeit wird nach dem [Wasserfallmodell](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/DiagrammeIMG.md#wasserfallmodell-phasen) entwickelt. Die Gesamtzeit, die der IT-Spezialist für die Entwicklung der Anwendung aufwenden kann, ist auf 80 Stunden begrenzt. Tabelle 1 zeigt im Detail, wie diese 80 Stunden auf die verschiedenen Phasen des Wasserfallmodells verteilt sind. [weitere Details](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/UML-Diagramme.md#projektphasen)
 
 
 | Phase                     | Zeit |
