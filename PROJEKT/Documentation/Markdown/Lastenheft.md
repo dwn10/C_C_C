@@ -7,7 +7,7 @@ Dieses Dokument beschreibt die Anforderungen an ein neues Web Inventarsystem fü
 #### 2.1 Funktionale Anforderungen
 
 | Anforderung | Priorität | Beschreibung |
-|---|---|---| 
+|---|---|---|
 | Benutzerauthentifizierung | Muss | Das System muss eine sichere Benutzerauthentifizierung mit verschiedenen Rollen (z. B. Administrator, Mitarbeiter) ermöglichen. |
 | Produktverwaltung | Muss | Das System muss die Verwaltung von Produktinformationen wie Name, Code, Beschreibung, Kategorie, Preis, Lagerbestand und Bilder ermöglichen. |
 | Bestandsverwaltung | Muss | Das System muss die Verwaltung des Lagerbestands in Echtzeit ermöglichen, einschließlich Zugängen, Abgängen und Warnungen bei niedrigem Bestand. |

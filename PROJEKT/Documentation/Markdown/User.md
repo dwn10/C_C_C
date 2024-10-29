@@ -9,3 +9,9 @@
 Das Benutzerhandbuch wurde zum einfachen Verständnis entwickelt und enthält Screenshots und Beispiele, die jeden Schritt veranschaulichen. Die wichtigsten Funktionen des Systems, wie die Produktregistrierung, die Bestandsverwaltung und die Berichterstellung, werden detailliert beschrieben.
 
 Darüber hinaus werden Informationen über den Zugriff auf das System, die Navigation in der Benutzeroberfläche und die Ausführung gängiger Aufgaben bereitgestellt.
+
+### System Nav
+
+<a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/img/mockup3-4.gif" target="_blank">
+  <img src="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/img/mockup3-4.png" style="height: 80%; width:80%;"/>
+</a>
