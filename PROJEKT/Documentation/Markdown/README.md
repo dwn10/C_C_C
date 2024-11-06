@@ -133,9 +133,9 @@ Als Basis für die Berechnung der Personalkosten dient eine 38-Stunden-Woche. Ei
 | Entwicklungskosten | Ein Auszubildender der IT | 80 h | 25 € | 2.000 € |
 | Erstellung des Lastenheftes | Zwei Mitarbeiter:innen der Personalabteilung | 2 h | 50 € * 2 = 100 € | 200 € |
 | Pull-Requests (PRs) abnehmen | Ein:e Mitarbeiter:in der IT-Abteilung | 2 h | 50 € | 100 € |
-| Abnahme und Erfolgskontrolle | Zwei Mitarbeiter:innen der Personalabteilung | 3 h | 50 € * 2 = 100 € | 300 € |
+| Abnahme und Erfolgskontrolle | Zwei Mitarbeiter:innen der Personalabteilung | 3 h | 50 € * 2 = 100 € | 500 € |
 | Migration der Daten | Ein:e Mitarbeiter:in der Personalabteilung | 7,6 h | 50 € | 380 € |
-|  |  |  |  | **2.980 €** |
+|  |  |  |  | **3.180 €** |
 
 #### Amortisationsrechnung
 

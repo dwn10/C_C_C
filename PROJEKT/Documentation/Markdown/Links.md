@@ -42,3 +42,7 @@ Ist ein äußerst vielseitiges Werkzeug, das die schnelle und unkomplizierte Ers
 
 #### [Markdown editor](https://code.visualstudio.com/Docs/languages/markdown)
 Ist eine leichtgewichtige Auszeichnungssprache, mit der du Texte einfach formatieren kannst. Du kannst Klartext schreiben und bearbeiten und dabei eine einfache Syntax verwenden, um Elemente wie Überschriften, Listen, Links und Fettdruck zu erstellen, die dann in HTML umgewandelt werden.
+
+#### Windows 10 Pro - Betriebssystem
+
+#### [Virtual Studio Code](https://code.visualstudio.com/download) - Entwicklungsumgebung
