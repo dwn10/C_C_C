@@ -5,7 +5,7 @@
   <a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Links.md#projektlinks-und-ressourcen" target="_blank">Projektlinks</a>
 </p>
 
-#### Entwicklerdokumentation
+### Entwicklerdokumentation
 Dieses webbasierte Inventarsystem basiert auf einer modernen Architektur, die die Leistungsfähigkeit von React im Frontend mit der Flexibilität von Supabase im Backend kombiniert.
 React, eine JavaScript-Bibliothek, ermöglicht den Aufbau einer dynamischen, schnellen und intuitiven Benutzeroberfläche, die das Benutzererlebnis verbessert. Supabase hingegen, eine BaaS-Plattform (Backend as a Service), bietet alle notwendigen Tools für das Backend, einschliesslich einer robusten Datenbank, eines sicheren Authentifizierungssystems und skalierbarer Speicheroptionen.
 Diese Kombination von Technologien führt zu einem effizienten, robusten und einfach zu wartenden webbasierten Inventarsystem.
