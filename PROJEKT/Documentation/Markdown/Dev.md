@@ -5,6 +5,29 @@
   <a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/Markdown/Links.md#projektlinks-und-ressourcen" target="_blank">Projektlinks</a>
 </p>
 
+#### Entwicklerdokumentation
+Dieses webbasierte Inventarsystem basiert auf einer modernen Architektur, die die Leistungsfähigkeit von React im Frontend mit der Flexibilität von Supabase im Backend kombiniert.
+React, eine JavaScript-Bibliothek, ermöglicht den Aufbau einer dynamischen, schnellen und intuitiven Benutzeroberfläche, die das Benutzererlebnis verbessert. Supabase hingegen, eine BaaS-Plattform (Backend as a Service), bietet alle notwendigen Tools für das Backend, einschliesslich einer robusten Datenbank, eines sicheren Authentifizierungssystems und skalierbarer Speicheroptionen.
+Diese Kombination von Technologien führt zu einem effizienten, robusten und einfach zu wartenden webbasierten Inventarsystem.
+
+#### Frontend (React):
+- React wird verwendet, um eine intuitive und responsive Benutzeroberfläche zu erstellen.
+- TanStack Query wird verwendet, um Serveranfragen zu stellen und Daten zu verwalten.
+- TanStack Table erleichtert die Anzeige von Daten in Tabellen.
+- React-pdf ermöglicht die Generierung von Berichten im PDF-Format.
+
+#### Backend (Supabase):
+- Supabase stellt die Backend-Infrastruktur bereit, einschließlich der PostgreSQL-Datenbank.
+- Supabase verwaltet auch die Authentifizierung und Autorisierung von Benutzern.
+- Die Dateispeicherung erfolgt über Supabase.
+
+#### Hauptfunktionen:
+- **Produktverwaltung:** Produkte registrieren, ändern, suchen und filtern.
+- **Bestandsverwaltung:** Echtzeit-Bestandskontrolle, Warnungen bei niedrigem Lagerbestand.
+- **Lieferantenverwaltung:** Registrierung und Verwaltung von Lieferanteninformationen.
+- **Berichtsgenerierung:** Erstellung von benutzerdefinierten Berichten im PDF-Format.
+- **API-Integration:** Verbindung mit externen Diensten zur Datensynchronisierung.
+
 ## Ein "Inventar"-Projekt mit React und Supabase in Visual Studio Code erstellen:
 #### Schritt 1: Umgebung vorbereiten
 
