@@ -320,7 +320,7 @@ Dieser Code definiert drei "Trigger" (Auslöser) in einer Datenbank. Trigger sin
 
 - **trigger_aktualisiere_bestand:** Dieser Trigger wird nach jeder Einfügung (AFTER INSERT) in der Tabelle kardex aktiviert. Seine Funktion ist die Ausführung der Funktion aktualisiere_bestand(), welche den Produktbestand basierend auf dem neuen Eintrag im Kardex aktualisiert.
 
-- **trigger_berechtigungen:** Dieser Trigger wird nach jeder Einfügung (AFTER INSERT) in der Tabelle users aktiviert. Seine Funktion ist die Ausführung der Funktion insert_berechtigungen(), die wahrscheinlich einem neuen Benutzer die Standardberechtigungen zuweist.
+- **trigger_berechtigungen:** Dieser Trigger wird nach jeder Einfügung (AFTER INSERT) in der Tabelle users aktiviert. Seine Funktion ist die Ausführung der Funktion insert_berechtigungen(), einem neuen Benutzer die Standardberechtigungen zuweist.
 
 - **trigger_standardwerte:** Dieser Trigger wird nach jeder Einfügung (AFTER INSERT) in der Tabelle Firma aktiviert. Seine Funktion ist die Ausführung der Funktion insert_standardwerte(), die Standardwerte oder -daten konfiguriert, wenn ein neue Firma im System angelegt wird.
 
