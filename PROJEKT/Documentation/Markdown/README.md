@@ -388,11 +388,12 @@ Sie beschreibt detailliert die Projektstruktur, die Hauptfunktionen, die verwend
 Zur besseren Veranschaulichung der Beziehungen zwischen den Komponenten werden Klassen- und Sequenzdiagramme verwendet.
 Diese Dokumentation wird bei jeder Änderung am Quellcode aktualisiert, um ihre Genauigkeit und ihren Nutzen zu gewährleisten.
 
-#### Schlussfolgerung
-Dieses Projekt schlägt die Entwicklung eines modernen und effizienten Inventarsystems unter Verwendung von React und Supabase vor. Ziel ist es, die Mängel des aktuellen Systems zu beheben, das nur von einem PC aus verwaltet werden kann, was die Flexibilität und den Zugriff auf Informationen einschränkt.
+#### Fazit
+Dieses Projekt bietet eine innovative Lösung für die Bestandsverwaltung: ein modernes System, das mit React und Supabase entwickelt wurde und die Einschränkungen des aktuellen PC-basierten Systems überwindet. Seine intuitive Benutzeroberfläche, die von jedem Gerät aus zugänglich ist, ermöglicht eine detaillierte Produktverwaltung und eine Echtzeit-Bestandskontrolle.
+Die Vorteile sind zahlreich: Optimierung der Verwaltung, bessere Entscheidungsfindung, höhere Effizienz, Skalierbarkeit, Sicherheit und Zuverlässigkeit. Im Wesentlichen handelt es sich um ein robustes und benutzerfreundliches Werkzeug, das die Lagerverwaltung revolutioniert.
 
-Das neue System wird eine intuitive und reaktionsschnelle Benutzeroberfläche bieten, auf die von verschiedenen Geräten aus zugegriffen werden kann. Es ermöglicht eine detaillierte Produktverwaltung, Echtzeit-Bestandskontrolle, Lieferantenmanagement und Berichtsgenerierung.
+#### 7.2 Lessons Learned
+Die Fertigstellung des Projekts bereichert den Lernenden, einen angehenden IT-Spezialisten, durch die intensive Auseinandersetzung mit technischen Mitteln und die Anwendung erlernter Entwicklungsmethoden. Es vertieft Inhalte, stärkt das Selbstvertrauen und festigt die Programmierfähigkeiten. Die Bedeutung der Kommunikation mit dem Kunden und der Planung, um ein Produkt zu schaffen, das seinen Anforderungen entspricht, wird hervorgehoben. Das Projekt ist ein Erfolg mit didaktischem und praktischem Wert.
 
-Zu den erwarteten Vorteilen der Implementierung des neuen Systems gehören die Optimierung der Bestandsverwaltung, die Verbesserung der Entscheidungsfindung, die Steigerung der Effizienz, Skalierbarkeit, Sicherheit und Zuverlässigkeit.
-
-Insgesamt zielt das Projekt darauf ab, die Art und Weise, wie Unternehmen ihre Lagerbestände verwalten, zu verbessern, indem es ein robustes, effizientes und benutzerfreundliches Werkzeug bereitstellt.
+#### 7.3 Ausblick
+Zur weiteren Verbesserung des Bestandssystems sind zukünftige Verbesserungen vorgesehen, beispielsweise die Integration mit ERP-Systemen und die Implementierung prädiktiver Analysen. Diese strategischen Ergänzungen versprechen nicht nur eine Optimierung der Bestandsverwaltung, sondern fördern auch das Wachstum und die Effizienz des Unternehmens.
