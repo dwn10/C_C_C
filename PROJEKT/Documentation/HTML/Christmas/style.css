@@ -1,0 +1,94 @@
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .tree-container {
+    text-align: center;
+  }
+  
+  .tree {
+    display: inline-block;
+  }
+  
+  .star {
+    width: 120px;
+    height: 120px;
+    background-color: rgb(251, 255, 0);
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+    margin: 0 auto;
+  }
+  
+  .row {
+    margin: 5px auto;
+  }
+  
+  .row1 { width: 20px; }
+  .row2 { width: 40px; }
+  .row3 { width: 60px; }
+  .row4 { width: 80px; }
+  .row5 { width: 100px; }
+  .row6 { width: 120px; }
+  .row7 { width: 140px; }
+  .row8 { width: 160px; }
+  .row9 { width: 180px; }
+  .row10 { width: 200px; }
+  
+  .star, .row div {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 2px;
+  }
+  
+  /* Clases para los colores */
+  .yellow { animation: blink-yellow 3s infinite; }
+  .green { animation: blink-green 3s infinite; }
+  .red { animation: blink-red 3s infinite; }
+  
+  .trunk {
+    width: 20px;
+    height: 40px;
+    background-color: #875a3c;
+    margin: 10px auto;
+  }
+  
+  .message {
+    color: #0f0;
+    font-size: 24px;
+    margin-top: 20px;
+    font-family: sans-serif;
+  }
+  
+  /* Animaciones para cada color */
+  @keyframes blink-yellow {
+    0%, 33% { opacity: 1; }
+    33.1%, 100% { opacity: 0.4; }
+  }
+  
+  @keyframes blink-green {
+    0%, 33% { opacity: 0.4; }
+    33.1%, 66% { opacity: 1; }
+    66.1%, 100% { opacity: 0.4; }
+  }
+  
+  @keyframes blink-red {
+    0%, 66% { opacity: 0.4; }
+    66.1%, 100% { opacity: 1; }
+  }
