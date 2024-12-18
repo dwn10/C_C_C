@@ -10,13 +10,36 @@
 }
 
 [data-theme="dark"] {
-    --primary-color: #1a1a1a;
-    --secondary-color: #3498db;
+    --primary-color: #433F3E;
+    --secondary-color: #BF973A;
     --text-color: #ffffff;
-    --light-gray: #2c2c2c;
+    --light-gray: #BF973A;
     --background-color: #1a1a1a;
-    --timeline-color: #3498db;
-    --timeline-color-rgb: 52, 152, 219;
+    --timeline-color: #BF973A;
+    --timeline-color-rgb: 191, 151, 58;
+}
+
+[data-theme="dark"] h3,
+[data-theme="dark"] .sidebar h3,
+[data-theme="dark"] .personal h3,
+[data-theme="dark"] .section-title {
+    color: #BF973A;
+}
+
+[data-theme="dark"] .personal h3::after {
+    background: #BF973A;
+}
+
+[data-theme="dark"] .about h3,
+[data-theme="dark"] .experience h3,
+[data-theme="dark"] .education h3,
+[data-theme="dark"] .certifications h3,
+[data-theme="dark"] .hobbies h3 {
+    color: #BF973A;
+}
+
+[data-theme="dark"] .experience-item h4 {
+    color: #BF973A;
 }
 
 * {
@@ -199,18 +222,39 @@ body {
     margin-top: 2rem;
 }
 
-.sidebar h3 {
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
+/* Sidebar buttons */
+.sidebar-buttons{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
-.sidebar ul {
-    list-style: none;
+.sidebar-btn{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    background: var(--secondary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 
-.sidebar li {
-    margin-bottom: 0.5rem;
+.sidebar-btn:hover{
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.sidebar-btn i{
+    font-size: 1rem;
+}
+
+.sidebar-btn span{
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .skills::after, .languages::after{
@@ -437,8 +481,8 @@ body {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background-color: var(--secondary-color);
-    color: white;
+    background-color: var(--secondary-color); /* Mantén el color de fondo general */
+    color: white; /* Color del icono en blanco */
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
@@ -458,8 +502,8 @@ body {
 }
 
 .social__link:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    color: #fff; /* Color del icono en blanco al pasar el ratón */
+    transform: translateY(-2px);
 }
 
 .social__link:hover i {
@@ -468,21 +512,21 @@ body {
 
 /* Colores específicos para cada red social */
 .fa-facebook {
-    background: linear-gradient(45deg, #3b5998, #4c70ba);
+    background: linear-gradient(45deg, #f5f6fa, #f5f6fa);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .fa-instagram {
-    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    background: linear-gradient(45deg, #f5f6fa, #f5f6fa);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .fa-github {
-    background: linear-gradient(45deg, #333333, #4c4c4c);
+    background: linear-gradient(45deg, #f5f6fa, #f5f6fa);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -533,90 +577,6 @@ body {
     margin: 0;
 }
 
-/* Estilos para iconos sociales */
-.user-info__user-links {
-    margin-top: 1.5rem;
-}
-
-.links__social {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    padding: 0;
-}
-
-.social__option {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.social__link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background-color: var(--secondary-color);
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.social__link i {
-    font-size: 1.2rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.social__link:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-}
-
-.social__link:hover i {
-    transform: translate(-50%, -50%) scale(1.1);
-}
-
-/* Colores específicos para cada red social */
-.fa-facebook {
-    background: linear-gradient(45deg, #3b5998, #4c70ba);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.fa-instagram {
-    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.fa-github {
-    background: linear-gradient(45deg, #333333, #4c4c4c);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.social__link:hover .fa-facebook,
-.social__link:hover .fa-instagram,
-.social__link:hover .fa-github {
-    -webkit-text-fill-color: white;
-    background: none;
-}
-
 /* Hobbies styles */
 .hobbies-container{
     display: flex;
@@ -650,7 +610,7 @@ body {
 }
 
 .hobby-item span{
-    color: #333;
+    color: var(--text-color);
     font-size: 0.85rem;
     opacity: 0.9;
 }
