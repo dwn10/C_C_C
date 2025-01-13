@@ -1,0 +1,121 @@
+<ubl:Invoice xmlns:ubl="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd">
+<cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0</cbc:CustomizationID>
+<cbc:ProfileID>urn:fdc:peppol.eu:2017:poacc:billing:01:1.0</cbc:ProfileID>
+<cbc:ID>1234</cbc:ID>
+<cbc:IssueDate>2019-08-13</cbc:IssueDate>
+<cbc:DueDate>2019-08-29</cbc:DueDate>
+<cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode>
+<cbc:Note>Test</cbc:Note>
+<cbc:DocumentCurrencyCode>EUR</cbc:DocumentCurrencyCode>
+<cbc:BuyerReference>000000000000</cbc:BuyerReference>
+<cac:OrderReference>
+<cbc:ID>5678</cbc:ID>
+</cac:OrderReference>
+<cac:ContractDocumentReference>
+<cbc:ID>987654</cbc:ID>
+</cac:ContractDocumentReference>
+<cac:ProjectReference>
+<cbc:ID>MyProjectRef</cbc:ID>
+</cac:ProjectReference>
+<cac:AccountingSupplierParty>
+<cac:Party>
+<cbc:EndpointID schemeID="EM">fred.feuerstein@dienetteag.de</cbc:EndpointID>
+<cac:PostalAddress>
+<cbc:StreetName>Musterweg1</cbc:StreetName>
+<cbc:CityName>Weilheim</cbc:CityName>
+<cbc:PostalZone>82362</cbc:PostalZone>
+<cac:Country>
+<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+</cac:Country>
+</cac:PostalAddress>
+<cac:PartyTaxScheme>
+<cbc:CompanyID>DE987654321</cbc:CompanyID>
+<cac:TaxScheme>
+<cbc:ID>VAT</cbc:ID>
+</cac:TaxScheme>
+</cac:PartyTaxScheme>
+<cac:PartyLegalEntity>
+<cbc:RegistrationName>Die nette AG</cbc:RegistrationName>
+</cac:PartyLegalEntity>
+<cac:Contact>
+<cbc:Name>Fred Feuerstein</cbc:Name>
+<cbc:Telephone>+ 49 73 184 214 3</cbc:Telephone>
+<cbc:ElectronicMail>fred.feuerstein@dienetteag.de</cbc:ElectronicMail>
+</cac:Contact>
+</cac:Party>
+</cac:AccountingSupplierParty>
+<cac:AccountingCustomerParty>
+<cac:Party>
+<cbc:EndpointID schemeID="EM">bruno.unglueck@wirkaufen.ag</cbc:EndpointID>
+<cac:PostalAddress>
+<cbc:StreetName>Kundenweg 27</cbc:StreetName>
+<cbc:CityName>Weilheim</cbc:CityName>
+<cbc:PostalZone>82362</cbc:PostalZone>
+<cac:Country>
+<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+</cac:Country>
+</cac:PostalAddress>
+<cac:PartyLegalEntity>
+<cbc:RegistrationName>Wir kaufen AG</cbc:RegistrationName>
+</cac:PartyLegalEntity>
+<cac:Contact>
+<cbc:Name>Bruno Unglück</cbc:Name>
+<cbc:Telephone>+ 49 11 222 333 4</cbc:Telephone>
+<cbc:ElectronicMail>bruno.unglueck@wirkaufen.ag</cbc:ElectronicMail>
+</cac:Contact>
+</cac:Party>
+</cac:AccountingCustomerParty>
+<cac:PaymentMeans>
+<cbc:PaymentMeansCode>30</cbc:PaymentMeansCode>
+<cbc:PaymentID>6543 21</cbc:PaymentID>
+<cac:PayeeFinancialAccount>
+<cbc:ID>DE11 2222 3333 4444 5555 66</cbc:ID>
+<cbc:Name>Der Zahler GmbH</cbc:Name>
+</cac:PayeeFinancialAccount>
+</cac:PaymentMeans>
+<cac:PaymentTerms>
+<cbc:Note>Besser gleich als nie</cbc:Note>
+</cac:PaymentTerms>
+<cac:TaxTotal>
+<cbc:TaxAmount currencyID="EUR">1064.00</cbc:TaxAmount>
+<cac:TaxSubtotal>
+<cbc:TaxableAmount currencyID="EUR">5600.00</cbc:TaxableAmount>
+<cbc:TaxAmount currencyID="EUR">1064.00</cbc:TaxAmount>
+<cac:TaxCategory>
+<cbc:ID>S</cbc:ID>
+<cbc:Percent>19</cbc:Percent>
+<cac:TaxScheme>
+<cbc:ID>VAT</cbc:ID>
+</cac:TaxScheme>
+</cac:TaxCategory>
+</cac:TaxSubtotal>
+</cac:TaxTotal>
+<cac:LegalMonetaryTotal>
+<cbc:LineExtensionAmount currencyID="EUR">5600.00</cbc:LineExtensionAmount>
+<cbc:TaxExclusiveAmount currencyID="EUR">5600.00</cbc:TaxExclusiveAmount>
+<cbc:TaxInclusiveAmount currencyID="EUR">6664.00</cbc:TaxInclusiveAmount>
+<cbc:PayableAmount currencyID="EUR">6664.00</cbc:PayableAmount>
+</cac:LegalMonetaryTotal>
+<cac:InvoiceLine>
+<cbc:ID>0</cbc:ID>
+<cbc:InvoicedQuantity unitCode="XPP">7</cbc:InvoicedQuantity>
+<cbc:LineExtensionAmount currencyID="EUR">5600.00</cbc:LineExtensionAmount>
+<cac:Item>
+<cbc:Description>Ihre Ware</cbc:Description>
+<cbc:Name>Produkt</cbc:Name>
+<cac:SellersItemIdentification>
+<cbc:ID>11111</cbc:ID>
+</cac:SellersItemIdentification>
+<cac:ClassifiedTaxCategory>
+<cbc:ID>S</cbc:ID>
+<cbc:Percent>19</cbc:Percent>
+<cac:TaxScheme>
+<cbc:ID>VAT</cbc:ID>
+</cac:TaxScheme>
+</cac:ClassifiedTaxCategory>
+</cac:Item>
+<cac:Price>
+<cbc:PriceAmount currencyID="EUR">800.00</cbc:PriceAmount>
+</cac:Price>
+</cac:InvoiceLine>
+</ubl:Invoice>
