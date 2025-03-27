@@ -2,7 +2,7 @@
 
 ### Kunst
 
-![Interior de la Galería DP Kunst mostrando una exposición de arte contemporáneo](images\Dwn-11.png)
+<a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/images/Dwn-11.png"><img src="[images\Dwn-11.png](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/images/Dwn-11.png)" style="height: 80%; width:80%;"/></a>
 
 * **Zeichnung**
 * **Malerei**
