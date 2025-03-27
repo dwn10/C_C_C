@@ -20,48 +20,18 @@ Hr. Peña lebt seit 2006 in Darmstadt und hat auch hier seine künstlerischen F�
 
 ### Ausstellungen
 
-- **2007** | Kunstzelt am Marktplatz | "Darmstadt"
+- **2007** | "Kunstzelt am Marktplatz" | Darmstadt
+- **2008** | "Goethe-Universität" | Frankfurt
+- **2009** | "Darmstadtium - Kongresszentrum" | Darmstadt
+- **2010** | "Kinderschutzbund" | Darmstadt
+- **2011** | "Galerie Kunst und Alltag" | Darmstadt
+- **2013** | "Generalkonsulat der Bolivarischen Republik Venezuela" | Frankfurt
+- **2014** | "Bürger Zentrum" | Darmstadt
+- **2015** | "Justus Liebig Haus" | Darmstadt
+- **2016** | "Goethe-Universität" | Frankfurt
+- **2017** | "Haus Martinus" | Darmstadt
+- **2019** | "Justus Liebig Haus" | Darmstadt
 
+<a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/images/Dwn-10.png"><img src="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/images/Dwn-10.png" style="height: 50%; width:50%;"/></a>
 
-**2008**
-#### "Goethe-Universität"
-Frankfurt
-
-**2009**
-#### "Darmstadtium - Kongresszentrum"
-Darmstadt
-
-**2010**
-#### "Kinderschutzbund"
-Darmstadt
-
-**2011**
-#### "Galerie Kunst und Alltag"
-Darmstadt
-
-**2013**
-#### "Generalkonsulat der Bolivarischen Republik Venezuela"
-Frankfurt
-
-**2014**
-#### "Bürger Zentrum"
-Darmstadt
-
-**2015**
-#### "Justus Liebig Haus"
-Darmstadt
-
-**2016**
-#### "Goethe-Universität"
-Frankfurt
-
-**2017**
-#### "Haus Martinus"
-Darmstadt
-
-**2019**
-#### "Justus Liebig Haus"
-Darmstadt
-
-![Arte vertical de Darwin Paz](images/Dwn-10.png)
-![Arte vertical de Darwin Paz](images/Dwn-1.jpg)
+<a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/images/Dwn-1.jpg"><img src="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/images/Dwn-1.jpg" style="height: 80%; width:80%;"/></a>
