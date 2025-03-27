@@ -2,7 +2,7 @@
 
 ### Kunst
 
-![Interior de la Galería DP Kunst mostrando una exposición de arte contemporáneo](images\darwin-paz-web-art.png)
+![Interior de la Galería DP Kunst mostrando una exposición de arte contemporáneo](images\Dwn-11.png)
 
 * **Zeichnung**
 * **Malerei**
