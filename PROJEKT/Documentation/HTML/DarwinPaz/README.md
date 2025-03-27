@@ -18,14 +18,10 @@ Somit konzentriert sich Hr. Peña primär auf die Malerei und setzte des weitere
 
 Hr. Peña lebt seit 2006 in Darmstadt und hat auch hier seine künstlerischen Fähigkeiten unter Beweis stellen können, indem er für die Stadt Darmstadt Designer und eigene Ausstellungen ausfertigte.
 
-![Arte vertical de Darwin Paz](images/Dwn-10.png)
-![Arte vertical de Darwin Paz](images/Dwn-1.jpg)
-
 ### Ausstellungen
 
-**2007**
-#### "Kunstzelt am Marktplatz"
-Darmstadt
+- "2007 - Kunstzelt am Marktplatz (Darmstadt)"
+
 
 **2008**
 #### "Goethe-Universität"
@@ -66,3 +62,6 @@ Darmstadt
 **2019**
 #### "Justus Liebig Haus"
 Darmstadt
+
+![Arte vertical de Darwin Paz](images/Dwn-10.png)
+![Arte vertical de Darwin Paz](images/Dwn-1.jpg)
