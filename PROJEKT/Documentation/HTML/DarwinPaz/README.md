@@ -20,7 +20,7 @@ Hr. Peña lebt seit 2006 in Darmstadt und hat auch hier seine künstlerischen F�
 
 ### Ausstellungen
 
-- "2007 - Kunstzelt am Marktplatz (Darmstadt)"
+- **2007** | Kunstzelt am Marktplatz | "Darmstadt"
 
 
 **2008**
