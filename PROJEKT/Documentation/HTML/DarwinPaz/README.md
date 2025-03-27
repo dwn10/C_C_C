@@ -2,7 +2,7 @@
 
 ### Kunst
 
-<a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/images/Dwn-11.png"><img src="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/images/Dwn-11.png" style="height: 80%; width:80%;"/></a>
+<a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/images/Dwn-11.png"><img src="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/images/Dwn-11.png" style="height: 60%; width:60%;"/></a>
 
 * **Zeichnung**
 * **Malerei**
