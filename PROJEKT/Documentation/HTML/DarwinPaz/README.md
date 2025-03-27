@@ -12,7 +12,7 @@
 
 ### Unsere Geschichte
 
-<font color="blue">Este texto es azul</font>
+<span style="color:blue">Ausstellungen</span>
 
 ":blue[**Darwin Alejandro Peña Paz**]" wurde am 23.08.1980 in Ambato (Ecuador) geboren. Er stammt aus einer künstlerischen Familie, wodurch Darwin seine Leidenschaft zur Malerei entdeckte und mit Unterstützung seines Vaters, der selbst Maler war, ausbauen und empfehlen konnte.
 
