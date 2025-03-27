@@ -1,4 +1,4 @@
-## Biographie
+## Darwin Paz | Biographie
 
 ### Kunst
 
@@ -31,6 +31,8 @@ Hr. Peña lebt seit 2006 in Darmstadt und hat auch hier seine künstlerischen F�
 - **2016** | "Goethe-Universität" | Frankfurt
 - **2017** | "Haus Martinus" | Darmstadt
 - **2019** | "Justus Liebig Haus" | Darmstadt
+
+### Kunstbeiträge
 
 <a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/images/Dwn-10.png"><img src="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/images/Dwn-10.png" style="height: 50%; width:50%;"/></a>
 
