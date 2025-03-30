@@ -20,17 +20,17 @@ Hr. Peña lebt seit 2006 in Darmstadt und hat auch hier seine künstlerischen F�
 
 ### Ausstellungen
 
-- **2007** | "Kunstzelt am Marktplatz" | Darmstadt
-- **2008** | "Goethe-Universität" | Frankfurt
-- **2009** | "Darmstadtium - Kongresszentrum" | Darmstadt
+- **2007** | "Kunstzelt am Marktplatz" | **Darmstadt**
+- **2008** | "Goethe-Universität" | **Frankfurt**
+- **2009** | "Darmstadtium - Kongresszentrum" | **Darmstadt**
 - **2010** | "Kinderschutzbund" | Darmstadt
-- **2011** | "Galerie Kunst und Alltag" | Darmstadt
-- **2013** | "Generalkonsulat der Bolivarischen Republik Venezuela" | Frankfurt
-- **2014** | "Bürger Zentrum" | Darmstadt
-- **2015** | "Justus Liebig Haus" | Darmstadt
-- **2016** | "Goethe-Universität" | Frankfurt
+- **2011** | "Galerie Kunst und Alltag" | **Darmstadt**
+- **2013** | "Generalkonsulat der Bolivarischen Republik Venezuela" | **Frankfurt**
+- **2014** | "Bürger Zentrum" | **Darmstadt**
+- **2015** | "Justus Liebig Haus" | **Darmstadt**
+- **2016** | "Goethe-Universität" | **Frankfurt**
 - **2017** | "Haus Martinus" | Darmstadt
-- **2019** | "Justus Liebig Haus" | Darmstadt
+- **2019** | "Justus Liebig Haus" | **Darmstadt**
 
 ### Kunstbeiträge
 
