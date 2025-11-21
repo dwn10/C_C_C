@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="Darwin Paz">
+	<title>Projektkosten-Rechner</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+    <!-- Dependencias para generar PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+	<script>
+		// Configuración de Tailwind para colores dinámicos del calculador de contenedores
+		tailwind.config = {
+			theme: {
+				extend: {
+					fontFamily: {
+						sans: ['Inter', 'sans-serif'],
+					},
+					colors: {
+						'primary': '#3b82f6', // Azul (blue-500)
+						'secondary': '#06b6d4', // Cyan 500
+						'messie': '#ef4444', // Red 500
+						'mucho': '#f59e0b', // Amber 500
+						'normal': '#3b82f6', // Azul (blue-500)
+					}
+				}
+			}
+		}
+	</script>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+	<style>
+		body {
+			font-family: 'Inter', sans-serif;
+			background-color: #f7f7f7;
+			min-height: 100vh;
+			/* Medidas de disuasión de copia: Deshabilita la selección de texto */
+			user-select: none;
+			-webkit-user-select: none;
+			/* Safari */
+			-ms-user-select: none;
+			/* IE10+ */
+		}
+
+		.input-text {
+			border: 1px solid #d1d5db;
+			padding: 0.5rem 0.75rem;
+			border-radius: 0.5rem;
+			width: 100%;
+			transition: all 0.2s;
+		}
+
+		.input-text:focus {
+			outline: none;
+			border-color: #3b82f6;
+			box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+		}
+
+		.btn-primary {
+			background-color: #3b82f6;
+			color: white;
+			padding: 0.5rem 1rem;
+			border-radius: 0.5rem;
+			transition: background-color 0.2s;
+		}
+
+		.btn-primary:hover {
+			background-color: #2563eb;
+		}
+
+		/* ESTILO PARA INPUTS DEL CALCULADOR DE CONTENEDORES */
+		.w-full.px-4.py-2.border {
+			/* Asegura que los nuevos inputs adopten el estilo general si es necesario */
+			border-radius: 0.5rem;
+		}
+
+		/* Asegurar que las imágenes de demostración se escalen en móvil */
+		#shapeVisualLabel img {
+			max-width: 100%;
+			height: auto;
+		}
+	</style>
+</head>
+<body class="p-2 sm:p-4 md:p-8">
+
+	<div class="max-w-5xl mx-auto bg-white shadow-xl rounded-xl p-4 sm:p-6 md:p-10">
+		<h1 class="text-2xl sm:text-3xl font-bold text-indigo-700 mb-6 border-b pb-2">Projektbudget-Manager</br>ArteQ</h1>
+
+		<!-- NAVEGACIÓN DE PESTAÑAS (OPTIMIZADA PARA MÓVIL) -->
+		<div class="flex border-b border-gray-200 mb-6 whitespace-nowrap overflow-x-auto" role="tablist">
+			<!-- PESTAÑA PROJEKTBUDGET (DEFAULT) -->
+			<button id="tab-btn-projektbudget" onclick="switchTab('projektbudget')"
+				class="tab-button flex-shrink-0 py-2 px-3 text-sm font-medium border-b-2 border-indigo-600 text-indigo-600 transition-colors duration-200 mx-1"
+				role="tab" aria-controls="tab-projektbudget" aria-selected="true">
+				Projektbudget
+			</button>
+			<!-- PESTAÑA PERSONAL -->
+			<button id="tab-btn-personal" onclick="switchTab('personal')"
+				class="tab-button flex-shrink-0 py-2 px-3 text-sm font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 transition-colors duration-200 mx-1"
+				role="tab" aria-controls="tab-personal" aria-selected="false">
+				Personal
+			</button>
+			<!-- PESTAÑA CONTAINER -->
+			<button id="tab-btn-container" onclick="switchTab('container')"
+				class="tab-button flex-shrink-0 py-2 px-3 text-sm font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 transition-colors duration-200 mx-1"
+				role="tab" aria-controls="tab-container" aria-selected="false">
+				Container
+			</button>
+			<!-- NUEVA PESTAÑA: MATERIAL -->
+			<button id="tab-btn-material" onclick="switchTab('material')"
+				class="tab-button flex-shrink-0 py-2 px-3 text-sm font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 transition-colors duration-200 mx-1"
+				role="tab" aria-controls="tab-material" aria-selected="false">
+				Materialgewicht
+			</button>
+		</div>
+
+		<!-- CONTENIDO DE LAS PESTAÑAS -->
+
+		<!-- PESTAÑA 1: PROJEKTBUDGET (Contenido Principal) -->
+		<div id="tab-projektbudget" class="tab-content">
+			<!-- SECCIÓN PARA PRESUPUESTO INICIAL Y DURACIÓN -->
+			<div class="mb-8 p-4 bg-indigo-50 rounded-lg shadow-inner grid grid-cols-1 md:grid-cols-2 gap-6">
+				<div>
+					<label for="budgetInput" class="block text-lg font-medium text-gray-700 mb-2">
+						Gesamtbudget (€)
+					</label>
+					<input type="number" id="budgetInput" value="4000" min="0"
+						class="input-text text-2xl font-semibold text-indigo-700" oninput="calculateTotals()">
+				</div>
+
+				<!-- SECCIÓN: DURACIÓN DEL PROYECTO EN DÍAS -->
+				<div>
+					<label for="durationInput" class="block text-lg font-medium text-gray-700 mb-2">
+						Projektdauer (Tage)
+					</label>
+					<input type="number" id="durationInput" value="5" min="0"
+						class="input-text text-2xl font-semibold text-indigo-700" oninput="handleDurationChange()">
+
+					<!-- ELEMENTO PARA MOSTRAR LAS HORAS CALCULADAS -->
+					<p class="text-sm font-medium text-gray-600 mt-2">
+						Entspricht Stunden (8h/Tag):
+						<span id="totalHoursOutput" class="font-bold text-indigo-700">0 Stunden</span>
+					</p>
+				</div>
+			</div>
+
+			<!-- TABLA DE COSTOS -->
+			<div class="overflow-x-auto mb-8">
+				<table class="min-w-full divide-y divide-gray-200">
+					<thead class="bg-gray-50">
+						<tr>
+							<th
+								class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4">
+								Beschreibung</th>
+							<th
+								class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/5">
+								Einzelkosten (€)</th>
+							<th
+								class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/6">
+								Anzahl</th>
+							<th
+								class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/6">
+								Gesamt (€)</th>
+							<th
+								class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/12">
+								Aktion</th>
+						</tr>
+					</thead>
+					<tbody id="expenseTableBody" class="bg-white divide-y divide-gray-200">
+						<!-- Las filas son generadas por JS -->
+					</tbody>
+				</table>
+			</div>
+
+			<!-- BOTONES DE ACCIÓN (AÑADIR FILA Y DESCARGAR PDF) -->
+			<div class="flex flex-col sm:flex-row gap-4">
+				<!-- BOTÓN AÑADIR FILA -->
+				<button onclick="addRow('Neue Position', 100, 1)"
+					class="btn-primary w-full sm:w-auto flex items-center justify-center">
+					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+							d="M12 4v16m8-8H4"></path>
+					</svg>
+					Zeile hinzufügen
+				</button>
+
+				<!-- NUEVO BOTÓN DESCARGAR PDF -->
+				<button onclick="downloadPDF()"
+					class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-200 w-full sm:w-auto flex items-center justify-center">
+					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+							d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+					</svg>
+					Download PDF
+				</button>
+			</div>
+
+			<!-- RESUMEN DE COSTOS -->
+			<div class="mt-8 pt-6 border-t border-gray-200 grid grid-cols-1 md:grid-cols-2 gap-6">
+				<div class="p-4 rounded-lg shadow-md bg-green-50">
+					<p class="text-sm font-medium text-gray-600">Gesamtausgaben</p>
+					<p id="totalSpent" class="text-2xl font-bold text-green-600">€ 0.00</p>
+				</div>
+
+				<div id="remainingBudgetCard" class="p-4 rounded-lg shadow-md bg-blue-50">
+					<p class="text-sm font-medium text-gray-600">Restbudget</p>
+					<p id="remainingBudget" class="text-2xl font-bold text-blue-600">€ 4.000,00</p>
+				</div>
+			</div>
+
+			<!-- Mensaje de Advertencia -->
+			<div id="alertMessage"
+				class="mt-4 hidden p-3 bg-red-100 border border-red-400 text-red-700 rounded-lg" role="alert">
+				<p class="font-semibold">Budget-Warnung!</p>
+				<p>Die Gesamtausgaben haben das festgelegte Budget überschritten.</p>
+			</div>
+
+			<!-- FOOTER: Año y Copyright -->
+			<footer class="mt-10 pt-4 border-t border-gray-100 text-center">
+				<p class="text-sm text-gray-500">
+					<span id="current-year" class="text-indigo-600 font-semibold"></span>&nbsp;
+					<a href="https://www.ecuador-it.com/" target="_blank" rel="noopener noreferrer"
+						class="hover:underline text-indigo-600 font-medium">ECUADOR-IT</a> <span
+						class="text-indigo-600">| All rights reserved</span>
+				</p>
+			</footer>
+		</div>
+
+		<!-- PESTAÑA 2: PERSONAL -->
+		<div id="tab-personal" class="tab-content hidden p-6 bg-gray-50 rounded-lg">
+			<h2 class="text-xl font-bold text-gray-800 mb-4">Personalrechner für Projekte 📊</h2>
+			<p class="text-gray-600 mb-6">Ziel: Berechnen Sie die gesamte geplante Personalarbeitslast basierend auf der Teamgröße und Dauer.</p>
+
+			<!-- SECCIÓN CONSOLIDADA: CARGA DE TRABAJO DEL EQUIPO -->
+			<div class="mb-8 p-4 bg-white rounded-lg shadow">
+				<h3 class="font-semibold text-lg text-indigo-700 mb-4 border-b pb-2">Geplante Team-Arbeitslast</h3>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+					<!-- 1. DÍAS -->
+					<div>
+						<label for="stdDays" class="block text-sm font-medium text-gray-700">Tage (Projektlaufzeit):</label>
+						<input type="number" id="stdDays" value="15" min="1" class="input-text text-base"
+							oninput="calculateScheduledTeamHours()">
+					</div>
+					<!-- 2. HORAS/DÍA -->
+					<div>
+						<label for="stdHoursPerDay" class="block text-sm font-medium text-gray-700">Std/Tag
+							(Team):</label>
+						<input type="number" id="stdHoursPerDay" value="8" min="1" class="input-text text-base"
+							oninput="calculateScheduledTeamHours()">
+					</div>
+					<!-- 3. NÚMERO DE PERSONAS (NUEVO) -->
+					<div>
+						<label for="numPeople" class="block text-sm font-medium text-gray-700">Anzahl Personen:</label>
+						<input type="number" id="numPeople" value="1" min="1" class="input-text text-base"
+							oninput="calculateScheduledTeamHours()">
+					</div>
+				</div>
+
+				<!-- HORAS TOTALES CALCULADAS -->
+				<div class="p-3 bg-indigo-50 rounded">
+					<p class="font-semibold text-base">
+						Erforderliche Stunden pro Person (bei gleicher Verteilung):
+						<span id="totalPersonHours" class="font-bold text-indigo-700">0,0 Stunden</span>
+					</p>
+					<p class="font-semibold text-base mt-1 pt-1 border-t border-indigo-200">
+						Entspricht Tagen (bei 8h/Tag):
+						<span id="totalPersonDays" class="font-bold text-indigo-700">0,0 Tage</span>
+					</p>
+				</div>
+			</div>
+
+			<p class="text-sm text-gray-500 mt-4">
+				Diese Berechnung liefert die gesamte Arbeitsmenge (in Stunden und Tagen), die jeder Mitarbeiter innerhalb
+				der angegebenen Dauer leisten muss.
+			</p>
+		</div>
+
+		<!-- PESTAÑA 3: CONTAINER (NUEVA VERSIÓN DE CALCULADORA DE VOLUMEN Y COSTOS) -->
+		<div id="tab-container" class="tab-content hidden p-6 bg-gray-50 rounded-lg">
+			<div class="w-full bg-white p-8 shadow-2xl rounded-xl transition-all duration-300">
+				<h1
+					class="text-2xl sm:text-3xl font-extrabold text-primary mb-6 border-b pb-2 text-center">
+					Container-Ressourcen und Kostenrechner
+				</h1>
+
+				<p class="text-sm text-gray-600 mb-6 text-center">
+					Berechnen Sie die benötigten 10 m³ Container und schätzen Sie den Gesamtpreis anhand der Art der
+					Akkumulation und der Wohnfläche.
+				</p>
+
+				<!-- Formulario de Inputs -->
+				<div class="space-y-4">
+
+					<!-- Superficie de la Vivienda -->
+					<div>
+						<label for="superficie" class="block text-sm font-medium text-gray-700 mb-1">Wohnfläche
+							(m²)</label>
+						<input type="number" id="superficie" value="100" min="1" oninput="calcularContenedores()"
+							class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150 shadow-sm"
+							aria-label="Wohnfläche">
+					</div>
+
+					<!-- Tipo de Acumulación (Select) -->
+					<div>
+						<label for="categoria" class="block text-sm font-medium text-gray-700 mb-1">Geschätzte
+							Akkumulationsart</label>
+						<select id="categoria" onchange="calcularContenedores()"
+							class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150 shadow-sm"
+							aria-label="Akkumulationsart">
+							<option value="normal">Normal</option>
+							<option value="mucho">Viel</option>
+							<option value="messie">Messie / Extreme Akkumulation</option>
+						</select>
+					</div>
+				</div>
+
+				<!-- Botón de Cálculo -->
+				<button id="calcularBtn" onclick="calcularContenedores()"
+					class="w-full mt-8 bg-primary text-white font-semibold py-3 rounded-xl shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-[1.01] focus:outline-none focus:ring-4 focus:ring-primary/50">
+					Vollständige Schätzung berechnen
+				</button>
+
+				<!-- Área de Resultados (Oculta por defecto) -->
+				<div id="resultado" class="mt-8 pt-6 border-t border-gray-200 hidden space-y-3">
+					<h2 class="text-xl font-bold text-gray-800">Benötigte Schätzung</h2>
+
+					<!-- Densidad Usada -->
+					<div class="flex justify-between items-center text-gray-700 p-3 bg-gray-50 rounded-lg">
+						<span class="font-medium">Angenommene Volumendichte (m³):</span>
+						<span id="densidadAsumida" class="font-bold text-lg text-secondary">0.00</span>
+					</div>
+
+					<!-- Volumen Total -->
+					<div class="flex justify-between items-center text-gray-700 p-3 bg-gray-50 rounded-lg">
+						<span class="font-medium">Geschätztes Raumvolumen:</span>
+						<span id="volumenTotal" class="font-bold text-lg text-primary">0 m³</span>
+					</div>
+
+					<!-- PRECIO ESTIMADO (NUEVO) -->
+					<div class="flex justify-between items-center text-gray-700 p-3 bg-gray-50 rounded-lg">
+						<span class="font-medium">Geschätzter Preis:</span>
+						<span id="costoTotal" class="font-bold text-lg text-red-600">€0</span>
+					</div>
+
+					<!-- Número de Contenedores (Destacado) -->
+					<div
+						class="p-4 rounded-xl shadow-md bg-primary/10 border-2 border-primary transition-colors duration-300">
+						<p class="text-sm font-semibold mb-1 text-gray-800">Empfohlene Container (Aufgerundet):</p>
+						<p id="contenedoresResultado" class="text-4xl font-extrabold text-center text-primary">0</p>
+						<!-- NOTA ACTUALIZADA con el texto solicitado y la referencia al costo -->
+						<p id="notaContenedores" class="text-xs text-center text-gray-600 mt-2">
+							Hinweis: Die Schätzung basiert auf 0,40 m³ Entrümpelungsvolumen pro Quadratmeter Wohnfläche und
+							rundet die Anzahl der Container auf. Der Preis ist eine **hypothetische Schätzung** pro
+							Container, abhängig von der Schwierigkeit der Kategorie.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- PESTAÑA 4: MATERIAL (CALCULADORA DE PESO) -->
+		<div id="tab-material" class="tab-content hidden p-6 bg-gray-50 rounded-lg">
+			<div class="w-full bg-white p-8 shadow-2xl rounded-xl transition-all duration-300">
+				<h1
+					class="text-2xl sm:text-3xl font-extrabold text-primary mb-6 border-b pb-2 text-center">
+					Materialgewichtsrechner (kg)
+				</h1>
+
+				<p class="text-sm text-gray-600 mb-6 text-center">
+					Berechnen Sie das Gesamtgewicht und schätzen Sie die Kosten verschiedener Materialien (Holz, Metall,
+					etc.) anhand des Volumens.
+				</p>
+
+				<!-- Formulario de Inputs -->
+				<div class="space-y-4 md:grid md:grid-cols-2 md:gap-4">
+
+					<!-- 1. Material -->
+					<div>
+						<label for="materialSelect" class="block text-sm font-medium text-gray-700 mb-1">Materialart</label>
+						<select id="materialSelect" onchange="calcularPesoMateriales()"
+							class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-secondary focus:border-secondary transition duration-150 shadow-sm"
+							aria-label="Materialart">
+							<option value="Stahl">Stahl (Metall)</option>
+							<option value="Aluminium">Aluminium (Metall)</option>
+							<option value="Holz">Holz (Eiche / Durschschnitt)</option>
+							<option value="Keramik">Keramik</option>
+							<option value="Textil">Textil (Stoff / Durchschnitt)</option>
+							<option value="Papier">Bücher (Durschschnitt)</option>
+						</select>
+					</div>
+
+					<!-- 2. Form (Shape) -->
+					<div>
+						<label for="shapeSelect" class="block text-sm font-medium text-gray-700 mb-1">Form/Geometrie</label>
+						<select id="shapeSelect" onchange="updateShapeInputs(); calcularPesoMateriales();"
+							class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-secondary focus:border-secondary transition duration-150 shadow-sm"
+							aria-label="Form/Geometrie">
+							<option value="rectangular">Rechteckig (Länge x Breite x Höhe)</option>
+							<option value="cylindrical">Zylindrisch (Durchmesser x Länge)</option>
+						</select>
+					</div>
+				</div>
+
+				<!-- GRÁFICO DEMOSTRATIVO MINATURA -->
+				<div id="shapeVisualLabel" class="mt-6">
+					<!-- Contenido inyectado por JS (incluye la imagen) -->
+				</div>
+
+				<!-- 3. Dimension Inputs (Dynamic) -->
+				<div id="materialDimensions" class="mt-4 space-y-4 md:grid md:grid-cols-3 md:gap-4">
+					<!-- Default inputs are generated by JS in updateShapeInputs() -->
+				</div>
+
+				<!-- 4. Multiplier Input -->
+				<div class="mt-4">
+					<label for="materialQty" class="block text-sm font-medium text-gray-700 mb-1">Anzahl der Teile</label>
+					<input type="number" id="materialQty" value="1" min="1" oninput="calcularPesoMateriales()"
+						class="input-text text-base" aria-label="Anzahl der Teile">
+				</div>
+
+				<!-- Área de Resultados -->
+				<div id="materialResultado" class="mt-8 pt-6 border-t border-gray-200 space-y-3">
+					<h2 class="text-xl font-bold text-gray-800">Ergebnisse</h2>
+
+					<!-- DENSITY -->
+					<div class="flex justify-between items-center text-gray-700 p-3 bg-secondary/10 rounded-lg">
+						<span class="font-medium">Angenommene Dichte:</span>
+						<span id="pesoDensidad" class="font-bold text-lg text-secondary">0 kg/m³</span>
+					</div>
+
+					<!-- VOLUME -->
+					<div class="flex justify-between items-center text-gray-700 p-3 bg-secondary/10 rounded-lg">
+						<span class="font-medium">Gesamtvolumen:</span>
+						<span id="pesoVolumen" class="font-bold text-lg text-primary">0 m³</span>
+					</div>
+
+					<!-- NUEVO: Umzugskartons (Cajas de Mudanza) - Visible solo para Textil/Papier -->
+					<div id="materialKartonDisplay"
+						class="hidden flex justify-between items-center text-gray-700 p-3 bg-yellow-50 rounded-lg border-l-4 border-yellow-600 transition-all duration-300">
+						<span class="font-medium">Geschätzte Umzugskartons Typ I (55x35x43.5cm):</span>
+						<span id="kartonMaterialResultado" class="font-bold text-lg text-yellow-800">0</span>
+					</div>
+
+					<!-- NUEVO: Müllbeutel (Bolsas de Basura) - Visible solo para Textil/Papier -->
+					<div id="materialMuellbeutelDisplay"
+						class="hidden flex justify-between items-center text-gray-700 p-3 bg-gray-200 rounded-lg border-l-4 border-gray-500 transition-all duration-300">
+						<span class="font-medium">Geschätzte Müllbeutel (120L):</span>
+						<span id="muellbeutelMaterialResultado" class="font-bold text-lg text-gray-700">0</span>
+					</div>
+
+
+					<!-- WEIGHT (DESTACADO) -->
+					<div
+						class="p-4 rounded-xl shadow-md bg-primary/10 border-2 border-primary transition-colors duration-300">
+						<p class="text-sm font-semibold mb-1 text-primary">Gesamtgewicht:</p>
+						<p id="pesoTotal" class="text-4xl font-extrabold text-center text-primary">0 kg</p>
+					</div>
+
+					<!-- NOTA AL FINAL -->
+					<p class="text-xs text-gray-500 mt-4">
+						HINWEIS: Die Dichtewerte sind Durchschnittsschätzungen und können je nach Materialqualität und
+						Herstellungsprozess variieren.
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script>
+		// Las variables de Firebase se inicializan globalmente (aunque Firestore no se use, según la instrucción)
+		const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+		const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
+		const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+		const DEFAULT_HOURS_PER_DAY = 8; // Constante para 8 horas/día
+
+		// --- CONSTANTES Y LÓGICA DEL CALCULADOR DE CONTENEDORES ---
+
+		// Mapa de Densidades Promedio (m³/m²) basado en la categoría de acumulación
+		const DENSIDADES = {
+			'normal': 0.40, // 0.40 m³/m²
+			'mucho': 0.65, // 0.65 m³/m²
+			'messie': 0.90 // 0.90 m³/m²
+		};
+
+		// Mapa de COSTOS ESTIMADOS por contenedor de 10 m³ (HIPOTÉTICO)
+		const COSTOS_CONTENEDOR = {
+			'normal': 700, // €700 por contenedor (10m³)
+			'mucho': 900, // €900 por contenedor (10m³)
+			'messie': 1200 // €1200 por contenedor (10m³)
+		};
+
+		// Volumen fijo del contenedor
+		const VOL_CONTENEDOR_FIJO = 10;
+
+		// CONSTANTES para el cálculo de cajas y bolsas (Usadas en la pestaña Material)
+		const VOL_KARTON_M3 = 0.55 * 0.35 * 0.435; // ~0.0835 m³ (550 x 350 x 435 mm)
+		const VOL_MUELLBEUTEL_M3 = 0.12; // 120 Liters = 0.12 m³
+
+
+		/**
+		 * Función principal para calcular el número de contenedores necesarios y el costo (PESTAÑA CONTAINER).
+		 */
+		function calcularContenedores() {
+			// 1. Obtener valores de los inputs (usando los nuevos IDs)
+			const superficie = parseFloat(document.getElementById('superficie')?.value);
+			const categoria = document.getElementById('categoria')?.value;
+			const volContenedor = VOL_CONTENEDOR_FIJO; // Usar el valor fijo
+
+			const resultadoDiv = document.getElementById('resultado');
+			const contenedoresDisplay = document.getElementById('contenedoresResultado');
+			const volumenTotalDisplay = document.getElementById('volumenTotal');
+			const densidadAsumidaDisplay = document.getElementById('densidadAsumida');
+			const costoTotalDisplay = document.getElementById('costoTotal');
+
+			// 2. Validación básica
+			if (isNaN(superficie) || superficie <= 0) {
+				// Si hay un error, ocultar el resultado y mostrar un mensaje
+				if (resultadoDiv) resultadoDiv.classList.add('hidden');
+				// Se utiliza la función de alerta personalizada para no usar alert()
+				alertResultado('Eingabefehler', 'Bitte geben Sie eine gültige Wohnfläche ein (Fläche > 0).', 'messie');
+				return;
+			}
+
+			// Obtener la densidad promedio para la categoría seleccionada
+			const densidadAsumida = DENSIDADES[categoria];
+
+			// 3. Lógica de Cálculo
+			// Volumen Total (m³) = Superficie (m²) * Densidad Promedio (m³/m²)
+			const volumenTotal = superficie * densidadAsumida;
+
+			// Número de Contenedores = Volumen Total / Volumen por Contenedor (redondeado al alza)
+			const numContenedores = Math.ceil(volumenTotal / volContenedor);
+
+			// Cálculo del Costo Total
+			const costoPorContenedor = COSTOS_CONTENEDOR[categoria];
+			const costoTotal = numContenedores * costoPorContenedor;
+
+
+			// 4. Actualizar la Interfaz de Usuario (UI)
+
+			// Actualizar valores numéricos
+			if (densidadAsumidaDisplay) densidadAsumidaDisplay.textContent = densidadAsumida.toFixed(2);
+			if (volumenTotalDisplay) volumenTotalDisplay.textContent = `${volumenTotal.toFixed(1)} m³`;
+			if (contenedoresDisplay) contenedoresDisplay.textContent = numContenedores;
+
+			// Formatear costo como moneda (Euro, sin decimales)
+			if (costoTotalDisplay) {
+				costoTotalDisplay.textContent = `${costoTotal.toLocaleString('de-DE', { style: 'currency', currency: 'EUR', minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+			}
+
+			// Mostrar el área de resultados
+			if (resultadoDiv) resultadoDiv.classList.remove('hidden');
+
+			// Aplicar estilo dinámico basado en la categoría
+			const categoriaColor = categoria === 'messie' ? 'messie' : (categoria === 'mucho' ? 'mucho' : 'normal');
+			const contenedoresBox = contenedoresDisplay?.parentElement?.parentElement;
+
+			if (contenedoresBox) {
+				contenedoresBox.className = `p-4 rounded-xl shadow-md transition-colors duration-300 ${getColorClass(categoriaColor)}`;
+			}
+		}
+
+		/**
+		 * Función auxiliar para obtener las clases de color de Tailwind (Fondo y Borde) para el resultado destacado.
+		 * @param {string} colorKey - 'normal', 'mucho' o 'messie'
+		 * @returns {string} Clases CSS para el contenedor
+		 */
+		function getColorClass(colorKey) {
+			let bgColorClass = '';
+			let borderColorClass = '';
+			let categoriaTextColorClass = '';
+
+			if (colorKey === 'normal') {
+				bgColorClass = 'bg-primary/10';
+				borderColorClass = 'border-primary';
+				categoriaTextColorClass = 'text-primary';
+			} else if (colorKey === 'mucho') {
+				bgColorClass = 'bg-mucho/10';
+				borderColorClass = 'border-mucho';
+				categoriaTextColorClass = 'text-mucho';
+			} else if (colorKey === 'messie') {
+				bgColorClass = 'bg-messie/10';
+				borderColorClass = 'border-messie';
+				categoriaTextColorClass = 'text-messie';
+			}
+
+			// Aplicar el color de texto al resultado de contenedores
+			const contenedoresResultadoElement = document.getElementById('contenedoresResultado');
+			if (contenedoresResultadoElement) {
+				contenedoresResultadoElement.className = `text-4xl font-extrabold text-center ${categoriaTextColorClass}`;
+			}
+
+			return `${bgColorClass} border-2 ${borderColorClass}`;
+		}
+
+		// --- CONSTANTES Y LÓGICA DEL NUEVO CALCULADOR DE PESO DE MATERIALES ---
+
+		// Densidades promedio (kg/m³)
+		const DENSIDADES_PESO = {
+			'Holz': 700, // Eiche/Durchschnitt
+			'Papier': 500,
+			'Textil': 200,
+			'Keramik': 2400,
+			'Stahl': 7850, // Acero estructural
+			'Aluminium': 2700
+		};
+
+		// Se ha eliminado la constante COSTOS_PESO_UNITARIO
+
+		/**
+		 * Actualiza los campos de entrada de dimensiones según la forma seleccionada (PESTAÑA MATERIAL).
+		 */
+		function updateShapeInputs() {
+			const shape = document.getElementById('shapeSelect')?.value;
+			const dimensionsDiv = document.getElementById('materialDimensions');
+			const visualLabelDiv = document.getElementById('shapeVisualLabel');
+
+			if (!dimensionsDiv || !visualLabelDiv) return;
+
+			let visualHtml = '';
+
+			if (shape === 'rectangular') {
+				// Nuevo gráfico demostrativo para el rectángulo
+				visualHtml = `
+					<div class="text-sm font-semibold text-gray-700 bg-secondary/10 p-2 rounded-lg mb-4 text-center border border-secondary/30">
+						Dimensionen: <span class="text-secondary font-bold">Länge</span> x <span class="text-secondary font-bold">Breite</span> x <span class="text-secondary font-bold">Höhe</span>
+						<!-- Etiqueta de imagen para demostración -->
+						
+					</div>
+				`;
+
+				dimensionsDiv.innerHTML = `
+					<div>
+						<label for="materialL" class="block text-sm font-medium text-gray-700 mb-1">Länge (m)</label>
+						<input type="number" id="materialL" value="1" min="0.01" step="0.01" oninput="calcularPesoMateriales()"
+							class="input-text text-base" aria-label="Länge">
+					</div>
+					<div>
+						<label for="materialW" class="block text-sm font-medium text-gray-700 mb-1">Breite (m)</label>
+						<input type="number" id="materialW" value="1" min="0.01" step="0.01" oninput="calcularPesoMateriales()"
+							class="input-text text-base" aria-label="Breite">
+					</div>
+					<div>
+						<label for="materialH" class="block text-sm font-medium text-gray-700 mb-1">Höhe (m)</label>
+						<input type="number" id="materialH" value="1" min="0.01" step="0.01" oninput="calcularPesoMateriales()"
+							class="input-text text-base" aria-label="Höhe">
+					</div>
+				`;
+			} else if (shape === 'cylindrical') {
+				// Nuevo gráfico demostrativo para el cilindro
+				visualHtml = `
+					<div class="text-sm font-semibold text-gray-700 bg-secondary/10 p-2 rounded-lg mb-4 text-center border border-secondary/30">
+						Dimensionen: <span class="text-secondary font-bold">Durchmesser</span> x <span class="text-secondary font-bold">Länge</span>
+						<!-- Etiqueta de imagen para demostración -->
+						
+					</div>
+				`;
+
+				dimensionsDiv.innerHTML = `
+					<div>
+						<label for="materialD" class="block text-sm font-medium text-gray-700 mb-1">Durchmesser (m)</label>
+						<input type="number" id="materialD" value="0.1" min="0.01" step="0.01" oninput="calcularPesoMateriales()"
+							class="input-text text-base" aria-label="Durchmesser">
+					</div>
+					<div>
+						<label for="materialL" class="block text-sm font-medium text-gray-700 mb-1">Länge (m)</label>
+						<input type="number" id="materialL" value="1" min="0.01" step="0.01" oninput="calcularPesoMateriales()"
+							class="input-text text-base" aria-label="Länge">
+					</div>
+					<div class="hidden"></div> <!-- Placeholder to maintain grid layout -->
+				`;
+			}
+
+			visualLabelDiv.innerHTML = visualHtml;
+
+			// Iniciar cálculo
+			calcularPesoMateriales();
+		}
+
+		/**
+		 * Calcula el volumen, peso y costo estimado de un material (PESTAÑA MATERIAL).
+		 */
+		function calcularPesoMateriales() {
+			const material = document.getElementById('materialSelect')?.value;
+			const shape = document.getElementById('shapeSelect')?.value;
+			const qty = parseFloat(document.getElementById('materialQty')?.value) || 0;
+			const density = DENSIDADES_PESO[material] || 0;
+
+			// Se ha eliminado la obtención de unitCostPerKg
+
+			// Displays para cajas y bolsas
+			const kartonDisplay = document.getElementById('materialKartonDisplay');
+			const muellbeutelDisplay = document.getElementById('materialMuellbeutelDisplay');
+			const kartonResultado = document.getElementById('kartonMaterialResultado');
+			const muellbeutelResultado = document.getElementById('muellbeutelMaterialResultado');
+
+			let volumePerUnit = 0;
+			let totalVolume = 0;
+
+			// 1. Calcular Volumen por Unidad
+			if (shape === 'rectangular') {
+				const L = parseFloat(document.getElementById('materialL')?.value) || 0;
+				const W = parseFloat(document.getElementById('materialW')?.value) || 0;
+				const H = parseFloat(document.getElementById('materialH')?.value) || 0;
+				volumePerUnit = L * W * H; // Volumen = L x W x H
+			} else if (shape === 'cylindrical') {
+				const D = parseFloat(document.getElementById('materialD')?.value) || 0;
+				const L = parseFloat(document.getElementById('materialL')?.value) || 0;
+				const R = D / 2;
+				volumePerUnit = Math.PI * R * R * L; // Volumen = π * R² * L
+			}
+
+			// 2. Calcular Volumen Total
+			totalVolume = volumePerUnit * qty;
+
+			// 3. Calcular Peso Total (Peso = Volumen x Densidad)
+			const totalWeight = totalVolume * density;
+
+			// 4. Se ha eliminado el Cálculo de Costo Total
+
+			// 5. LÓGICA CONDICIONAL: Cálculo y Visualización de Cajas/Bolsas
+			if (material === 'Textil' || material === 'Papier') {
+				const numUmzugskartons = Math.ceil(totalVolume / VOL_KARTON_M3);
+				const numMuellbeutel = Math.ceil(totalVolume / VOL_MUELLBEUTEL_M3);
+
+				if (kartonResultado) kartonResultado.textContent = numUmzugskartons.toLocaleString('de-DE');
+				if (muellbeutelResultado) muellbeutelResultado.textContent = numMuellbeutel.toLocaleString('de-DE');
+
+				if (kartonDisplay) kartonDisplay.classList.remove('hidden');
+				if (muellbeutelDisplay) muellbeutelDisplay.classList.remove('hidden');
+
+			} else {
+				// Ocultar si el material no es Textil o Papier
+				if (kartonDisplay) kartonDisplay.classList.add('hidden');
+				if (muellbeutelDisplay) muellbeutelDisplay.classList.add('hidden');
+			}
+
+
+			// 6. Actualizar la Interfaz de Usuario (UI) para Peso/Volumen
+			document.getElementById('pesoDensidad').textContent = `${density.toFixed(0)} kg/m³`;
+			document.getElementById('pesoVolumen').textContent = `${totalVolume.toFixed(3)} m³`;
+			document.getElementById('pesoTotal').textContent = `${totalWeight.toFixed(2)} kg`;
+
+			// Se ha eliminado la actualización del costo total
+
+
+			// Opcional: Retroalimentación visual si los inputs son inválidos
+			const materialResultadoDiv = document.getElementById('materialResultado');
+			if (materialResultadoDiv) {
+				if (totalVolume <= 0 || qty <= 0) {
+					materialResultadoDiv.classList.add('opacity-50');
+				} else {
+					materialResultadoDiv.classList.remove('opacity-50');
+				}
+			}
+		}
+
+		/**
+		 * Función para mostrar mensajes de error/alerta (sustituto de alert()).
+		 * Se muestra en el área de resultados.
+		 * @param {string} title - Título del mensaje
+		 * @param {string} message - Cuerpo del mensaje
+		 * @param {string} type - Tipo de mensaje para el color ('normal', 'mucho', 'messie')
+		 */
+		function alertResultado(title, message, type) {
+			const resultArea = document.getElementById('resultado');
+			// Usamos el área de la tarjeta de alerta principal si existe
+			const mainAlertArea = document.getElementById('alertMessage')?.parentElement;
+			const targetArea = resultArea && !resultArea.classList.contains('hidden') ? resultArea : mainAlertArea;
+
+			if (!targetArea) return; // Salir si el área de resultado no existe
+
+			// Crear un div para el mensaje temporal
+			let alertDiv = document.getElementById('customAlert');
+			if (!alertDiv) {
+				alertDiv = document.createElement('div');
+				alertDiv.id = 'customAlert';
+				alertDiv.classList.add('mt-4');
+				targetArea.prepend(alertDiv);
+			}
+
+			let bgColor = '';
+			let borderColor = '';
+			let textColor = 'text-gray-800';
+
+			if (type === 'messie') {
+				bgColor = 'bg-messie/10';
+				borderColor = 'border-messie';
+			} else if (type === 'mucho') {
+				bgColor = 'bg-mucho/10';
+				borderColor = 'border-mucho';
+			} else if (type === 'normal' || type === 'success') {
+				// Usar un color de éxito si el tipo es 'normal' o 'success'
+				bgColor = 'bg-green-100';
+				borderColor = 'border-green-600';
+				textColor = 'text-green-800';
+			}
+			 else {
+				// Si es 'normal' o cualquier otro, usa el color primario (azul)
+				bgColor = 'bg-primary/10';
+				borderColor = 'border-primary';
+			}
+
+			alertDiv.className = `mb-4 p-4 rounded-xl border-2 ${bgColor} ${borderColor} ${textColor}`;
+			alertDiv.innerHTML = `<p class="font-bold">${title}</p><p class="text-sm">${message}</p>`;
+
+			// Ocultar el mensaje después de 5 segundos
+			setTimeout(() => {
+				alertDiv.remove();
+			}, 5000);
+		}
+        
+        /**
+         * Generates a PDF report for the Projektbudget tab using jsPDF and autotable.
+         */
+        function downloadPDF() {
+            // Check if jsPDF is available
+            if (typeof window.jspdf === 'undefined' || typeof window.jspdf.jsPDF === 'undefined') {
+                console.error("jsPDF library not loaded. Ensure the CDN is correctly linked.");
+                alertResultado('Fehler', 'Die PDF-Bibliothek konnte nicht geladen werden. Der Download ist nicht möglich.', 'messie');
+                return;
+            }
+
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            const projectTitle = "Projektbudget-Manager: ArteQ";
+            const budget = document.getElementById('budgetInput').value;
+            const duration = document.getElementById('durationInput').value;
+            const totalHours = document.getElementById('totalHoursOutput').textContent;
+            const totalSpent = document.getElementById('totalSpent').textContent;
+            const remainingBudget = document.getElementById('remainingBudget').textContent;
+            
+            // Función auxiliar para obtener el valor numérico limpio del presupuesto
+            const getNumericValue = (text) => {
+                // Elimina caracteres no numéricos excepto coma y punto, luego reemplaza coma por punto para float
+                return parseFloat(text.replace(/[^0-9,-]+/g,"").replace('.', '').replace(',', '.')) || 0;
+            };
+
+            const totalBudget = getNumericValue(budget);
+            const remainingValue = getNumericValue(remainingBudget);
+
+            // --- 1. Header and General Info ---
+            doc.setFontSize(18);
+            doc.text(projectTitle, 14, 20);
+            
+            doc.setFontSize(12);
+            doc.setTextColor(100);
+            let y = 30;
+
+            // Hacemos el presupuesto total en negritas
+            doc.setFont(undefined, 'bold'); // Establece el estilo de fuente a negrita
+            doc.setTextColor(0); // Opcional: Oscurece el color para mayor contraste
+            doc.text(`Gesamtbudget: € ${totalBudget.toFixed(2).replace('.', ',')}`, 14, y);
+            
+            // Restablece el estilo de fuente y color para las siguientes líneas de información
+            doc.setFont(undefined, 'normal');
+            doc.setTextColor(100);
+            
+            y += 7;
+            doc.text(`Projektdauer: ${duration} Tage`, 14, y);
+            y += 7;
+            doc.text(`(Entspricht: ${totalHours})`, 14, y);
+            y += 10;
+            
+            // --- 2. Expense Table ---
+            doc.setFontSize(14);
+            doc.setTextColor(0);
+            doc.text("Kostenpositionen", 14, y);
+            y += 5;
+
+            const tableBody = document.getElementById('expenseTableBody');
+            const rows = tableBody.rows;
+            const tableData = [];
+
+            for (let i = 0; i < rows.length; i++) {
+                const row = rows[i];
+                // Usamos querySelector en row para asegurar que solo buscamos dentro de la fila actual
+                const desc = row.querySelector('input[type="text"]')?.value || '';
+                const cost = parseFloat(row.querySelector('.cost-input')?.value) || 0;
+                const qty = parseInt(row.querySelector('.quantity-input')?.value) || 0;
+                
+                const lineTotal = cost * qty; 
+                
+                // Formato alemán: coma para decimal, punto para separador de miles
+                const formattedCost = cost.toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                const formattedTotal = lineTotal.toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+                tableData.push([
+                    desc,
+                    `€ ${formattedCost}`,
+                    qty,
+                    `€ ${formattedTotal}`
+                ]);
+            }
+
+            doc.autoTable({
+                startY: y,
+                head: [['Beschreibung', 'Einzelkosten (€)', 'Anzahl', 'Gesamt (€)']],
+                body: tableData,
+                theme: 'striped',
+                headStyles: { fillColor: [59, 130, 246], textColor: 255 }, // Azul de Tailwind 
+                styles: { fontSize: 10 },
+                columnStyles: {
+                    2: { halign: 'right' },
+                    3: { halign: 'right' }
+                }
+            });
+            
+            y = doc.autoTable.previous.finalY + 10;
+            
+            // --- 3. Summary Footer ---
+            doc.setFontSize(14);
+            doc.setTextColor(0);
+            doc.text("Zusammenfassung", 14, y);
+            y += 5;
+
+            // Colores basados en el estado del presupuesto
+            let remainingColor = [59, 130, 246]; // Blue (normal)
+            let remainingTextColor = [255];
+            
+            if (remainingValue < 0) {
+                 remainingColor = [239, 68, 68]; // Red 500
+                 remainingTextColor = [255];
+            } else if (remainingValue > 0 && remainingValue < (totalBudget * 0.2)) {
+                 remainingColor = [245, 158, 11]; // Amber 500
+                 remainingTextColor = [255];
+            } else if (remainingValue > 0) {
+                 remainingColor = [16, 185, 129]; // Green 500
+                 remainingTextColor = [255];
+            } else {
+                 remainingColor = [59, 130, 246]; // Blue 500
+                 remainingTextColor = [255];
+            }
+
+            // Datos para la tabla de resumen
+            const summaryData = [
+                ['Gesamtausgaben:', totalSpent],
+                ['Restbudget:', remainingBudget]
+            ];
+            
+            doc.autoTable({
+                startY: y,
+                head: [['Kennzahl', 'Betrag']],
+                body: summaryData,
+                theme: 'plain',
+                styles: { fontSize: 12, cellPadding: 2 },
+                headStyles: { fillColor: [243, 244, 246], textColor: 0 },
+                bodyStyles: { lineColor: 200, lineWidth: 0.1 },
+                columnStyles: {
+                    0: { fontStyle: 'bold' },
+                    1: { halign: 'right', fontStyle: 'bold', textColor: remainingValue < 0 ? [239, 68, 68] : [16, 185, 129] } // Colorea solo el valor del restante/gastado
+                }
+            });
+
+            // --- 4. Save PDF ---
+            doc.save(`Projektbudget_${new Date().toLocaleDateString('de-DE').replace(/\./g, '-')}.pdf`);
+            
+            // Alerta de éxito personalizada
+            alertResultado('Erfolg', 'Das PDF "Projektbudget" wurde erfolgreich generiert.', 'success');
+        }
+
+		/**
+		 * Implementa medidas básicas de prevención de copias y acceso al código fuente.
+		 * NOTA: Estas medidas solo son un elemento disuasorio y no ofrecen seguridad real,
+		 * ya que cualquier usuario experto puede anularlas.
+		 */
+		function implementAntiCopyMeasures() {
+			const body = document.body;
+
+			// 1. Deshabilitar el menú contextual (clic derecho)
+			body.oncontextmenu = function () {
+				console.log("Right click disabled.");
+				return false;
+			};
+
+			// 2. Deshabilitar la selección y copia (Ctrl+C)
+			body.onselectstart = function () {
+				return false;
+			}; // Deshabilita la selección
+			body.oncopy = function () {
+				return false;
+			}; // Deshabilita el evento de copia
+
+			// 3. Deshabilitar teclas comunes de desarrollador/visualización de código fuente
+			document.addEventListener('keydown', function (e) {
+				// Bloquear F12
+				if (e.key === 'F12') {
+					e.preventDefault();
+					console.log("F12 (Developer Tools) disabled.");
+					return false;
+				}
+
+				// Bloquear Ctrl+Shift+I (Inspeccionar) / Ctrl+Shift+J (Consola) / Ctrl+Shift+C (Inspector)
+				if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) {
+					e.preventDefault();
+					console.log("Ctrl+Shift+I/J/C disabled.");
+					return false;
+				}
+
+				// Bloquear Ctrl+U (Ver código fuente)
+				if (e.ctrlKey && e.key === 'U') {
+					e.preventDefault();
+					console.log("Ctrl+U (View Source) disabled.");
+					return false;
+				}
+			});
+		}
+
+
+		// --- LÓGICA DE LA APLICACIÓN MULTI-PESTAÑA ---
+
+		/**
+		 * Cambia entre las pestañas.
+		 * @param {string} tabId - El ID de la pestaña a mostrar (sin el prefijo 'tab-').
+		 */
+		function switchTab(tabId) {
+			// Ocultar todas las pestañas y establecer los botones como inactivos
+			document.querySelectorAll('.tab-content').forEach(content => {
+				content.classList.add('hidden');
+			});
+			document.querySelectorAll('.tab-button').forEach(button => {
+				button.classList.remove('border-indigo-600', 'text-indigo-600');
+				button.classList.add('border-transparent', 'text-gray-500', 'hover:text-gray-700', 'hover:border-gray-300');
+				button.setAttribute('aria-selected', 'false');
+			});
+
+			// Mostrar la pestaña actual y establecer el botón como activo
+			const activeContent = document.getElementById(`tab-${tabId}`);
+			const activeButton = document.getElementById(`tab-btn-${tabId}`);
+
+			if (activeContent && activeButton) {
+				activeContent.classList.remove('hidden');
+				activeButton.classList.remove('border-transparent', 'text-gray-500', 'hover:text-gray-700', 'hover:border-gray-300');
+				activeButton.classList.add('border-indigo-600', 'text-indigo-600');
+				activeButton.setAttribute('aria-selected', 'true');
+
+				// Inicialización específica al cambiar a las pestañas
+				if (tabId === 'personal') {
+					calculateScheduledTeamHours();
+				} else if (tabId === 'container') {
+					calcularContenedores();
+				} else if (tabId === 'material') { // NUEVA INICIALIZACIÓN
+					updateShapeInputs();
+				}
+			}
+		}
+
+		/**
+		 * Calcula las horas requeridas por persona y los días resultantes (PESTAÑA PERSONAL).
+		 */
+		function calculateScheduledTeamHours() {
+			const days = parseFloat(document.getElementById('stdDays')?.value) || 0;
+			const hoursPerDay = parseFloat(document.getElementById('stdHoursPerDay')?.value) || DEFAULT_HOURS_PER_DAY;
+			const numPeople = parseFloat(document.getElementById('numPeople')?.value) || 1;
+			const totalPersonHoursElement = document.getElementById('totalPersonHours');
+			const totalPersonDaysElement = document.getElementById('totalPersonDays');
+
+			// La carga de trabajo fija del proyecto (basada en días * horas_por_día)
+			const fixedProjectHours = days * hoursPerDay;
+
+			let hoursPerPerson = 0;
+			let daysPerPerson = 0;
+
+			// Dividir las horas fijas entre el número de personas.
+			if (numPeople > 0) {
+				hoursPerPerson = fixedProjectHours / numPeople;
+
+				// CÁLCULO: Días por persona = Horas por persona / Horas estándar por día (8h)
+				daysPerPerson = hoursPerPerson / DEFAULT_HOURS_PER_DAY;
+			}
+
+			// Se utiliza la coma como separador decimal para la visualización (formato alemán)
+			if (totalPersonHoursElement) totalPersonHoursElement.textContent = `${hoursPerPerson.toFixed(1).replace('.', ',')} Stunden`;
+			if (totalPersonDaysElement) totalPersonDaysElement.textContent = `${daysPerPerson.toFixed(1).replace('.', ',')} Tage`;
+		}
+
+		/**
+		 * Actualiza el año actual en el pie de página.
+		 */
+		function updateCurrentYear() {
+			const yearSpan = document.getElementById('current-year');
+			if (yearSpan) {
+				yearSpan.textContent = new Date().getFullYear();
+			}
+		}
+
+		/**
+		 * Inicializa la aplicación con filas de ejemplo.
+		 */
+		function initializeApp() {
+			// Inicializa con algunas filas de ejemplo en la tabla principal
+			addRow('Personal (1)', 150, 5);
+			addRow('Personal (2)', 150, 5);
+			addRow('Personal (3)', 150, 3);
+			addRow('Container', 500, 1);
+
+			// Asegura que los totales se calculen al cargar la página
+			calculateTotals();
+
+			// Calcula y muestra las horas iniciales (vista principal)
+			handleDurationChange();
+
+			// Calcula las horas iniciales para la pestaña Personal
+			calculateScheduledTeamHours();
+
+			// Calcula las necesidades de contenedores para la pestaña Container
+			calcularContenedores();
+
+			// Inicializa la pestaña Material
+			updateShapeInputs();
+
+			// Implementa medidas anti-copia (NUEVA FUNCIÓN)
+			implementAntiCopyMeasures();
+
+			// Actualiza el año actual en el pie de página
+			updateCurrentYear();
+
+			// Establece la pestaña por defecto
+			switchTab('projektbudget');
+
+			// Lógica para enfocar automáticamente el presupuesto
+			setTimeout(() => {
+				const budgetInput = document.getElementById('budgetInput');
+				if (budgetInput) {
+					budgetInput.focus();
+				}
+			}, 100);
+		}
+
+		/**
+		 * Maneja el cambio en la duración del proyecto (días) en la vista principal y calcula las horas.
+		 */
+		function handleDurationChange() {
+			const durationInput = document.getElementById('durationInput');
+			const totalHoursOutput = document.getElementById('totalHoursOutput');
+
+			const days = parseInt(durationInput.value) || 0;
+			const hoursPerDay = DEFAULT_HOURS_PER_DAY; // Mínimo 8 horas por día
+
+			const totalHours = days * hoursPerDay;
+
+			if (totalHoursOutput) totalHoursOutput.textContent = `${totalHours} Stunden`;
+
+			calculateTotals();
+		}
+
+		/**
+		 * Agrega una nueva fila a la tabla de costos.
+		 * @param {string} desc - Descripción por defecto.
+		 * @param {number} cost - Costo unitario por defecto.
+		 * @param {number} qty - Cantidad por defecto.
+		 */
+		function addRow(desc = '', cost = 0, qty = 0) {
+			const tableBody = document.getElementById('expenseTableBody');
+			if (!tableBody) return;
+
+			const row = tableBody.insertRow();
+			row.classList.add('hover:bg-gray-50', 'transition-colors', 'duration-150');
+
+			// Contenido de la fila
+			row.innerHTML = `
+				<td class="px-3 py-3 whitespace-nowrap">
+					<input type="text" value="${desc}" placeholder="Beschreibung" class="input-text text-sm" oninput="calculateTotals()">
+				</td>
+				<td class="px-3 py-3 whitespace-nowrap">
+					<input type="number" value="${cost.toFixed(2)}" min="0" placeholder="Kosten" class="input-text cost-input text-sm" oninput="calculateTotals()">
+				</td>
+				<td class="px-3 py-3 whitespace-nowrap">
+					<input type="number" value="${qty}" min="0" placeholder="Anzahl" class="input-text quantity-input text-sm" oninput="calculateTotals()">
+				</td>
+				<td class="px-3 py-3 whitespace-nowrap">
+					<span class="total-output font-semibold text-gray-800">€ 0.00</span>
+				</td>
+				<td class="px-3 py-3 whitespace-nowrap text-center">
+					<button onclick="deleteRow(this)" class="text-red-600 hover:text-red-900 transition-colors duration-150 p-1 rounded-full hover:bg-red-100" title="Zeile löschen">
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+					</button>
+				</td>
+			`;
+
+			// Calcular totales inmediatamente después de agregar la fila
+			calculateTotals();
+		}
+
+		/**
+		 * Elimina la fila de la tabla donde se hizo clic en el botón.
+		 * @param {HTMLElement} button - El botón que disparó la eliminación.
+		 */
+		function deleteRow(button) {
+			const row = button.closest('tr');
+			if (row) {
+				row.remove();
+				calculateTotals(); // Recalcular después de eliminar
+			}
+		}
+
+		/**
+		 * Calcula los totales de cada fila, los gastos totales y el presupuesto restante.
+		 */
+		function calculateTotals() {
+			const budgetInput = document.getElementById('budgetInput');
+			const totalSpentElement = document.getElementById('totalSpent');
+			const remainingBudgetElement = document.getElementById('remainingBudget');
+			const remainingBudgetCard = document.getElementById('remainingBudgetCard');
+			const alertMessage = document.getElementById('alertMessage');
+
+			if (!budgetInput || !totalSpentElement || !remainingBudgetElement || !remainingBudgetCard || !alertMessage) return;
+
+			// 1. Obtener el presupuesto total
+			const totalBudget = parseFloat(budgetInput.value) || 0;
+
+			// 2. Calcular gastos totales
+			let currentTotalSpent = 0;
+			const rows = document.getElementById('expenseTableBody')?.rows || [];
+
+			for (let i = 0; i < rows.length; i++) {
+				const row = rows[i];
+				const costInput = row.querySelector('.cost-input');
+				const quantityInput = row.querySelector('.quantity-input');
+				const totalOutput = row.querySelector('.total-output');
+
+				const cost = parseFloat(costInput?.value) || 0;
+				const quantity = parseInt(quantityInput?.value) || 0;
+
+				const lineTotal = cost * quantity;
+				currentTotalSpent += lineTotal;
+
+				// Actualizar el total de la fila (Formato alemán: usa coma para decimal y punto para separador de miles)
+				if (totalOutput) totalOutput.textContent = `€ ${lineTotal.toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, ".")}`;
+			}
+
+			// 3. Calcular el presupuesto restante
+			const remaining = totalBudget - currentTotalSpent;
+
+			// 4. Actualizar el DOM (Formato alemán)
+			totalSpentElement.textContent = `€ ${currentTotalSpent.toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, ".")}`;
+			remainingBudgetElement.textContent = `€ ${remaining.toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, ".")}`;
+
+			// 5. Retroalimentación Visual
+
+			// Eliminar clases de color
+			remainingBudgetCard.classList.remove('bg-red-100', 'bg-blue-50', 'bg-green-50', 'bg-yellow-50');
+			remainingBudgetElement.classList.remove('text-red-600', 'text-blue-600', 'text-green-600', 'text-yellow-600');
+			alertMessage.classList.add('hidden'); // Ocultar la advertencia por defecto
+
+			if (remaining < 0) {
+				// Presupuesto excedido (Rojo)
+				remainingBudgetCard.classList.add('bg-red-100');
+				remainingBudgetElement.classList.add('text-red-600');
+				alertMessage.classList.remove('hidden');
+			} else if (remaining === 0) {
+				// Presupuesto alcanzado exactamente (Verde)
+				remainingBudgetCard.classList.add('bg-green-50');
+				remainingBudgetElement.classList.add('text-green-600');
+			} else if (remaining < (totalBudget * 0.2)) {
+				// Menos del 20% restante (Amarillo)
+				remainingBudgetCard.classList.add('bg-yellow-50');
+				remainingBudgetElement.classList.add('text-yellow-600');
+			} else {
+				// Presupuesto saludable (Azul)
+				remainingBudgetCard.classList.add('bg-blue-50');
+				remainingBudgetElement.classList.add('text-blue-600');
+			}
+		}
+        
+        // Exponer la función para ser llamada desde el botón
+        window.downloadPDF = downloadPDF;
+
+
+		// Iniciar la aplicación al cargar la ventana
+		window.onload = initializeApp;
+	</script>
+</body>
+</html>
