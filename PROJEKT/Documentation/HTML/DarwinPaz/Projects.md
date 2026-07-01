@@ -18,17 +18,13 @@ Dies hilft ihnen, ihre Kommunikations-, Kooperations- und Führungsfähigkeiten 
 <p align="left">
 
 
-| ECUADOR-IT: | [>> "Portfolio" >>](https://heyzine.com/flip-book/68343e51e8.html)     |
+| ECUADOR-IT: | [Portfolio >>](https://www.ecuador-it.com/ecuador-it-portafolio-2022/)     |
 | :-------- | :------- |
-| LF10aV2:     | [Benutzerschnittstellen gestalten und entwickeln, "Website" >> ](https://github.com/dwn10/gfn-2023) |
-| LF-ZQ3a: | [Agile Scrum "Präsentation" >>](https://heyzine.com/flip-book/c134286abb.html)     |
-| LF-ZQ8a: | [HTML CSS JS "Thema : Pizzeria" >>](https://github.com/dwn10/LF-ZQ8a-Projekt)     |
-| LT-4V2: | [SQL + Mini CRUD "Projekt" >>](https://github.com/dwn10/SQL-LT4V2-Projekt)     |
-| LT-12a: | [Zeiterfassungs-App "Projekt" >>](https://github.com/dwn10/LF12a)     |
-| IHK AP2: | [IHK Projekt "Präsentation" >>](https://heyzine.com/flip-book/a60e45f651.html) / [Dokumentation" >>](https://github.com/dwn10/C_C_C/tree/main/PROJEKT/Documentation/Markdown)    |
-| Harvard: | [CS50x "Final Projekt" >>](https://github.com/dwn10/CS50_FINAL_PROJECT)     |
-| Harvard: | [CS50 Cybersecurity "Final Projekt" >>](https://youtu.be/3Bf--zUYMxg)     |
-| Harvard: | [CS50 SQL "Final Projekt" >>](https://github.com/dwn10/CS50_FINAL_PROJECT/blob/main/SQL/README.md)     |
+| ArteQ | [Dokumentation >> ](#) / ["Website" >> ](https://arte-q.com/) |
+| MyBC: | [Dokumentation >> ](#) / ["Website" >> ](https://mybc.bio/)     |
+| UmzugEstimator: | [Dokumentation >> ](#) / ["Video" >> ](https://www.instagram.com/p/DRKmNYijYln/)     |
+| PropuestaGlow: | [Dokumentation >> ](#) / ["Video" >> ](https://www.instagram.com/p/DRKmNYijYln/)     |
+| ArteQ-IT: | [Dokumentation >> ](#) / ["Website" >> ](https://arteq-it.com/)     |
 
 ### 👅 Dev Quote 👅
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
