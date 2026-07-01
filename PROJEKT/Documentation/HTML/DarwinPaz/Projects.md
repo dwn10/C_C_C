@@ -25,6 +25,7 @@ Dies hilft ihnen, ihre Kommunikations-, Kooperations- und Führungsfähigkeiten 
 | UmzugEstimator: | [Technical Architecture >> ](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/UmzugEstimator.md) / ["Video" >> ](https://www.instagram.com/p/DRKmNYijYln/)     |
 | PropuestaGlow: | [Technical Architecture >> ](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/PropuestaGlow.md) / ["Video" >> ](https://www.instagram.com/p/DRKmNYijYln/)     |
 | ArteQ-IT: | [Technical Architecture >> ](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/ArteQ-IT.md) / ["Website" >> ](https://arteq-it.com/)     |
+| 3D Scan GaussianSplat: | [Technical Architecture >> ](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/3D_Scan.md) / ["Video" >> ](https://www.instagram.com/p/DZxZZwmNBN-/)     |
 
 ### 👅 Dev Quote 👅
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
