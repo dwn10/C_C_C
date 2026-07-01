@@ -18,7 +18,7 @@ Dies hilft ihnen, ihre Kommunikations-, Kooperations- und Führungsfähigkeiten 
 <p align="left">
 
 
-| LF02V2: | [Arbeitsplatz nach Kundenwunsch ausstatten "Präsentation" >>](https://heyzine.com/flip-book/68343e51e8.html)     |
+| ECUADOR-IT: | [>> "Portfolio" >>](https://heyzine.com/flip-book/68343e51e8.html)     |
 | :-------- | :------- |
 | LF10aV2:     | [Benutzerschnittstellen gestalten und entwickeln, "Website" >> ](https://github.com/dwn10/gfn-2023) |
 | LF-ZQ3a: | [Agile Scrum "Präsentation" >>](https://heyzine.com/flip-book/c134286abb.html)     |
@@ -29,8 +29,6 @@ Dies hilft ihnen, ihre Kommunikations-, Kooperations- und Führungsfähigkeiten 
 | Harvard: | [CS50x "Final Projekt" >>](https://github.com/dwn10/CS50_FINAL_PROJECT)     |
 | Harvard: | [CS50 Cybersecurity "Final Projekt" >>](https://youtu.be/3Bf--zUYMxg)     |
 | Harvard: | [CS50 SQL "Final Projekt" >>](https://github.com/dwn10/CS50_FINAL_PROJECT/blob/main/SQL/README.md)     |
-
-
 
 ### 👅 Dev Quote 👅
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
