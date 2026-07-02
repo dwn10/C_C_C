@@ -17,7 +17,7 @@ graph TD
     A --> E[pages/contacto.html <br> Formulario de contacto]
     
     %% Assets & Scripts locales
-    subgraph Assets Locales (Privacidad y Rendimiento)
+    subgraph AssetsLocales ["Assets Locales (Privacidad y Rendimiento)"]
         F[assets/css/style.css <br> Estilos Base]
         G[assets/css/rechner.css <br> Estilos de Calculadora]
         H[assets/js/main.js <br> Menú, Slider, Speech API]
