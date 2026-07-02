@@ -11,15 +11,15 @@
 <p align="left">
 
 
-| Proyecto | Documentación Técnica | Demo / Live |
+| Project | Technical Documentation | Demo / Live |
 | :--- | :--- | :--- |
 | **ECUADOR-IT** | - | [🌐 Portfolio](https://www.ecuador-it.com/ecuador-it-portafolio-2022/) |
-| **ArteQ** | [📄 Arquitectura](./ArteQ.md) | [🌐 Website](https://arte-q.com/) |
-| **MyBC** | [📄 Arquitectura](./MyBC.md) | [🌐 Website](https://mybc.bio/) |
-| **UmzugEstimator** | [📄 Arquitectura](./UmzugEstimator.md) | [▶️ Video](https://www.instagram.com/p/DRKmNYijYln/) |
-| **PropuestaGlow** | [📄 Arquitectura](./PropuestaGlow.md) | [▶️ Video](https://www.instagram.com/p/DRKmNYijYln/) |
-| **ArteQ-IT** | [📄 Arquitectura](./ArteQ-IT.md) | [🌐 Website](https://arteq-it.com/) |
-| **3D Scan GaussianSplat** | [📄 Arquitectura](./3D_Scan.md) | [▶️ Video](https://www.instagram.com/p/DZxZZwmNBN-/) |
+| **ArteQ** | [📄 Architecture](./ArteQ.md) | [🌐 Website](https://arte-q.com/) |
+| **MyBC** | [📄 Architecture](./MyBC.md) | [🌐 Website](https://mybc.bio/) |
+| **UmzugEstimator** | [📄 Architecture](./UmzugEstimator.md) | [▶️ Video](https://www.instagram.com/p/DRKmNYijYln/) |
+| **PropuestaGlow** | [📄 Architecture](./PropuestaGlow.md) | [▶️ Video](https://www.instagram.com/p/DRKmNYijYln/) |
+| **ArteQ-IT** | [📄 Architecture](./ArteQ-IT.md) | [🌐 Website](https://arteq-it.com/) |
+| **3D Scan GaussianSplat** | [📄 Architecture](./3D_Scan.md) | [▶️ Video](https://www.instagram.com/p/DZxZZwmNBN-/) |
 
 ### 👅 Dev Quote 👅
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
