@@ -185,3 +185,7 @@ La interfaz se estructura sobre una filosofía **Mobile-First**, asegurando una 
 > *   [`PropuestaGlow`](./PropuestaGlow.md)
 > *   [`3D_Scan`](./3D_Scan.md)
 ---
+<br>
+<p align="center">
+  <small>All rights reserved © 2026 | <a href="https://github.com/dwn10">Darwin Paz</a></small>
+</p>
