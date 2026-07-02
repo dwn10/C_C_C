@@ -2,6 +2,17 @@
 
 Este documento detalla la estructura técnica, flujo de navegación e interacción de componentes para el sitio web de **ARTEQ** (Dienstleistungen für Räumung, Umzüge, Transport und Reinigung). Está diseñado para servir como referencia a desarrolladores y agentes de IA.
 
+### Tecnologías usadas
+```javascript
+const ArteQ_Project = {
+    code: ["HTML5", "CSS3", "JavaScript"],
+    technologies: {
+        devTool: ["VSCode"],
+        apis: ["Web Speech API"],
+        assets: ["FontAwesome", "SVG"]
+    }
+};
+```
 ---
 
 ## 1. Estructura de la Aplicación y Componentes
