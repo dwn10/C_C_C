@@ -2,8 +2,18 @@
 
 Este documento define la arquitectura técnica, el stack tecnológico, los flujos de usuario y las directrices de cumplimiento normativo y seguridad para el proyecto **ArteQ-IT**. Sirve como fuente de verdad y plano técnico para el desarrollo.
 
+### Tecnologías usadas
+```javascript
+const ArteQ_IT_Project = {
+    code: ["React 19", "TypeScript", "Tailwind CSS"],
+    technologies: {
+        devTool: ["VSCode", "Vite"],
+        apis: ["Google GenAI", "Cloudflare Pages"],
+        assets: ["SweetAlert2", "pdfjs"]
+    }
+};
+```
 ---
-
 ## 1. Stack Tecnológico (Análisis y Justificación)
 
 La arquitectura técnica ha sido seleccionada para maximizar el rendimiento, la escalabilidad, la experiencia de usuario (UX) y la integración con Inteligencia Artificial.
@@ -165,3 +175,13 @@ La interfaz se estructura sobre una filosofía **Mobile-First**, asegurando una 
 | **Agotamiento de Cuota de API (IA)** | Medio | **Mitigación**: Implementar rate-limiting local, caché de respuestas frecuentes y botones de acción *on-demand* estricta (no precargas). |
 | **Pérdida de Datos en Formularios Largos** | Medio | **Mitigación**: Se implementa un motor de persistencia (`sessionStorage`) que guarda el progreso del usuario en formularios mientras navega por páginas legales, restaurándolos al volver. |
 | **Sobrecarga del Main Thread (Fondos Canvas)** | Medio | Las animaciones complejas en Canvas pueden ralentizar dispositivos antiguos. **Mitigación**: Uso de `requestAnimationFrame` optimizado, limpieza de recursos al desmontar componentes (`useEffect cleanup`) y posible degradación visual en dispositivos de bajo rendimiento. |
+
+---
+> [!NOTE]
+> **Explorar siguientes proyectos:**
+> *   [`ArteQ`](./ArteQ.md)
+> *   [`MyBC`](./MyBC.md)
+> *   [`UmzugEstimator`](./UmzugEstimator.md)
+> *   [`PropuestaGlow`](./PropuestaGlow.md)
+> *   [`3D_Scan`](./3D_Scan.md)
+---

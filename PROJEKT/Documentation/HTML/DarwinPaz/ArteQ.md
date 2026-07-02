@@ -132,9 +132,10 @@ ARTEQ/
 ```
 ---
 > [!NOTE]
-> *   next project [`MyBC.md`](./MyBC.md).
-> *   next project [`UmzugEstimator.md`](./UmzugEstimator.md).
-> *   next project [`PropuestaGlow.md`](./PropuestaGlow.md).
-> *   next project [`ArteQ-IT.md`](./ArteQ-IT.md).
-> *   next project [`3D_Scan.md`](./3D_Scan.md).
+> **Explorar siguientes proyectos:**
+> *   [`MyBC`](./MyBC.md)
+> *   [`UmzugEstimator`](./UmzugEstimator.md)
+> *   [`PropuestaGlow`](./PropuestaGlow.md)
+> *   [`ArteQ-IT`](./ArteQ-IT.md)
+> *   [`3D_Scan`](./3D_Scan.md)
 ---

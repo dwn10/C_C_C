@@ -6,8 +6,18 @@
 
 </div>
 
+### Tecnologías usadas
+```javascript
+const Scan3D_Project = {
+    code: ["React 19", "WebGL", "Python"],
+    technologies: {
+        devTool: ["VSCode", "Vite"],
+        apis: ["Supabase", "GaussianSplats3D"],
+        assets: ["CUDA", "Three.js"]
+    }
+};
+```
 ---
-
 ## 1. Analizar y Justificar el Stack Tecnológico
 
 - **Frontend / UI**: Vite + React 19. 
@@ -135,3 +145,13 @@ sequenceDiagram
 
 3. **Riesgo**: El cliente (Agente inmobiliario) suministra videos mal grabados (rápidos, desenfocados) causando fallos masivos y tiempos muertos en el script local de Inteligencia Artificial (COLMAP y Gaussian Splatting).
    - **Estrategia de Mitigación**: Desarrollar e integrar una guía interactiva en el Dashboard con "Instrucciones de Grabación" (moverse lentamente, iluminación uniforme, trayectorias en bucle). Adicionalmente, establecer límites duros automáticos donde la duración del video de entrada sea estrictamente proporcional a los m² contratados por el agente (Ej. Límite de 4 minutos de video por cada 100m²).
+
+---
+> [!NOTE]
+> **Explorar siguientes proyectos:**
+> *   [`ArteQ`](./ArteQ.md)
+> *   [`MyBC`](./MyBC.md)
+> *   [`UmzugEstimator`](./UmzugEstimator.md)
+> *   [`PropuestaGlow`](./PropuestaGlow.md)
+> *   [`ArteQ-IT`](./ArteQ-IT.md)
+---

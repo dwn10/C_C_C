@@ -2,8 +2,18 @@
 
 Este documento detalla la estructura técnica de la plataforma **Propuesta Glow**, describiendo la interacción de sus componentes core, flujo de datos y modelo de seguridad.
 
+### Tecnologías usadas
+```javascript
+const PropuestaGlow_Project = {
+    code: ["React", "TypeScript"],
+    technologies: {
+        devTool: ["VSCode"],
+        apis: ["Gemini 2.5 Flash", "Firebase"],
+        assets: ["SVGs"]
+    }
+};
+```
 ---
-
 ## 1. Diagrama de Arquitectura
 El sistema sigue una arquitectura desacoplada basada en microservicios serverless (Firebase) y APIs generativas (Google Gemini).
 
@@ -81,3 +91,12 @@ flowchart TD
 │   └── App.tsx             # Punto de entrada de la app
 └── MANUAL.md               # Onboarding, guía de administración y Análisis Comercial/ROI
 ```
+---
+> [!NOTE]
+> **Explorar siguientes proyectos:**
+> *   [`ArteQ`](./ArteQ.md)
+> *   [`MyBC`](./MyBC.md)
+> *   [`UmzugEstimator`](./UmzugEstimator.md)
+> *   [`ArteQ-IT`](./ArteQ-IT.md)
+> *   [`3D_Scan`](./3D_Scan.md)
+---

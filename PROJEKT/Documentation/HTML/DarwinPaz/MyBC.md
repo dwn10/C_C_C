@@ -2,6 +2,18 @@
 
 Este documento detalla la arquitectura de software, flujos de datos y diseño técnico del proyecto **myBC**, cumpliendo con los estándares de diseño escalable y mantenible.
 
+## Tecnologías usadas
+```javascript
+const MyBC_Project = {
+    code: ["React 18", "Vite 6"],
+    technologies: {
+        devTool: ["VSCode"],
+        apis: ["Firebase", "Vercel Edge"],
+        assets: ["Honeypot Shield"]
+    }
+};
+```
+---
 ## 1. Arquitectura de Software y Flujo de Datos
 
 myBC implementa una arquitectura híbrida serverless de alto rendimiento que conecta una interfaz de usuario estática React (Vite) con una base de datos reactiva en Cloud Firestore y una API serverless en Vercel Edge.
@@ -95,3 +107,12 @@ myBC/
 ├── 📄 vite.config.ts         # Reglas avanzadas de compilación y Vendor Chunks
 └── 📄 vercel.json            # Configuración de ruteo serverless
 ```
+---
+> [!NOTE]
+> **Explorar siguientes proyectos:**
+> *   [`ArteQ`](./ArteQ.md)
+> *   [`UmzugEstimator`](./UmzugEstimator.md)
+> *   [`PropuestaGlow`](./PropuestaGlow.md)
+> *   [`ArteQ-IT`](./ArteQ-IT.md)
+> *   [`3D_Scan`](./3D_Scan.md)
+---

@@ -2,8 +2,18 @@
 
 Este documento describe la arquitectura técnica, el flujo de datos y la interacción entre agentes de **Umzug Estimator KI**, detallando los componentes frontend, las funciones serverless de backend, el motor de IA de triple redundancia y la infraestructura de control de tasa (Rate Limiting).
 
+### Tecnologías usadas
+```javascript
+const UmzugEstimator_Project = {
+    code: ["React 19", "JavaScript"],
+    technologies: {
+        devTool: ["VSCode"],
+        apis: ["Gemini API", "Vercel Serverless"],
+        assets: ["Vercel KV", "i18n"]
+    }
+};
+```
 ---
-
 ## 1. Diagrama de Arquitectura General
 
 El siguiente diagrama Mermaid describe el flujo de peticiones desde la interacción del usuario en el navegador hasta el análisis de IA y almacenamiento efímero:
@@ -160,3 +170,12 @@ UmzugEstimator2/
     ├── context/          # Contexto de React (EstimatorContext)
     └── utils/            # Utilidades generales y traducciones (i18n)
 ```
+---
+> [!NOTE]
+> **Explorar siguientes proyectos:**
+> *   [`ArteQ`](./ArteQ.md)
+> *   [`MyBC`](./MyBC.md)
+> *   [`PropuestaGlow`](./PropuestaGlow.md)
+> *   [`ArteQ-IT`](./ArteQ-IT.md)
+> *   [`3D_Scan`](./3D_Scan.md)
+---
