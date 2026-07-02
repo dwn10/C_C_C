@@ -24,5 +24,8 @@
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
 ---
-Developed by [Darwin Paz](https://github.com/dwn10) | 2026
+<br>
+<p align="center">
+  <small>All rights reserved © 2026 | <a href="https://github.com/dwn10">Darwin Paz</a></small>
+</p>
 

@@ -155,3 +155,8 @@ sequenceDiagram
 > *   [`PropuestaGlow`](./PropuestaGlow.md)
 > *   [`ArteQ-IT`](./ArteQ-IT.md)
 ---
+<br>
+<p align="center">
+  <small>All rights reserved © 2026 | <a href="https://github.com/dwn10">Darwin Paz</a></small>
+</p>
+
