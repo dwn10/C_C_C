@@ -11,14 +11,15 @@
 <p align="left">
 
 
-| ECUADOR-IT: | [Portfolio >>](https://www.ecuador-it.com/ecuador-it-portafolio-2022/)     |
-| :-------- | :------- |
-| ArteQ | [Technical Architecture >> ](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/ArteQ.md) / ["Website" >> ](https://arte-q.com/) |
-| MyBC: | [Technical Architecture >> ](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/MyBC.md) / ["Website" >> ](https://mybc.bio/)     |
-| UmzugEstimator: | [Technical Architecture >> ](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/UmzugEstimator.md) / ["Video" >> ](https://www.instagram.com/p/DRKmNYijYln/)     |
-| PropuestaGlow: | [Technical Architecture >> ](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/PropuestaGlow.md) / ["Video" >> ](https://www.instagram.com/p/DRKmNYijYln/)     |
-| ArteQ-IT: | [Technical Architecture >> ](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/ArteQ-IT.md) / ["Website" >> ](https://arteq-it.com/)     |
-| 3D Scan GaussianSplat: | [Technical Architecture >> ](https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/3D_Scan.md) / ["Video" >> ](https://www.instagram.com/p/DZxZZwmNBN-/)     |
+| Proyecto | Documentación Técnica | Demo / Live |
+| :--- | :--- | :--- |
+| **ECUADOR-IT** | - | [🌐 Portfolio](https://www.ecuador-it.com/ecuador-it-portafolio-2022/) |
+| **ArteQ** | [📄 Arquitectura](./ArteQ.md) | [🌐 Website](https://arte-q.com/) |
+| **MyBC** | [📄 Arquitectura](./MyBC.md) | [🌐 Website](https://mybc.bio/) |
+| **UmzugEstimator** | [📄 Arquitectura](./UmzugEstimator.md) | [▶️ Video](https://www.instagram.com/p/DRKmNYijYln/) |
+| **PropuestaGlow** | [📄 Arquitectura](./PropuestaGlow.md) | [▶️ Video](https://www.instagram.com/p/DRKmNYijYln/) |
+| **ArteQ-IT** | [📄 Arquitectura](./ArteQ-IT.md) | [🌐 Website](https://arteq-it.com/) |
+| **3D Scan GaussianSplat** | [📄 Arquitectura](./3D_Scan.md) | [▶️ Video](https://www.instagram.com/p/DZxZZwmNBN-/) |
 
 ### 👅 Dev Quote 👅
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
