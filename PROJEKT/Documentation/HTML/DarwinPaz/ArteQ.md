@@ -119,3 +119,11 @@ ARTEQ/
 ├── index.html                    # Startseite (ca. 558 Zeilen)
 └── README.md                     # Projektbeschreibung
 ```
+---
+> [!NOTE]
+> *   next project [`MyBC.md`](./MyBC.md).
+> *   next project [`UmzugEstimator.md`](./UmzugEstimator.md).
+> *   next project [`PropuestaGlow.md`](./PropuestaGlow.md).
+> *   next project [`ArteQ-IT.md`](./ArteQ-IT.md).
+> *   next project [`3D_Scan.md`](./3D_Scan.md).
+---
