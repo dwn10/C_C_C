@@ -34,11 +34,11 @@ Hr. Peña lebt seit 2006 in Darmstadt und hat auch hier seine künstlerischen F�
 
 ### Kunstbeiträge
 
-- [Sociac - Aktivitäten](https://heyzine.com/flip-book/dfca028cb9.html)
-- [Sociac - Redaktion](https://heyzine.com/flip-book/5ebef7853b.html)
+- [Sociac - Aktivitäten](./images/pdfs/Sociac-Aktivitäten-2015-2019.pdf)
+- [Sociac - Redaktion](./images/pdfs/sociac-redaktion.pdf)
 - [Sociac - LaFeDa - Latin Festival Darmstadt](https://heyzine.com/flip-book/ec027b9492.html)
 - [Sociac - Rückblick Video](https://www.youtube.com/watch?v=uhjMRazuHWU&t=19s&ab_channel=ECUADORIT)
-- [Mitorganisation der Veranstaltung](https://heyzine.com/flip-book/284a30a72e.html)
+- [Mitorganisation der Veranstaltung](./images/pdfs/Mitorganisation-der-Veranstaltung.pdf)
 
 <a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/images/Dwn-7.jpg"><img src="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/images/Dwn-7.jpg" style="height: 80%; width:80%;"/></a>
 
