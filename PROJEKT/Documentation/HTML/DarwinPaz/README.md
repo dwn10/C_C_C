@@ -43,3 +43,8 @@ Hr. Peña lebt seit 2006 in Darmstadt und hat auch hier seine künstlerischen F�
 <a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/images/Dwn-7.jpg"><img src="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/images/Dwn-7.jpg" style="height: 80%; width:80%;"/></a>
 
 <a href="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/images/Dwn-1.jpg"><img src="https://github.com/dwn10/C_C_C/blob/main/PROJEKT/Documentation/HTML/DarwinPaz/images/Dwn-1.jpg" style="height: 80%; width:80%;"/></a>
+---
+<br>
+<p align="center">
+  <small>All rights reserved © 2026 | <a href="https://github.com/dwn10">Darwin Paz</a></small>
+</p>
