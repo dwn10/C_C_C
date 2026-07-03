@@ -24,6 +24,13 @@
 ### 👅 Dev Quote 👅
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
+<br>
+<p align="center">
+  <a href="https://github.com/dwn10/GFN"><img src="https://img.shields.io/badge/EDU-Projects-blue?style=for-the-badge"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/dwn10/C_C_C/tree/main/PROJEKT/Documentation/HTML/DarwinPaz"><img src="https://img.shields.io/badge/Art_Contributions-blue?style=for-the-badge"></a>
+</p>
+
 ---
 <br>
 <p align="center">
