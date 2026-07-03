@@ -14,7 +14,7 @@
 | Project | Technical Documentation | Demo / Live |
 | :--- | :--- | :--- |
 | **ECUADOR-IT** | - | [🌐 Portfolio](https://www.ecuador-it.com/ecuador-it-portafolio-2022/) |
-| **Python Tools** | 📄 Demo| [🌐 Portfolio](https://github.com/dwn10/django-web) |
+| **Python Tools** | 🐍 Demo | [Portfolio](https://github.com/dwn10/django-web) |
 | **ArteQ** | [📄 Architecture](./IT-Projects/ArteQ.md) | [🌐 Website](https://arte-q.com/) |
 | **MyBC** | [📄 Architecture](./IT-Projects/MyBC.md) | [🌐 Website](https://mybc.bio/) |
 | **UmzugEstimator** | [📄 Architecture](./IT-Projects/UmzugEstimator.md) | [▶️ Video](https://www.instagram.com/p/DRKmNYijYln/) |
