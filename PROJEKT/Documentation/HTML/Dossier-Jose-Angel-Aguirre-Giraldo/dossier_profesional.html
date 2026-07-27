@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="José Ángel Aguirre">
+    <meta name="copyright" content="© 2026 José Ángel Aguirre">
+    <meta name="description" content="Bewerbung um ein Fußballstipendium - Dossier">
+    <title>Professionelles Dossier - José Ángel Aguirre Giraldo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0b1c3d;
+            --secondary-color: #d4af37;
+            --bg-color: #f8f9fa;
+            --text-main: #2b3035;
+            --text-light: #5a6268;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e5e7eb;
+            color: var(--text-main);
+            line-height: 1.5;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .a4-container {
+            width: 210mm;
+            height: 296mm;
+            /* Fijar altura exacta de A4 */
+            margin: 20px auto;
+            background: var(--white);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* HEADER */
+        .header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 25px 40px;
+            /* Reducido para dar más espacio */
+            border-bottom: 5px solid var(--secondary-color);
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 2px;
+        }
+
+        .header h2 {
+            font-size: 15px;
+            font-weight: 300;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* LAYOUT */
+        .main-content {
+            display: flex;
+            flex: 1;
+            height: calc(296mm - 100px);
+            /* Ajustar al resto de la página */
+        }
+
+        /* SIDEBAR (Izquierda) */
+        .sidebar {
+            width: 38%;
+            background-color: var(--bg-color);
+            border-right: 1px solid #e5e5e5;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* FOTO DEL JUGADOR */
+        .photo-container {
+            width: 100%;
+            height: 270px;
+            /* Reducido para dar espacio a los videos */
+            overflow: hidden;
+            border-bottom: 3px solid var(--secondary-color);
+        }
+
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .sidebar-content {
+            padding: 15px 25px;
+        }
+
+        /* CONTENT (Derecha) */
+        .content {
+            width: 62%;
+            padding: 25px 35px;
+            background-color: var(--white);
+        }
+
+        /* TIPOGRAFÍA Y SECCIONES */
+        .section-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 3px;
+            margin-bottom: 15px;
+            margin-top: 20px;
+        }
+
+        .sidebar .section-title {
+            margin-top: 0;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .sidebar .section-title:not(:first-child) {
+            margin-top: 20px;
+        }
+
+        .info-group {
+            margin-bottom: 12px;
+        }
+
+        .info-label {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--text-light);
+            text-transform: uppercase;
+        }
+
+        .info-value {
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 1px;
+            color: var(--primary-color);
+        }
+
+        .skill-item {
+            margin-bottom: 12px;
+        }
+
+        .skill-item strong {
+            display: block;
+            font-size: 13px;
+            color: var(--primary-color);
+        }
+
+        .skill-item p {
+            font-size: 12.5px;
+            color: var(--text-light);
+            margin-top: 2px;
+            line-height: 1.4;
+        }
+
+        .text-block {
+            font-size: 14px;
+            color: var(--text-main);
+            text-align: justify;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        ul.timeline {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.timeline li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 12px;
+            font-size: 13.5px;
+        }
+
+        ul.timeline li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 7px;
+            height: 7px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+        }
+
+        /* GRID PARA VIDEOS (Ahora en Sidebar) */
+        .video-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .video-link {
+            display: block;
+            background-color: var(--white);
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 10px;
+            border-left: 3px solid var(--primary-color);
+            border-radius: 0 4px 4px 0;
+            font-size: 12px;
+            font-weight: 700;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .video-link span {
+            display: block;
+            font-size: 10px;
+            color: var(--text-light);
+            font-weight: 400;
+            margin-top: 2px;
+        }
+
+        /* PRINT STYLES */
+        @media print {
+            body {
+                background-color: var(--white);
+            }
+
+            .a4-container {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+
+            .no-print {
+                display: none;
+            }
+
+            @page {
+                margin: 0;
+                size: A4;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="text-align: center; margin: 20px;" class="no-print">
+        <button onclick="window.print()"
+            style="padding: 10px 20px; background-color: #0b1c3d; color: white; border: none; cursor: pointer; font-size: 16px; border-radius: 5px; font-weight: bold;">📥
+            Descargar CV (Ctrl+P)</button>
+        <p style="margin-top: 10px; color: #666; font-size: 14px;">Recuerda marcar <b>"Gráficos en segundo plano"</b> y
+            márgenes en <b>"Ninguno"</b>.</p>
+    </div>
+
+    <div class="a4-container">
+
+        <!-- HEADER CENTRALIZADO -->
+        <header class="header">
+            <h2>Bewerbung um ein Fußballstipendium</h2>
+            <h1>José Ángel Aguirre</h1>
+            <h2 style="color: #fff; margin-top: 5px;">Innenverteidiger / U19 - Seniors</h2>
+        </header>
+
+        <div class="main-content">
+            <!-- SIDEBAR: FOTO + DATOS + VIDEOS -->
+            <aside class="sidebar">
+                <div class="photo-container">
+                    <img src="JoseAngel.jpg" alt="José Ángel Aguirre - Aktion" class="profile-photo">
+                </div>
+
+                <div class="sidebar-content">
+                    <h3 class="section-title">Persönliche Daten</h3>
+
+                    <div class="info-group" style="margin-bottom: 12px;">
+                        <div class="info-label">Geburtsdatum</div>
+                        <div class="info-value" style="font-size: 13px;">17. November 2007</div>
+                    </div>
+
+                    <div class="info-group" style="margin-bottom: 12px;">
+                        <div class="info-label">Nationalität</div>
+                        <div class="info-value" style="font-size: 13px;">Kolumbianisch</div>
+                    </div>
+
+                    <div class="info-group" style="margin-bottom: 12px;">
+                        <div class="info-label">Größe & Gewicht</div>
+                        <div class="info-value" style="font-size: 13px;">1.81 m | 71 kg</div>
+                    </div>
+
+                    <div class="info-group" style="margin-bottom: 12px;">
+                        <div class="info-label">Starker Fuß</div>
+                        <div class="info-value" style="font-size: 13px;">Rechtsfuß</div>
+                    </div>
+
+                    <div class="info-group" style="margin-bottom: 12px;">
+                        <div class="info-label">Kontakt</div>
+                        <div class="info-value" style="font-size: 13px;">
+                            <a href="tel:+573116683661" style="color: var(--primary-color); text-decoration: none;">+57 311 668 3661</a><br>
+                            <a href="mailto:joseangelaguirregiraldo@gmail.com" style="color: var(--primary-color); text-decoration: none;">joseangelaguirregiraldo@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="info-group" style="margin-bottom: 20px;">
+                        <div class="info-label">Sprachen</div>
+                        <div class="info-value" style="font-size: 13px;">
+                            Spanisch (Muttersprache)<br>
+                            Deutsch (Zertifikat A2)
+                        </div>
+                    </div>
+
+                    <!-- VIDEOS MOVIDOS A LA IZQUIERDA -->
+                    <h3 class="section-title">Videomaterial</h3>
+                    <div class="video-grid">
+                        <a href="https://youtu.be/LjxeE-X-YtA?si=9pm8AHiZqcUwEkxS" target="_blank" class="video-link">
+                            ▶ SPIEL 1: Highlight-Video
+                            <span>Gegner: Restrepo Naranjo vs. The Columbus</span>
+                        </a>
+                        <a href="https://youtu.be/lMz4TzB4qg4?si=cD4KPDZNQDNHbyan" target="_blank" class="video-link">
+                            ▶ SPIEL 2: Offizielles Ligaspiel
+                            <span>Gegner: Juvenil B vs. Pacho Maturana</span>
+                        </a>
+                        <a href="https://youtu.be/2eeXq87cNtE?si=p-YetBdmTkDj0yCK" target="_blank" class="video-link">
+                            ▶ SPIEL 3: Regionales Match
+                            <span>Gegner: Elite vs. Sabaneta FC</span>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- CONTENIDO PRINCIPAL -->
+            <main class="content">
+                <h3 class="section-title">Persönliches Statement</h3>
+                <p class="text-block">
+                    Als Innenverteidiger definiere ich mein Spiel durch taktische Disziplin, kompromisslose
+                    Zweikampfstärke und einen sauberen Spielaufbau von hinten heraus. Fußball ist für mich mehr als ein
+                    Sport; es ist mein Lebensstil, der von harter Arbeit, Pünktlichkeit und ständiger Verbesserung
+                    geprägt ist.
+                    <br><br>
+                    Mein klares Ziel ist es, mich der anspruchsvollen und wettbewerbsintensiven Struktur des deutschen
+                    Fußballs anzupassen. Mein zertifiziertes A2-Deutschniveau ist der erste Schritt meines Engagements,
+                    um mich sofort in die Mannschaft zu integrieren, den Trainer perfekt zu verstehen und auf dem Platz
+                    Führungsqualitäten zu zeigen. Ich bin bereit, die Intensität des europäischen Fußballs anzunehmen
+                    und alles für den Erfolg des Vereins zu geben.
+                </p>
+
+                <h3 class="section-title">Kernkompetenzen</h3>
+                <div class="skill-item">
+                    <strong>🛡️ Zweikampfverhalten</strong>
+                    <p>Technische Antizipation, exzellentes Timing und physische Stärke bei fairen Ballgewinnen.</p>
+                </div>
+                <div class="skill-item">
+                    <strong>🎯 Spielaufbau</strong>
+                    <p>Präzision in langen und kurzen Pässen, um Linien aus der Defensive strategisch zu durchbrechen.
+                    </p>
+                </div>
+                <div class="skill-item">
+                    <strong>✈️ Kopfballspiel</strong>
+                    <p>Hervorragende taktische Raumlesung und absolute Dominanz bei Luftduellen.</p>
+                </div>
+
+                <h3 class="section-title">Fußballerischer Werdegang</h3>
+                <p class="text-block"
+                    style="font-size: 12px; color: var(--text-light); margin-top: -10px; margin-bottom: 12px;">
+                    Wettbewerbe der Liga Antioqueña de Fútbol (LAF) - Höchste regionale Spielklasse</p>
+                <ul class="timeline">
+                    <li><strong>Club Gerardo Vallejo</strong> (Aktuelle Kategorie)</li>
+                    <li><strong>Club Modo Fußball</strong> (Jugendkategorien)</li>
+                    <li><strong>Restrepo Naranjo FC</strong> (Fortgeschrittene Ausbildung)</li>
+                    <li><strong>Camilo Zúñiga FC</strong> (Jugendfußball)</li>
+                    <li><strong>Fernando Montoya FC</strong> (Anfänge im Fußball)</li>
+                </ul>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>
