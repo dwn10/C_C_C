@@ -1,0 +1,27 @@
+version: 2
+updates:
+  # Dependabot for Python modules
+  - package-ecosystem: "pip"
+    directory: "/PYTHON/E-Rechnung"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: "pip"
+    directory: "/PYTHON/Leitweg-ID"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: "pip"
+    directory: "/PYTHON/XmlToPdf"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+
+  # Dependabot for Java Maven
+  - package-ecosystem: "maven"
+    directory: "/JAVA/CRUD"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
