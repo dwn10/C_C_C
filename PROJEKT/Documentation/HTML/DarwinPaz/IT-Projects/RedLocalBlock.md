@@ -22,36 +22,36 @@ RedLocalBlock adopta una arquitectura desacoplada y orientada a eventos para gar
 ```mermaid
 graph TD
     %% Entidades de Usuario y Sistema Operativo
-    User[Operador / Administrador de Red]
-    AdminCheck{¿Permisos de Admin / UAC?}
+    User["Operador / Administrador de Red"]
+    AdminCheck{"¿Permisos de Admin / UAC?"}
     
-    subgraph UI_Presentation [Capa de Presentación - CustomTkinter]
-        AppWindow[Ventana Principal - Dark/Light Theme]
-        DeviceTable[Tabla de Dispositivos & Badges]
-        ConsoleLog[Consola de Auditoría en Tiempo Real]
-        TrayIcon[System Tray Manager - Segundo Plano]
-        ManualModal[Manual Desplegable Interactivo]
+    subgraph UI_Presentation ["Capa de Presentación - CustomTkinter"]
+        AppWindow["Ventana Principal - Dark/Light Theme"]
+        DeviceTable["Tabla de Dispositivos y Badges"]
+        ConsoleLog["Consola de Auditoría en Tiempo Real"]
+        TrayIcon["System Tray Manager - Segundo Plano"]
+        ManualModal["Manual Desplegable Interactivo"]
     end
 
-    subgraph Core_Services [Capa de Orquestación & Servicios]
-        ScanWorker[ScanService: Barrido /24 Activo]
-        SentinelWorker[SentinelService: Escucha Pasiva Capa 2]
-        IsolationWorker[IsolationService: Bucle ARP op=2]
-        RecoveryWorker[Atomic Recovery: Ráfaga Legítima count=5]
-        OuiResolver[OuiService: Diccionario MAC Local]
-        AliasStore[AliasService: device_aliases.json]
+    subgraph Core_Services ["Capa de Orquestación y Servicios"]
+        ScanWorker["ScanService: Barrido /24 Activo"]
+        SentinelWorker["SentinelService: Escucha Pasiva Capa 2"]
+        IsolationWorker["IsolationService: Bucle ARP op=2"]
+        RecoveryWorker["Atomic Recovery: Ráfaga Legítima count=5"]
+        OuiResolver["OuiService: Diccionario MAC Local"]
+        AliasStore["AliasService: device_aliases.json"]
     end
 
-    subgraph Network_Kernel [Capa de Red & Sockets Raw - Scapy / Npcap]
-        SystemDet[SystemDetector: Gateway & IP Local]
-        NetEngine[NetworkEngine: Forjado de Tramas ARP/Ether]
-        PhysicalNIC[(Tarjeta de Red Local - Wi-Fi / Ethernet)]
+    subgraph Network_Kernel ["Capa de Red y Sockets Raw - Scapy / Npcap"]
+        SystemDet["SystemDetector: Gateway e IP Local"]
+        NetEngine["NetworkEngine: Forjado de Tramas ARP/Ether"]
+        PhysicalNIC[("Tarjeta de Red Local - Wi-Fi / Ethernet")]
     end
 
     %% Flujos de Inicialización
     User -->|1. Inicia Aplicación| AdminCheck
-    AdminCheck -- No -->|Solicita Elevación| User
-    AdminCheck -- Sí --> SystemDet
+    AdminCheck -->|No: Solicita Elevación| User
+    AdminCheck -->|Sí: Concede Acceso| SystemDet
     SystemDet -->|2. Resuelve Gateway e Interfaz| AppWindow
     
     %% Flujos de Descubrimiento y Monitoreo
