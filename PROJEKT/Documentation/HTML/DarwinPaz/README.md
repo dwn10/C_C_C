@@ -16,7 +16,7 @@
 
 Sein Schaffen schlägt eine Brücke zwischen den Wurzeln der südamerikanischen indigenen Malerei und den expressiven Strömungen der Moderne. Neben der Malerei als zentralem Medium umfasst sein vielseitiges Werk Zeichnung, feines Lederdesign, Skulptur und Grafikdesign.
 
-Seit 2006 lebt und wirkt Darwin Peña in Darmstadt. In den vergangenen zwei Jahrzehnten hat er sich als feste Größe in der regionalen und überregionalen Kunstszene etabliert – mit zahlreichen Einzel- und Gruppenausstellungen (u. a. im Kongresszentrum Darmstadtium, an der Goethe-Universität Frankfurt und im Justus-Liebig-Haus) sowie durch sein kontinuierliches Engagement für kulturelle und gestalterische Projekte.
+Seit 2006 lebt und wirkt Darwin Paz in Darmstadt. In den vergangenen zwei Jahrzehnten hat er sich als feste Größe in der regionalen und überregionalen Kunstszene etabliert – mit zahlreichen Einzel- und Gruppenausstellungen (u. a. im Kongresszentrum Darmstadtium, an der Goethe-Universität Frankfurt und im Justus-Liebig-Haus) sowie durch sein kontinuierliches Engagement für kulturelle und gestalterische Projekte.
 
 ### Ausstellungen
 
