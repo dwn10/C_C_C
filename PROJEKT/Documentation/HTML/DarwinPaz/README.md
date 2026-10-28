@@ -12,11 +12,11 @@
 
 ### Unsere Geschichte
 
-**Darwin Alejandro Peña Paz** wurde am 23.08.1980 in Ambato (Ecuador) geboren. Er stammt aus einer künstlerischen Familie, wodurch Darwin seine Leidenschaft zur Malerei entdeckte und mit Unterstützung seines Vaters, der selbst Maler war, ausbauen und empfehlen konnte.
+**Darwin Alejandro Peña Paz** wurde in Ambato (Ecuador) in eine Künstlerfamilie hineingeboren. Geprägt und gefördert durch seinen Vater – selbst Maler – entdeckte er früh seine Leidenschaft für die bildende Kunst und entwickelte über die Jahre eine unverwechselbare künstlerische Handschrift.
 
-Somit konzentriert sich Hr. Peña primär auf die Malerei und setzte des weiteren Schwerpunkte auf Zeichnung und Lederdesign. Als Maler orientiert sich Hr. Peña an südamerikanischen Künstlern der Nativen Malerei und der Expressionismus.
+Sein Schaffen schlägt eine Brücke zwischen den Wurzeln der südamerikanischen indigenen Malerei und den expressiven Strömungen der Moderne. Neben der Malerei als zentralem Medium umfasst sein vielseitiges Werk Zeichnung, feines Lederdesign, Skulptur und Grafikdesign.
 
-Hr. Peña lebt seit 2006 in Darmstadt und hat auch hier seine künstlerischen Fähigkeiten unter Beweis stellen können, indem er für die Stadt Darmstadt Designer und eigene Ausstellungen ausfertigte.
+Seit 2006 lebt und wirkt Darwin Peña in Darmstadt. In den vergangenen zwei Jahrzehnten hat er sich als feste Größe in der regionalen und überregionalen Kunstszene etabliert – mit zahlreichen Einzel- und Gruppenausstellungen (u. a. im Kongresszentrum Darmstadtium, an der Goethe-Universität Frankfurt und im Justus-Liebig-Haus) sowie durch sein kontinuierliches Engagement für kulturelle und gestalterische Projekte.
 
 ### Ausstellungen
 
