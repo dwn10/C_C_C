@@ -21,6 +21,8 @@
 | **PropuestaGlow** | [📄 Architecture](./IT-Projects/PropuestaGlow.md) | [▶️ Video](https://www.instagram.com/p/DRKmNYijYln/) |
 | **ArteQ-IT** | [📄 Architecture](./IT-Projects/ArteQ-IT.md) | [🌐 Website](https://arteq-it.com/) |
 | **3D Scan GaussianSplat** | [📄 Architecture](./IT-Projects/3D_Scan.md) | [▶️ Video](https://www.instagram.com/p/DZxZZwmNBN-/) |
+| **AntigravityVoiceReader** | [📄 Architecture](./IT-Projects/AntigravityVoiceReader.md) | [🔊 Tool / Repo](https://github.com/dwn10/AntigravityVoiceReader) |
+| **RedLocalBlock** | [📄 Architecture](./IT-Projects/RedLocalBlock.md) | [🛡️ Tool / Repo](https://github.com/dwn10/RedLocalBlock) |
 
 ### 👅 Dev Quote 👅
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
